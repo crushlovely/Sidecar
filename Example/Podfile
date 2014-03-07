@@ -1,0 +1,7 @@
+pod "CRLLib", :path => "../CRLLib.podspec"
+
+target "Demo" do
+end
+
+target "DemoTests" do
+end
