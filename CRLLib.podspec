@@ -1,37 +1,41 @@
-#
-# Be sure to run `pod spec lint NAME.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# To learn more about the attributes see http://guides.cocoapods.org/syntax/podspec.html
-#
 Pod::Spec.new do |s|
   s.name             = "CRLLib"
   s.version          = "0.1.0"
-  s.summary          = "A short description of CRLLib."
-  s.description      = <<-DESC
-                       An optional longer description of CRLLib
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "http://EXAMPLE/NAME"
-  s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.summary          = "Crush & Lovely Bootstrap Library"
   s.license          = 'MIT'
   s.author           = { "Tim Clem" => "tim.clem@gmail.com" }
-  s.source           = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/NAME'
+  s.source           = { :git => "https://github.com/misterfifths/CRLLib.git", :branch => "master" }
 
-  # s.platform     = :ios, '5.0'
-  # s.ios.deployment_target = '5.0'
-  # s.osx.deployment_target = '10.7'
+  s.platform     = :ios, '7.0'
+  s.ios.deployment_target = '7.0'
   s.requires_arc = true
+  s.dependency 'CocoaLumberjack/Core'
+  
+  # Defining LOG_LEVEL_DEF makes sure we don't stomp on the application's
+  # log level, which is usually called 'ddLogLevel'.
+  s.prefix_header_contents = <<-PCH
+
+#ifdef __OBJC__
+  #define LOG_LEVEL_DEF CRLLogLevel
+  #import <CocoaLumberjack/DDLog.h>
+  static const int CRLLogLevel = LOG_LEVEL_WARN;
+#endif
+  PCH
+
+  non_arc_files = 'Classes/CRLSystemSound.m'
 
   s.source_files = 'Classes'
-  s.resources = 'Resources'
-
-  s.ios.exclude_files = 'Classes/osx'
-  s.osx.exclude_files = 'Classes/ios'
-  # s.public_header_files = 'Classes/**/*.h'
-  # s.frameworks = 'SomeFramework', 'AnotherFramework'
-  # s.dependency 'JSONKit', '~> 1.4'
+  s.exclude_files = non_arc_files
+  
+  s.subspec 'Non-ARC' do |sna|
+    sna.requires_arc = false
+    sna.source_files = non_arc_files
+    
+    # Nil out the PCH content for this subspec... otherwise it gets two copies
+    # of our string, which doesn't work at all.
+    sna.prefix_header_contents = ''
+  end
+  
+  s.public_header_files = 'Classes/*.h'
+  s.frameworks = 'QuartzCore', 'AudioToolbox'
 end
