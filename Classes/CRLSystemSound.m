@@ -118,7 +118,7 @@ static void SBSystemSoundCompletionCallback(SystemSoundID soundID, void *clientD
         #endif
     }
     else
-        DDLogError(@"Error creating system sound for %@. Status code: %ld", fileURL, err);
+        DDLogError(@"Error creating system sound for %@. Status code: %d", fileURL, (int)err);
     
     return err;
 }
@@ -168,7 +168,7 @@ static void SBSystemSoundCompletionCallback(SystemSoundID soundID, void *clientD
         // Abandon ship if our handler didn't get added for some reason.
         [self release];  // Balance the -retain, since the completion callback won't be called
         
-        DDLogError(@"Error adding completion handler to system sound. Status code: %ld", err);
+        DDLogError(@"Error adding completion handler to system sound. Status code: %d", (int)err);
         if(completion) completion(self);
     }
     
