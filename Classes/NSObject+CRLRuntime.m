@@ -2,19 +2,19 @@
 
 @implementation NSObject (CRLRuntime)
 
--(void)crl_setAssociatedObject:(id)object forKey:(void *)key policy:(CRLAssociationPolicy)policy
+-(void)crl_associateObject:(id)object withKey:(void *)key policy:(CRLAssociationPolicy)policy
 {
     objc_setAssociatedObject(self, key, object, (objc_AssociationPolicy)policy);
 }
 
--(id)crl_associatedObjectForKey:(void *)key
+-(id)crl_objectAssociatedWithKey:(void *)key
 {
     return objc_getAssociatedObject(self, key);
 }
 
--(void)crl_removeAssociatedObjectForKey:(void *)key
+-(void)crl_removeObjectAssociatedWithKey:(void *)key
 {
-    [self crl_setAssociatedObject:nil forKey:key policy:CRLAssociatedObjectPolicyAssign];
+    [self crl_associateObject:nil withKey:key policy:CRLAssociatedObjectPolicyAssign];
 }
 
 -(void)crl_removeAllAssociatedObjects

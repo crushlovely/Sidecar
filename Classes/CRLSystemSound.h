@@ -42,6 +42,7 @@
 +(CRLSystemSound *)playResource:(NSString *)name extension:(NSString *)extension completion:(void (^)(CRLSystemSound *sound))completion;
 +(CRLSystemSound *)playResource:(NSString *)name extension:(NSString *)extension;
 
+-(CRLSystemSound *)initWithFileURL:(NSURL *)URL;
 -(CRLSystemSound *)initWithFileAtPath:(NSString *)path;
 -(CRLSystemSound *)initWithResource:(NSString *)name extension:(NSString *)extension;
 

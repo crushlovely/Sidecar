@@ -13,9 +13,9 @@ typedef NS_ENUM(uintptr_t, CRLAssociationPolicy) {
 
 // These are Objective-C wrappers for the runtime's C-level Associative References API.
 // See http://developer.apple.com/library/ios/#documentation/cocoa/conceptual/objectivec/Chapters/ocAssociativeReferences.html
--(void)crl_setAssociatedObject:(id)object forKey:(void *)key policy:(CRLAssociationPolicy)policy;
--(id)crl_associatedObjectForKey:(void *)key;
--(void)crl_removeAssociatedObjectForKey:(void *)key;
+-(void)crl_associateObject:(id)object withKey:(void *)key policy:(CRLAssociationPolicy)policy;
+-(id)crl_objectAssociatedWithKey:(void *)key;
+-(void)crl_removeObjectAssociatedWithKey:(void *)key;
 
 // Removes all associated objects from the target object.
 // Be careful in calling this as you can't know the other clients of the

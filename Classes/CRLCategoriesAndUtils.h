@@ -1,5 +1,6 @@
 #import "CRLBlockExecution.h"
 #import "CRLViewUtils.h"
+#import "CRLFileUtils.h"
 
 #import "NSData+CRLDigests.h"
 #import "NSObject+CRLRuntime.h"
