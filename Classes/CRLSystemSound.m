@@ -14,9 +14,10 @@
 #import "CRLSystemSound.h"
 
 @interface CRLSystemSound () {
-    NSURL *fileURL;
     SystemSoundID soundID;
 }
+
+@property (nonatomic, retain) NSURL *fileURL;
 
 @property (nonatomic, assign, readwrite) BOOL playing;
 @property (nonatomic, copy) void (^userBlock)(CRLSystemSound *);
@@ -89,7 +90,7 @@ static void SBSystemSoundCompletionCallback(SystemSoundID soundID, void *clientD
 {
     self = [super init];
     if(self) {
-        fileURL = [URL copy];
+        self.fileURL = URL;
         
         [self createSystemSound];
         
@@ -104,7 +105,7 @@ static void SBSystemSoundCompletionCallback(SystemSoundID soundID, void *clientD
 -(OSStatus)createSystemSound
 {
     soundID = 0;
-    OSStatus err = AudioServicesCreateSystemSoundID((CFURLRef)fileURL, &soundID);
+    OSStatus err = AudioServicesCreateSystemSoundID((CFURLRef)self.fileURL, &soundID);
     
     if(err == kAudioServicesNoError) {
         #if TARGET_IPHONE_SIMULATOR
@@ -118,7 +119,7 @@ static void SBSystemSoundCompletionCallback(SystemSoundID soundID, void *clientD
         #endif
     }
     else
-        DDLogError(@"Error creating system sound for %@. Status code: %d", fileURL, (int)err);
+        DDLogError(@"Error creating system sound for %@. Status code: %d", self.fileURL, (int)err);
     
     return err;
 }
@@ -217,7 +218,6 @@ static void SBSystemSoundCompletionCallback(SystemSoundID soundID, void *clientD
 -(void)dealloc
 {
     [self disposeOfSystemSound];
-    [fileURL release];
     self.userBlock = nil;
     
     [super dealloc];

@@ -1,8 +1,8 @@
 #import "CRLGradientLayerView.h"
 
-@interface CRLGradientLayerView () {
-    BOOL settingBackgroundColorInternally;
-}
+@interface CRLGradientLayerView ()
+
+@property (nonatomic, assign) BOOL settingBackgroundColorInternally;
 
 @end
 
@@ -31,7 +31,7 @@
         self.gradientLayer.colors = cgColors;
     }
     
-    settingBackgroundColorInternally = YES;  // Prevents -setBackgroundColor from removing gradient colors
+    self.settingBackgroundColorInternally = YES;  // Prevents -setBackgroundColor from removing gradient colors
     self.backgroundColor = [UIColor clearColor];
 }
 
@@ -51,10 +51,10 @@
 {
     [super setBackgroundColor:backgroundColor];
 
-    if(!settingBackgroundColorInternally)
+    if(!self.settingBackgroundColorInternally)
         self.gradientLayer.colors = nil;  // Not -setGradientColors: to avoid a loop
     else
-        settingBackgroundColorInternally = NO;
+        self.settingBackgroundColorInternally = NO;
 }
 
 -(void)setGradientLocations:(NSArray *)gradientLocations
