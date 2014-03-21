@@ -61,9 +61,7 @@ static const NSCalendarUnit CRLMethodLogFormatterCalendarUnitFlags = NSYearCalen
     NSTimeInterval epoch = [logMessage->timestamp timeIntervalSinceReferenceDate];
     int milliseconds = (int)((epoch - floor(epoch)) * 1000);
 
-    const char *function = logMessage->function;
-
-    NSString *formattedMsg = [NSString stringWithFormat:@"%04ld-%02ld-%02ld %02ld:%02ld:%02ld:%03d %s%@ [%s] %@",
+    NSString *formattedMsg = [NSString stringWithFormat:@"%04ld-%02ld-%02ld %02ld:%02ld:%02ld:%03d %@ %s [%s] %@",
                               (long)components.year,
                               (long)components.month,
                               (long)components.day,
@@ -71,8 +69,8 @@ static const NSCalendarUnit CRLMethodLogFormatterCalendarUnitFlags = NSYearCalen
                               (long)components.minute,
                               (long)components.second,
                               milliseconds,
-                              function ? function : "",                // Include either the function name, or if we don't have that ...
-                              function ? @"" : logMessage.fileName,    // .. the filename
+                              logMessage.fileName,
+                              logMessage->function ?: "",
                               CRLLogFlagToCString(logMessage->logFlag),
                               logMessage->logMsg];
 
