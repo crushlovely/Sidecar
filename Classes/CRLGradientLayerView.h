@@ -1,16 +1,32 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-// A view with CAGradientLayer for its layerClass and some helpers to manipulate it.
-// Note that backgroundColor and gradientColors are mutually exclusive:
-// Setting gradientColors results in a backgroundColor of [UIColor clearColor],
-// and setting backgroundColor results in gradientColors being set to nil.
-
+/**
+ CRLGradientLayerView is a UIView subclass with CAGradientLayer as its layerClass, and features several
+ helpers to make it easier to manipulate the gradient.
+ 
+ Note that the backgroundColor and gradientColors of this view are mutually exclusive: setting
+ gradientColors results in a backgroundColor of [UIColor clearColor], and setting backgroundColor
+ results in gradientColors being set to nil.
+ */
 @interface CRLGradientLayerView : UIView
 
+/**
+ A type-correct passthrough for the layer property.
+ */
 @property (nonatomic, readonly) CAGradientLayer *gradientLayer;
 
-@property (nonatomic, assign) NSArray *gradientColors;  // An array of UIColor objects
-@property (nonatomic, assign) NSArray *gradientLocations;  // An array of NSNumber objects; passed through to CAGradientLayer.locations
+/**
+ An array of UIColor objects that specify the colors for the gradientLayer.
+ @see [CAGradientLayer colors]
+ */
+@property (nonatomic, assign) NSArray *gradientColors;
+
+/**
+ An array of NSNumber objects that represents the locations of elements in the gradient.
+ Passed through to CAGradientLayer's locations property.
+ @see [CAGradientLayer locations]
+ */
+@property (nonatomic, assign) NSArray *gradientLocations;
 
 @end

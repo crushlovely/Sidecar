@@ -1,11 +1,25 @@
 #import <Foundation/Foundation.h>
-#import <objc/runtime.h>
 
+/**
+ Defines the memory semantics for an associated object.
+ */
+typedef NS_ENUM(NSInteger, CRLAssociationPolicy) {
+    /**
+     Synonymous with a (nonatomic, assign) property. Note that for objects, this is *not* a
+     zeroing-weak reference; it is akin to __unsafe_unretained. Zeroing-weak reference
+     semantics (that found in weak properties) are not available for associated objects.
+     */
+    CRLAssociatedObjectPolicyAssign,
 
-typedef NS_ENUM(uintptr_t, CRLAssociationPolicy) {
-    CRLAssociatedObjectPolicyAssign = OBJC_ASSOCIATION_ASSIGN,
-    CRLAssociatedObjectPolicyRetain = OBJC_ASSOCIATION_RETAIN_NONATOMIC,
-    CRLAssociatedObjectPolicyCopy = OBJC_ASSOCIATION_COPY_NONATOMIC
+    /**
+     Synonymous with a (nonatomic, strong) property.
+     */
+    CRLAssociatedObjectPolicyStrong,
+
+    /**
+     Synonymous with a (nonatomic, copy) property.
+     */
+    CRLAssociatedObjectPolicyCopy,
 };
 
 
@@ -13,13 +27,23 @@ typedef NS_ENUM(uintptr_t, CRLAssociationPolicy) {
 
 // These are Objective-C wrappers for the runtime's C-level Associative References API.
 // See http://developer.apple.com/library/ios/#documentation/cocoa/conceptual/objectivec/Chapters/ocAssociativeReferences.html
--(void)crl_associateObject:(id)object withKey:(void *)key policy:(CRLAssociationPolicy)policy;
--(id)crl_objectAssociatedWithKey:(void *)key;
--(void)crl_removeObjectAssociatedWithKey:(void *)key;
 
-// Removes all associated objects from the target object.
-// Be careful in calling this as you can't know the other clients of the
-// Associative References API; you may remove associations from some unrelated piece of code.
--(void)crl_removeAllAssociatedObjects;
+/**
+ Uses the runtime Associative References functionality to associate the given object with
+ the receiver, using the semantics specified by policy.
+ */
+-(void)crl_associateObject:(id)object withKey:(void *)key policy:(CRLAssociationPolicy)policy;
+
+/**
+ Retrieves an object previously associated with the receiver through the Associative
+ References functionality. If no object is associated with the given key, returns nil.
+ */
+-(id)crl_objectAssociatedWithKey:(void *)key;
+
+/**
+ Removes an object previously associated with the receiver through the Associative
+ References functionality.
+ */
+-(void)crl_removeObjectAssociatedWithKey:(void *)key;
 
 @end

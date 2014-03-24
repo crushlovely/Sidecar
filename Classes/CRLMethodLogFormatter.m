@@ -1,5 +1,10 @@
 #import "CRLMethodLogFormatter.h"
+#import "DDLog.h"
 #import <libkern/OSAtomic.h>
+
+static NSString * const CRLMethodLogFormatterCalendarKey = @"CRLMethodLogFormatterCalendarKey";
+static const NSCalendarUnit CRLMethodLogFormatterCalendarUnitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+
 
 NS_INLINE const char *CRLLogFlagToCString(int logFlag)
 {
@@ -13,9 +18,6 @@ NS_INLINE const char *CRLLogFlagToCString(int logFlag)
         default: return "";
     }
 }
-
-static NSString * const CRLMethodLogFormatterCalendarKey = @"CRLMethodLogFormatterCalendarKey";
-static const NSCalendarUnit CRLMethodLogFormatterCalendarUnitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
 
 
 @interface CRLMethodLogFormatter () {
@@ -77,12 +79,12 @@ static const NSCalendarUnit CRLMethodLogFormatterCalendarUnitFlags = NSYearCalen
     return formattedMsg;
 }
 
--(void)didAddToLogger:(id<DDLogger>)logger
+-(void)didAddToLogger:(id<DDLogger> __unused)logger
 {
     OSAtomicIncrement32(&atomicLoggerCount);
 }
 
--(void)willRemoveFromLogger:(id<DDLogger>)logger
+-(void)willRemoveFromLogger:(id<DDLogger> __unused)logger
 {
     OSAtomicDecrement32(&atomicLoggerCount);
 }

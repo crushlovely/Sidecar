@@ -1,11 +1,3 @@
-//
-//  SBSystemSound.m
-//  CRLLib
-//
-//  Created by Tim Clem on 3/15/12.
-//  Copyright (c) 2012 Socialbomb. All rights reserved.
-//
-
 #if defined(__has_feature) && __has_feature(objc_arc)
     #error CRLSystemSound.m must be compiled without ARC; add -fno-objc-arc to the compiler arguments for this file in the "Build Phases" section of your project settings
 #endif
@@ -33,7 +25,7 @@
 
 
 // Our completion callback, added before playing a sound
-static void SBSystemSoundCompletionCallback(SystemSoundID soundID, void *clientData)
+static void SBSystemSoundCompletionCallback(SystemSoundID soundID __unused, void *clientData)
 {
     // Fetch the object that finished and let it know what's up
     CRLSystemSound *sound = (CRLSystemSound *)clientData;

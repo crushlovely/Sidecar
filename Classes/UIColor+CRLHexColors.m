@@ -8,7 +8,7 @@
     int g = (hex & 0x00ff00) >> 8;
     int b = (hex & 0x0000ff);
 
-    return [self colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:alpha];
+    return [self colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:alpha];
 }
 
 +(UIColor *)crl_colorWithHex:(uint)hex
