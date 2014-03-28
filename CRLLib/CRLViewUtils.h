@@ -20,7 +20,10 @@ NS_INLINE CGFloat CRLSizeOfPixelInPoints(void)
 NS_INLINE CGFloat CRLRoundToNearestPixel(CGFloat length)
 {
     const CGFloat screenScale = [UIScreen mainScreen].scale;
-    return round(length * screenScale) / screenScale;
+
+    CGFloat numerator = length * screenScale;
+    numerator = (numerator < 0) ? floor(numerator) : ceil(numerator);
+    return numerator / screenScale;
 }
 
 /**
