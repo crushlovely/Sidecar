@@ -1,5 +1,5 @@
 #import "CRLMethodLogFormatter.h"
-#import "DDLog.h"
+#import <CocoaLumberjack/DDLog.h>
 #import <libkern/OSAtomic.h>
 
 static NSString * const CRLMethodLogFormatterCalendarKey = @"CRLMethodLogFormatterCalendarKey";

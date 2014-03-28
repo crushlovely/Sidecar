@@ -1,0 +1,100 @@
+//
+//  UIColor+CRLHexColorsSpec.m
+//  CRLLib
+//
+//  Created by Tim Clem on 3/28/14.
+//  Copyright (c) 2014 Crush & Lovely. All rights reserved.
+//
+
+#import "UIColor+CRLHexColors.h"
+
+SpecBegin(crl_colorWithHex)
+
+it(@"should properly convert hex colors to a UIColor", ^{
+    UIColor *color = [UIColor crl_colorWithHex:0xadbdcd];
+    CGFloat r, g, b, a;
+    [color getRed:&r green:&g blue:&b alpha:&a];
+    r *= 255.0;
+    g *= 255.0;
+    b *= 255.0;
+
+    expect(r).to.equal(0xad);
+    expect(g).to.equal(0xbd);
+    expect(b).to.equal(0xcd);
+});
+
+it(@"should default to an alpha of 1.0", ^{
+    UIColor *color = [UIColor crl_colorWithHex:0x000000];
+    CGFloat r, g, b, a;
+    [color getRed:&r green:&g blue:&b alpha:&a];
+
+    expect(a).to.equal(1.0);
+});
+
+it(@"should properly handle an alpha value if passed one", ^{
+    UIColor *color = [UIColor crl_colorWithHex:0x000000 alpha:0.25];
+    CGFloat r, g, b, a;
+    [color getRed:&r green:&g blue:&b alpha:&a];
+
+    expect(a).to.equal(0.25);
+});
+
+SpecEnd
+
+
+SpecBegin(crl_colorWithHexString)
+
+it(@"should accept a variety of prefixes", ^{
+    expect([UIColor crl_colorWithHexString:@"0xffffff"]).toNot.beNil();
+    expect([UIColor crl_colorWithHexString:@"0Xffffff"]).toNot.beNil();
+    expect([UIColor crl_colorWithHexString:@"#ffffff"]).toNot.beNil();
+    expect([UIColor crl_colorWithHexString:@"ffffff"]).toNot.beNil();
+});
+
+it(@"should return nil for malformed strings", ^{
+    expect([UIColor crl_colorWithHexString:@"$$bobross"]).to.beNil();
+    expect([UIColor crl_colorWithHexString:@"f"]).to.beNil();
+    expect([UIColor crl_colorWithHexString:@"f f"]).to.beNil();
+    expect([UIColor crl_colorWithHexString:@"f f f "]).to.beNil();
+    expect([UIColor crl_colorWithHexString:@"0xf"]).to.beNil();
+    expect([UIColor crl_colorWithHexString:@""]).to.beNil();
+    expect([UIColor crl_colorWithHexString:@"0xfffffff"]).to.beNil();
+    expect([UIColor crl_colorWithHexString:nil]).to.beNil();
+});
+
+it(@"should properly convert strings to colors", ^{
+    UIColor *color = [UIColor crl_colorWithHexString:@"aabbcc"];
+    CGFloat r, g, b, a;
+    [color getRed:&r green:&g blue:&b alpha:&a];
+    r *= 255.0;
+    g *= 255.0;
+    b *= 255.0;
+
+    expect(r).to.equal(0xaa);
+    expect(g).to.equal(0xbb);
+    expect(b).to.equal(0xcc);
+
+    NSArray *equivalentColors = @[
+        [UIColor crl_colorWithHexString:@"abc"],
+        [UIColor crl_colorWithHexString:@"#abc"],
+        [UIColor crl_colorWithHexString:@"0xabc"],
+        [UIColor crl_colorWithHexString:@"0XABC"],
+        [UIColor crl_colorWithHexString:@"#aabbcc"],
+        [UIColor crl_colorWithHexString:@"0xaabbcc"],
+        [UIColor crl_colorWithHexString:@"0Xaabbcc"],
+        [UIColor crl_colorWithHexString:@"0xAaBbcC"]
+    ];
+
+    for(UIColor *equivalentColor in equivalentColors)
+        expect(equivalentColor).to.equal(color);
+});
+
+it(@"should properly handle an alpha value if passed one", ^{
+    UIColor *color = [UIColor crl_colorWithHexString:@"000000" alpha:0.25];
+    CGFloat r, g, b, a;
+    [color getRed:&r green:&g blue:&b alpha:&a];
+
+    expect(a).to.equal(0.25);
+});
+
+SpecEnd

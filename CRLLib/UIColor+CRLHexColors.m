@@ -8,7 +8,9 @@
     int g = (hex & 0x00ff00) >> 8;
     int b = (hex & 0x0000ff);
 
-    return [self colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:alpha];
+    const CGFloat divisor = 255.0;
+
+    return [self colorWithRed:r / divisor green:g / divisor blue:b / divisor alpha:alpha];
 }
 
 +(UIColor *)crl_colorWithHex:(uint)hex
@@ -18,10 +20,21 @@
 
 +(UIColor *)crl_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha
 {
+    // Valid lengths are 3 (fff), 4 (#fff), 5 (0xfff), 6 (ffffff), 7 (#ffffff), 8 (0xffffff)
+    NSRange validLengths = NSMakeRange(3, 6);
+    if(!NSLocationInRange(hexString.length, validLengths))
+        return nil;
+
     if([hexString hasPrefix:@"0x"] || [hexString hasPrefix:@"0X"])
         hexString = [hexString substringFromIndex:2];
     else if([hexString hasPrefix:@"#"])
         hexString = [hexString substringFromIndex:1];
+
+    NSCharacterSet *hexDigitCharacters = [NSCharacterSet characterSetWithCharactersInString:@"0123456789abcdefABCDEF"];
+    NSCharacterSet *illegalCharacters = [hexDigitCharacters invertedSet];
+
+    if([hexString rangeOfCharacterFromSet:illegalCharacters].location != NSNotFound)
+        return nil;
 
     if(hexString.length == 3) {
         NSString *rc = [hexString substringWithRange:NSMakeRange(0, 1)];

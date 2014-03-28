@@ -8,12 +8,6 @@
 -(NSString *)crl_stringByTrimmingWhitespace;
 
 /**
- Returns a new string formed by decoding percent-encoded UTF8 characters in the receiver, and
- replacing '+' with spaces.
- */
--(NSString *)crl_stringByDecodingURLFormat;
-
-/**
  Returns the MD5 hash of the UTF8 encoding of the receiver, as a 32-character hexadecimal string.
  */
 -(NSString *)crl_MD5Hash;
