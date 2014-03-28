@@ -8,13 +8,6 @@
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
--(NSString *)crl_stringByDecodingURLFormat
-{
-    NSString *result = [(NSString *)self stringByReplacingOccurrencesOfString:@"+" withString:@" "];
-    result = [result stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    return result;
-}
-
 -(NSString *)crl_MD5Hash
 {
     return [[self dataUsingEncoding:NSUTF8StringEncoding] crl_MD5Hash];
@@ -30,7 +23,7 @@
     if(self.length == 0) return YES;
 
     NSCharacterSet *notWhitespace = [[NSCharacterSet whitespaceAndNewlineCharacterSet] invertedSet];
-    return [self rangeOfCharacterFromSet:notWhitespace].location != NSNotFound;
+    return [self rangeOfCharacterFromSet:notWhitespace].location == NSNotFound;  // We didn't find none. Wot?
 }
 
 @end
