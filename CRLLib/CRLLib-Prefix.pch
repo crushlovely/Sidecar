@@ -1,0 +1,14 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#ifdef __OBJC__
+    #define LOG_LEVEL_DEF CRLLogLevel
+    #import <CocoaLumberjack/DDLog.h>
+    static const int CRLLogLevel = LOG_LEVEL_WARN;
+
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif

@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = "Crush & Lovely Bootstrap Library"
   s.license          = 'MIT'
   s.author           = { "Tim Clem" => "tim.clem@gmail.com" }
-  s.source           = { :git => "https://github.com/misterfifths/CRLLib.git", :branch => "master" }
+  s.source           = { :git => "https://github.com/crushlovely/CRLLib.git", :branch => "master" }
 
   s.platform     = :ios, '7.0'
   s.ios.deployment_target = '7.0'
@@ -22,9 +22,9 @@ Pod::Spec.new do |s|
 #endif
   PCH
 
-  non_arc_files = 'Classes/CRLSystemSound.m'
+  non_arc_files = 'CRLLib/CRLSystemSound.m'
 
-  s.source_files = 'Classes'
+  s.source_files = 'CRLLib'
   s.exclude_files = non_arc_files
   
   s.subspec 'Non-ARC' do |sna|
@@ -36,6 +36,6 @@ Pod::Spec.new do |s|
     sna.prefix_header_contents = ''
   end
   
-  s.public_header_files = 'Classes/*.h'
+  s.public_header_files = 'CRLLib/*.h'
   s.frameworks = 'QuartzCore', 'AudioToolbox'
 end
