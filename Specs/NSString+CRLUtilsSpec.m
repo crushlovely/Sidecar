@@ -65,7 +65,7 @@ it(@"should hash the UTF8 encoding of a string", ^{
     expect([[@"💩" crl_MD5Hash] lowercaseString]).to.equal(@"bd49d549f7c1f0169d6d61322a02d39d");
 });
 
-it(@"should property hash the empty string", ^{
+it(@"should properly hash the empty string", ^{
     expect([[@"" crl_MD5Hash] lowercaseString]).to.equal(@"d41d8cd98f00b204e9800998ecf8427e");
 });
 
@@ -82,7 +82,7 @@ it(@"should hash the UTF8 encoding of a string", ^{
     expect([[@"💩" crl_SHA1Hash] lowercaseString]).to.equal(@"82ab1e5bf66129bdbb3d5477dfe48bfcb2545cbd");
 });
 
-it(@"should property hash the empty string", ^{
+it(@"should properly hash the empty string", ^{
     expect([[@"" crl_SHA1Hash] lowercaseString]).to.equal(@"da39a3ee5e6b4b0d3255bfef95601890afd80709");
 });
 

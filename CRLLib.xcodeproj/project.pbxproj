@@ -23,6 +23,11 @@
 		BD0C901818E50395005B537A /* UIColor+CRLHexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FD818E4FC0F005B537A /* UIColor+CRLHexColors.m */; };
 		BD0C901918E50395005B537A /* UIView+CRLPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FDA18E4FC0F005B537A /* UIView+CRLPositioning.m */; };
 		BD0C901D18E50ACA005B537A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C901C18E50ACA005B537A /* libPods.a */; };
+		BD0C902718E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902618E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m */; };
+		BD0C902B18E5C606005B537A /* NSObject+CRLRuntimeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902A18E5C606005B537A /* NSObject+CRLRuntimeSpec.m */; };
+		BD0C902D18E5C95F005B537A /* NSData+CRLDigestsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902C18E5C95F005B537A /* NSData+CRLDigestsSpec.m */; };
+		BD9FFD9118E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */; };
+		BD9FFD9318E5E355001DF6EC /* CRLViewUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +90,11 @@
 		BD0C900A18E5002E005B537A /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Specs-Prefix.pch"; path = "Specs/Specs-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		BD0C900F18E50239005B537A /* NSString+CRLUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CRLUtilsSpec.m"; sourceTree = "<group>"; };
 		BD0C901C18E50ACA005B537A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		BD0C902618E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CRLHexColorsSpec.m"; sourceTree = "<group>"; };
+		BD0C902A18E5C606005B537A /* NSObject+CRLRuntimeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CRLRuntimeSpec.m"; sourceTree = "<group>"; };
+		BD0C902C18E5C95F005B537A /* NSData+CRLDigestsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CRLDigestsSpec.m"; sourceTree = "<group>"; };
+		BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLGradientLayerViewSpec.m; sourceTree = "<group>"; };
+		BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLViewUtilsSpec.m; sourceTree = "<group>"; };
 		C5E5AD17574C4C5DA5F72058 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA638790D943413BB7910570 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,29 +161,29 @@
 		BD0C8F8918E4F937005B537A /* CRLLib */ = {
 			isa = PBXGroup;
 			children = (
-				BD0C8FC418E4FC0F005B537A /* CRLBlockExecution.h */,
+				BD0C8FCD18E4FC0F005B537A /* CRLSystemSound.h */,
+				BD0C8FCE18E4FC0F005B537A /* CRLSystemSound.m */,
+				BD0C8FCF18E4FC0F005B537A /* CRLViewUtils.h */,
+				BD0C8FD918E4FC0F005B537A /* UIView+CRLPositioning.h */,
+				BD0C8FDA18E4FC0F005B537A /* UIView+CRLPositioning.m */,
 				BD0C8FC518E4FC0F005B537A /* CRLCategoriesAndUtils.h */,
+				BD0C8FC418E4FC0F005B537A /* CRLBlockExecution.h */,
 				BD0C8FC618E4FC0F005B537A /* CRLFileUtils.h */,
-				BD0C8FC718E4FC0F005B537A /* CRLGradientLayerView.h */,
-				BD0C8FC818E4FC0F005B537A /* CRLGradientLayerView.m */,
 				BD0C8FC918E4FC0F005B537A /* CRLMethodLogFormatter.h */,
 				BD0C8FCA18E4FC0F005B537A /* CRLMethodLogFormatter.m */,
 				BD0C8FCB18E4FC0F005B537A /* CRLShapeLayerView.h */,
 				BD0C8FCC18E4FC0F005B537A /* CRLShapeLayerView.m */,
-				BD0C8FCD18E4FC0F005B537A /* CRLSystemSound.h */,
-				BD0C8FCE18E4FC0F005B537A /* CRLSystemSound.m */,
-				BD0C8FCF18E4FC0F005B537A /* CRLViewUtils.h */,
+				BD0C8FC718E4FC0F005B537A /* CRLGradientLayerView.h */,
+				BD0C8FC818E4FC0F005B537A /* CRLGradientLayerView.m */,
 				BD0C8FD018E4FC0F005B537A /* NSData+CRLDigests.h */,
 				BD0C8FD118E4FC0F005B537A /* NSData+CRLDigests.m */,
 				BD0C8FD218E4FC0F005B537A /* NSObject+CRLRuntime.h */,
 				BD0C8FD318E4FC0F005B537A /* NSObject+CRLRuntime.m */,
 				BD0C8FD418E4FC0F005B537A /* NSString+CRLUtils.h */,
 				BD0C8FD518E4FC0F005B537A /* NSString+CRLUtils.m */,
-				BD0C8FD618E4FC0F005B537A /* tgmath-stopgap.h */,
 				BD0C8FD718E4FC0F005B537A /* UIColor+CRLHexColors.h */,
 				BD0C8FD818E4FC0F005B537A /* UIColor+CRLHexColors.m */,
-				BD0C8FD918E4FC0F005B537A /* UIView+CRLPositioning.h */,
-				BD0C8FDA18E4FC0F005B537A /* UIView+CRLPositioning.m */,
+				BD0C8FD618E4FC0F005B537A /* tgmath-stopgap.h */,
 				BD0C8F8A18E4F937005B537A /* Supporting Files */,
 			);
 			path = CRLLib;
@@ -191,7 +201,12 @@
 		BD0C8FA818E4F937005B537A /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				BD0C902C18E5C95F005B537A /* NSData+CRLDigestsSpec.m */,
 				BD0C900F18E50239005B537A /* NSString+CRLUtilsSpec.m */,
+				BD0C902618E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m */,
+				BD0C902A18E5C606005B537A /* NSObject+CRLRuntimeSpec.m */,
+				BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */,
+				BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */,
 				BD0C8FA918E4F937005B537A /* Supporting Files */,
 			);
 			path = Specs;
@@ -338,7 +353,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD0C902D18E5C95F005B537A /* NSData+CRLDigestsSpec.m in Sources */,
+				BD0C902B18E5C606005B537A /* NSObject+CRLRuntimeSpec.m in Sources */,
+				BD0C902718E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m in Sources */,
 				BD0C901018E50239005B537A /* NSString+CRLUtilsSpec.m in Sources */,
+				BD9FFD9118E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m in Sources */,
+				BD9FFD9318E5E355001DF6EC /* CRLViewUtilsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
