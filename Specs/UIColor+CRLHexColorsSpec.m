@@ -1,6 +1,6 @@
 //
 //  UIColor+CRLHexColorsSpec.m
-//  CRLLib
+//  Sidecar
 //
 //  Created by Tim Clem on 3/28/14.
 //  Copyright (c) 2014 Crush & Lovely. All rights reserved.

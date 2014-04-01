@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
-  s.name             = "CRLLib"
+  s.name             = "Sidecar"
   s.version          = "0.1.0"
-  s.summary          = "Crush & Lovely Bootstrap Library"
+  s.summary          = "Crush & Lovely Utility Belt"
   s.license          = 'MIT'
   s.author           = { "Tim Clem" => "tim.clem@gmail.com" }
-  s.source           = { :git => "https://github.com/crushlovely/CRLLib.git", :branch => "master" }
+  s.source           = { :git => "https://github.com/crushlovely/Sidecar.git", :branch => "master" }
 
   s.platform     = :ios, '7.0'
   s.ios.deployment_target = '7.0'
@@ -16,15 +16,15 @@ Pod::Spec.new do |s|
   s.prefix_header_contents = <<-PCH
 
 #ifdef __OBJC__
-  #define LOG_LEVEL_DEF CRLLogLevel
+  #define LOG_LEVEL_DEF CRLSidecarLogLevel
   #import <CocoaLumberjack/DDLog.h>
-  static const int CRLLogLevel = LOG_LEVEL_WARN;
+  static const int CRLSidecarLogLevel = LOG_LEVEL_WARN;
 #endif
   PCH
 
-  non_arc_files = 'CRLLib/CRLSystemSound.m'
+  non_arc_files = 'Sidecar/CRLSystemSound.m'
 
-  s.source_files = 'CRLLib'
+  s.source_files = 'Sidecar'
   s.exclude_files = non_arc_files
   
   s.subspec 'Non-ARC' do |sna|
@@ -36,6 +36,6 @@ Pod::Spec.new do |s|
     sna.prefix_header_contents = ''
   end
   
-  s.public_header_files = 'CRLLib/*.h'
+  s.public_header_files = 'Sidecar/*.h'
   s.frameworks = 'QuartzCore', 'AudioToolbox'
 end

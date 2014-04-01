@@ -11,7 +11,7 @@
 		BD0C8FA418E4F937005B537A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C8F8318E4F937005B537A /* Foundation.framework */; };
 		BD0C8FA518E4F937005B537A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C8F8718E4F937005B537A /* UIKit.framework */; };
 		BD0C8FE918E4FDF5005B537A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C8F8318E4F937005B537A /* Foundation.framework */; };
-		BD0C900D18E50116005B537A /* libCRLLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C8FE818E4FDF5005B537A /* libCRLLib.a */; };
+		BD0C900D18E50116005B537A /* libSidecar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C8FE818E4FDF5005B537A /* libSidecar.a */; };
 		BD0C901018E50239005B537A /* NSString+CRLUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C900F18E50239005B537A /* NSString+CRLUtilsSpec.m */; };
 		BD0C901118E50395005B537A /* CRLGradientLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FC818E4FC0F005B537A /* CRLGradientLayerView.m */; };
 		BD0C901218E50395005B537A /* CRLMethodLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FCA18E4FC0F005B537A /* CRLMethodLogFormatter.m */; };
@@ -36,7 +36,7 @@
 			containerPortal = BD0C8F7818E4F937005B537A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BD0C8FE718E4FDF5005B537A;
-			remoteInfo = CRLLib;
+			remoteInfo = Sidecar;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -58,8 +58,8 @@
 		BD0C8F8318E4F937005B537A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD0C8F8518E4F937005B537A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BD0C8F8718E4F937005B537A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		BD0C8F8B18E4F937005B537A /* CRLLib-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CRLLib-Info.plist"; sourceTree = "<group>"; };
-		BD0C8F9118E4F937005B537A /* CRLLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRLLib-Prefix.pch"; sourceTree = "<group>"; };
+		BD0C8F8B18E4F937005B537A /* Sidecar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sidecar-Info.plist"; sourceTree = "<group>"; };
+		BD0C8F9118E4F937005B537A /* Sidecar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sidecar-Prefix.pch"; sourceTree = "<group>"; };
 		BD0C8FA118E4F937005B537A /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0C8FA218E4F937005B537A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BD0C8FBF18E4FB20005B537A /* Specs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Specs-Info.plist"; path = "Specs/Specs-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -86,7 +86,7 @@
 		BD0C8FD818E4FC0F005B537A /* UIColor+CRLHexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CRLHexColors.m"; sourceTree = "<group>"; };
 		BD0C8FD918E4FC0F005B537A /* UIView+CRLPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CRLPositioning.h"; sourceTree = "<group>"; };
 		BD0C8FDA18E4FC0F005B537A /* UIView+CRLPositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CRLPositioning.m"; sourceTree = "<group>"; };
-		BD0C8FE818E4FDF5005B537A /* libCRLLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCRLLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0C8FE818E4FDF5005B537A /* libSidecar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSidecar.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0C900A18E5002E005B537A /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Specs-Prefix.pch"; path = "Specs/Specs-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		BD0C900F18E50239005B537A /* NSString+CRLUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CRLUtilsSpec.m"; sourceTree = "<group>"; };
 		BD0C901C18E50ACA005B537A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			files = (
 				BD0C8FA518E4F937005B537A /* UIKit.framework in Frameworks */,
 				BD0C8FA418E4F937005B537A /* Foundation.framework in Frameworks */,
-				BD0C900D18E50116005B537A /* libCRLLib.a in Frameworks */,
+				BD0C900D18E50116005B537A /* libSidecar.a in Frameworks */,
 				A988BFA2BBC9495D9D69B0A1 /* libPods-Specs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,7 +126,7 @@
 		BD0C8F7718E4F937005B537A = {
 			isa = PBXGroup;
 			children = (
-				BD0C8F8918E4F937005B537A /* CRLLib */,
+				BD0C8F8918E4F937005B537A /* Sidecar */,
 				BD0C8FA818E4F937005B537A /* Specs */,
 				BD0C8F8218E4F937005B537A /* Frameworks */,
 				BD0C8F8118E4F937005B537A /* Products */,
@@ -139,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0C8FA118E4F937005B537A /* Specs.xctest */,
-				BD0C8FE818E4FDF5005B537A /* libCRLLib.a */,
+				BD0C8FE818E4FDF5005B537A /* libSidecar.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BD0C8F8918E4F937005B537A /* CRLLib */ = {
+		BD0C8F8918E4F937005B537A /* Sidecar */ = {
 			isa = PBXGroup;
 			children = (
 				BD0C8FC518E4FC0F005B537A /* CRLCategoriesAndUtils.h */,
@@ -186,14 +186,14 @@
 				BD0C8FD618E4FC0F005B537A /* tgmath-stopgap.h */,
 				BD0C8F8A18E4F937005B537A /* Supporting Files */,
 			);
-			path = CRLLib;
+			path = Sidecar;
 			sourceTree = "<group>";
 		};
 		BD0C8F8A18E4F937005B537A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BD0C8F8B18E4F937005B537A /* CRLLib-Info.plist */,
-				BD0C8F9118E4F937005B537A /* CRLLib-Prefix.pch */,
+				BD0C8F8B18E4F937005B537A /* Sidecar-Info.plist */,
+				BD0C8F9118E4F937005B537A /* Sidecar-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -241,13 +241,13 @@
 				BD0C900C18E50102005B537A /* PBXTargetDependency */,
 			);
 			name = Specs;
-			productName = CRLLibTests;
+			productName = SidecarTests;
 			productReference = BD0C8FA118E4F937005B537A /* Specs.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BD0C8FE718E4FDF5005B537A /* CRLLib */ = {
+		BD0C8FE718E4FDF5005B537A /* Sidecar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD0C900418E4FDF5005B537A /* Build configuration list for PBXNativeTarget "CRLLib" */;
+			buildConfigurationList = BD0C900418E4FDF5005B537A /* Build configuration list for PBXNativeTarget "Sidecar" */;
 			buildPhases = (
 				BD0C8FE418E4FDF5005B537A /* Sources */,
 				BD0C8FE518E4FDF5005B537A /* Frameworks */,
@@ -257,9 +257,9 @@
 			);
 			dependencies = (
 			);
-			name = CRLLib;
-			productName = CRLLib;
-			productReference = BD0C8FE818E4FDF5005B537A /* libCRLLib.a */;
+			name = Sidecar;
+			productName = Sidecar;
+			productReference = BD0C8FE818E4FDF5005B537A /* libSidecar.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -273,7 +273,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Crush & Lovely";
 			};
-			buildConfigurationList = BD0C8F7B18E4F937005B537A /* Build configuration list for PBXProject "CRLLib" */;
+			buildConfigurationList = BD0C8F7B18E4F937005B537A /* Build configuration list for PBXProject "Sidecar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -286,7 +286,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD0C8FE718E4FDF5005B537A /* CRLLib */,
+				BD0C8FE718E4FDF5005B537A /* Sidecar */,
 				BD0C8FA018E4F937005B537A /* Specs */,
 			);
 		};
@@ -383,7 +383,7 @@
 /* Begin PBXTargetDependency section */
 		BD0C900C18E50102005B537A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BD0C8FE718E4FDF5005B537A /* CRLLib */;
+			target = BD0C8FE718E4FDF5005B537A /* Sidecar */;
 			targetProxy = BD0C900B18E50102005B537A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -506,9 +506,9 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DSTROOT = /tmp/CRLLib.dst;
+				DSTROOT = /tmp/Sidecar.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CRLLib/CRLLib-Prefix.pch";
+				GCC_PREFIX_HEADER = "Sidecar/Sidecar-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -541,9 +541,9 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DSTROOT = /tmp/CRLLib.dst;
+				DSTROOT = /tmp/Sidecar.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CRLLib/CRLLib-Prefix.pch";
+				GCC_PREFIX_HEADER = "Sidecar/Sidecar-Prefix.pch";
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
 				LIBRARY_SEARCH_PATHS = (
@@ -566,7 +566,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BD0C8F7B18E4F937005B537A /* Build configuration list for PBXProject "CRLLib" */ = {
+		BD0C8F7B18E4F937005B537A /* Build configuration list for PBXProject "Sidecar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD0C8FB018E4F937005B537A /* Debug */,
@@ -584,7 +584,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD0C900418E4FDF5005B537A /* Build configuration list for PBXNativeTarget "CRLLib" */ = {
+		BD0C900418E4FDF5005B537A /* Build configuration list for PBXNativeTarget "Sidecar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD0C900518E4FDF5005B537A /* Debug */,
