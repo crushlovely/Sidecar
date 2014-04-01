@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BD0C8FE718E4FDF5005B537A"
-               BuildableName = "libCRLLib.a"
-               BlueprintName = "CRLLib"
-               ReferencedContainer = "container:CRLLib.xcodeproj">
+               BuildableName = "libSidecar.a"
+               BlueprintName = "Sidecar"
+               ReferencedContainer = "container:Sidecar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "BD0C8FA018E4F937005B537A"
                BuildableName = "Specs.xctest"
                BlueprintName = "Specs"
-               ReferencedContainer = "container:CRLLib.xcodeproj">
+               ReferencedContainer = "container:Sidecar.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BD0C8FE718E4FDF5005B537A"
-            BuildableName = "libCRLLib.a"
-            BlueprintName = "CRLLib"
-            ReferencedContainer = "container:CRLLib.xcodeproj">
+            BuildableName = "libSidecar.a"
+            BlueprintName = "Sidecar"
+            ReferencedContainer = "container:Sidecar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
