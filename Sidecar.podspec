@@ -1,10 +1,11 @@
 Pod::Spec.new do |s|
   s.name             = "Sidecar"
   s.version          = "0.1.0"
-  s.summary          = "Crush & Lovely Utility Belt"
+  s.summary          = "Yet Another iOS Utility Belt"
   s.license          = 'MIT'
-  s.author           = { "Tim Clem" => "tim.clem@gmail.com" }
+  s.authors          = { 'Crush & Lovely' => 'engineering@crushlovely.com', 'Tim Clem' => 'tim@crushlovely.com' }
   s.source           = { :git => "https://github.com/crushlovely/Sidecar.git", :branch => "master" }
+  s.homepage         = 'https://github.com/crushlovely/Sidecar'
 
   s.platform     = :ios, '7.0'
   s.ios.deployment_target = '7.0'
@@ -22,7 +23,7 @@ Pod::Spec.new do |s|
 #endif
   PCH
 
-  non_arc_files = 'Sidecar/CRLSystemSound.m'
+  non_arc_files = 'Sidecar/CRLSystemSound.{h,m}'
 
   s.source_files = 'Sidecar'
   s.exclude_files = non_arc_files

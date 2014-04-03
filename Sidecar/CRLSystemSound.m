@@ -111,7 +111,7 @@ static void SBSystemSoundCompletionCallback(SystemSoundID soundID __unused, void
         #endif
     }
     else
-        DDLogError(@"Error creating system sound for %@. Status code: %d", self.fileURL, (int)err);
+        NSLog(@"[CRLSystemSound] Error creating system sound for %@. Status code: %d", self.fileURL, (int)err);
     
     return err;
 }
@@ -161,7 +161,7 @@ static void SBSystemSoundCompletionCallback(SystemSoundID soundID __unused, void
         // Abandon ship if our handler didn't get added for some reason.
         [self release];  // Balance the -retain, since the completion callback won't be called
         
-        DDLogError(@"Error adding completion handler to system sound. Status code: %d", (int)err);
+        NSLog(@"[CRLSystemSound] Error adding completion handler to system sound. Status code: %d", (int)err);
         if(completion) completion(self);
     }
     
