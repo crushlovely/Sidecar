@@ -2,8 +2,6 @@
 
 @interface UIColor (CRLHexColors)
 
-// These take RGB hex: 0xrrggbb
-
 /**
  Returns a UIColor from a hexadecimal representation of its RGB components,
  as 0xrrggbb, with the given alpha.
