@@ -424,6 +424,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-Wno-unknown-warning-option",
+					"-Wno-gnu",
+				);
 			};
 			name = Debug;
 		};
@@ -456,6 +463,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-Wno-unknown-warning-option",
+					"-Wno-gnu",
+				);
 			};
 			name = Release;
 		};
@@ -523,12 +537,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SKIP_INSTALL = YES;
-				WARNING_CFLAGS = (
-					"-Wall",
-					"-Wextra",
-					"-Wpedantic",
-					"-Wno-gnu-conditional-omitted-operand",
-				);
 			};
 			name = Debug;
 		};
@@ -554,12 +562,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SKIP_INSTALL = YES;
-				WARNING_CFLAGS = (
-					"-Wall",
-					"-Wextra",
-					"-Wpedantic",
-					"-Wno-gnu-conditional-omitted-operand",
-				);
 			};
 			name = Release;
 		};
