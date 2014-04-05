@@ -1,18 +1,17 @@
 language: objective-c
-rvm: 1.9.3
 
-before_script:
-  - export LANG=en_US.UTF-8
+env:
+  global:
+    - LANG=en_US.UTF-8
 
 # Pulling in the head version of xctool until they update to something > 0.1.14
 # Unfortunate, but I couldn't get tests to run without it.
-
 before_install:
-  - gem install cocoapods
+  - gem install cocoapods --no-ri --no-rdoc
   - brew update
   - brew unlink xctool
   - brew install xctool --HEAD
 
-script:
-  - xctool -workspace Sidecar.xcworkspace -scheme Sidecar -sdk iphonesimulator -arch i386 ONLY_ACTIVE_ARCH=yes test
-
+xcode_workspace: Sidecar.xcworkspace
+xcode_scheme: Sidecar
+xcode_sdk: iphonesimulator
