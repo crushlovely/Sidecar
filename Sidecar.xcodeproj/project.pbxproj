@@ -430,6 +430,9 @@
 					"-Wpedantic",
 					"-Wno-unknown-warning-option",
 					"-Wno-gnu",
+					"-Wno-variadic-macros",
+					"-Wno-newline-eof",
+					"-Wno-extra-semi",
 				);
 			};
 			name = Debug;
@@ -469,6 +472,9 @@
 					"-Wpedantic",
 					"-Wno-unknown-warning-option",
 					"-Wno-gnu",
+					"-Wno-variadic-macros",
+					"-Wno-newline-eof",
+					"-Wno-extra-semi",
 				);
 			};
 			name = Release;
