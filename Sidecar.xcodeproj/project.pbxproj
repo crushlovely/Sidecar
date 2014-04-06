@@ -28,6 +28,7 @@
 		BD0C902D18E5C95F005B537A /* NSData+CRLDigestsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902C18E5C95F005B537A /* NSData+CRLDigestsSpec.m */; };
 		BD9FFD9118E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */; };
 		BD9FFD9318E5E355001DF6EC /* CRLViewUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */; };
+		BDD0D72018F0D12A007AA200 /* CRLCoverageReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0D71F18F0D12A007AA200 /* CRLCoverageReporter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		BD0C902C18E5C95F005B537A /* NSData+CRLDigestsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CRLDigestsSpec.m"; sourceTree = "<group>"; };
 		BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLGradientLayerViewSpec.m; sourceTree = "<group>"; };
 		BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLViewUtilsSpec.m; sourceTree = "<group>"; };
+		BDD0D71F18F0D12A007AA200 /* CRLCoverageReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLCoverageReporter.m; sourceTree = "<group>"; };
 		C5E5AD17574C4C5DA5F72058 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA638790D943413BB7910570 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +219,7 @@
 			children = (
 				BD0C900A18E5002E005B537A /* Specs-Prefix.pch */,
 				BD0C8FBF18E4FB20005B537A /* Specs-Info.plist */,
+				BDD0D71F18F0D12A007AA200 /* CRLCoverageReporter.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD0D72018F0D12A007AA200 /* CRLCoverageReporter.m in Sources */,
 				BD0C902D18E5C95F005B537A /* NSData+CRLDigestsSpec.m in Sources */,
 				BD0C902B18E5C606005B537A /* NSObject+CRLRuntimeSpec.m in Sources */,
 				BD0C902718E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m in Sources */,
@@ -488,6 +492,8 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -509,6 +515,8 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";

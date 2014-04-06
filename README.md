@@ -1,4 +1,4 @@
-# <img src="sidecar.png"> Sidecar [![Build Status](https://travis-ci.org/crushlovely/Sidecar.svg?branch=master)](https://travis-ci.org/crushlovely/Sidecar)
+# <img src="sidecar.png"> Sidecar [![Build Status](https://travis-ci.org/crushlovely/Sidecar.svg?branch=master)](https://travis-ci.org/crushlovely/Sidecar) [![Coverage Status](https://coveralls.io/repos/crushlovely/Sidecar/badge.png)](https://coveralls.io/r/crushlovely/Sidecar)
 
 <!--
 [![Version](http://cocoapod-badges.herokuapp.com/v/Sidecar/badge.png)](http://cocoadocs.org/docsets/Sidecar)
