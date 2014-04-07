@@ -18,6 +18,7 @@
  Returns YES if view1's index in the subviews array is greater than that of view2.
  Barring any external factors, this would imply that view1 would be "in front" of
  view2, if their content were to overlap.
+ If either view is not a subview of the receiver, this method returns NO.
  */
 -(BOOL)crl_subview:(UIView *)view1 isInFrontOfSubview:(UIView *)view2;
 

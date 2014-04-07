@@ -60,6 +60,11 @@ it(@"should have a CAGradientLayer layer", ^{
     expect(view.layer).to.beKindOf([CAGradientLayer class]);
 });
 
+it(@"should pass through its layer via the gradientLayer property", ^{
+    CRLGradientLayerView *view = [[CRLGradientLayerView alloc] initWithFrame:CGRectZero];
+    expect(view.gradientLayer).to.beIdenticalTo(view.layer);
+});
+
 it(@"should pass gradient colors to the layer and back", ^{
     CRLGradientLayerView *view = [[CRLGradientLayerView alloc] initWithFrame:CGRectZero];
     view.gradientColors = @[ [UIColor redColor], [UIColor blueColor] ];
@@ -89,6 +94,18 @@ it(@"should clear gradientColors when setting backgroundColor", ^{
     view.gradientColors = @[ [UIColor redColor], [UIColor blueColor] ];
     view.backgroundColor = [UIColor redColor];
 
+    expect(view.gradientColors).to.beNil();
+});
+
+it(@"should clear gradientColors when set to nil or an empty array", ^{
+    CRLGradientLayerView *view = [[CRLGradientLayerView alloc] initWithFrame:CGRectZero];
+    view.gradientColors = @[ [UIColor redColor], [UIColor blueColor] ];
+
+    view.gradientColors = nil;
+    expect(view.gradientColors).to.beNil();
+
+    view.gradientColors = @[ [UIColor redColor], [UIColor blueColor] ];
+    view.gradientColors = @[];
     expect(view.gradientColors).to.beNil();
 });
 

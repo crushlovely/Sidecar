@@ -155,7 +155,7 @@
 
 -(CGFloat)crl_right
 {
-    return CGRectGetMaxY(self.frame);
+    return CGRectGetMaxX(self.frame);
 }
 
 -(void)setCrl_right:(CGFloat)right
@@ -182,7 +182,7 @@
 -(CGPoint)crl_topRight
 {
     CGRect f = CGRectStandardize(self.frame);
-    return CGPointMake(f.origin.x, f.origin.y + f.size.width);
+    return CGPointMake(f.origin.x + f.size.width, f.origin.y);
 }
 
 -(void)setCrl_topRight:(CGPoint)topRight
@@ -196,7 +196,7 @@
 -(CGPoint)crl_bottomLeft
 {
     CGRect f = CGRectStandardize(self.frame);
-    return CGPointMake(f.origin.x + f.size.height, f.origin.y);
+    return CGPointMake(f.origin.x, f.origin.y + f.size.height);
 }
 
 -(void)setCrl_bottomLeft:(CGPoint)bottomLeft
@@ -210,7 +210,7 @@
 -(CGPoint)crl_bottomRight
 {
     CGRect f = CGRectStandardize(self.frame);
-    return CGPointMake(f.origin.x + f.size.height, f.origin.y + f.size.width);
+    return CGPointMake(f.origin.x + f.size.width, f.origin.y + f.size.height);
 }
 
 -(void)setCrl_bottomRight:(CGPoint)bottomRight

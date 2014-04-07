@@ -1,8 +1,6 @@
-#ifdef __OBJC__
-    #define LOG_LEVEL_DEF CRLLogLevel
-    #import <CocoaLumberjack/DDLog.h>
-    static const int CRLLogLevel = LOG_LEVEL_WARN;
+#import "Sidecar-Prefix.pch"
 
+#ifdef __OBJC__
     #import <Specta/Specta.h>
 
     #define EXP_SHORTHAND

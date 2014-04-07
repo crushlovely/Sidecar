@@ -26,6 +26,8 @@
 		BD0C902718E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902618E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m */; };
 		BD0C902B18E5C606005B537A /* NSObject+CRLRuntimeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902A18E5C606005B537A /* NSObject+CRLRuntimeSpec.m */; };
 		BD0C902D18E5C95F005B537A /* NSData+CRLDigestsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902C18E5C95F005B537A /* NSData+CRLDigestsSpec.m */; };
+		BD57091C18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57091B18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m */; };
+		BD57092318F2E68D00E73B69 /* UIView+CRLPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57092218F2E68D00E73B69 /* UIView+CRLPositioning.m */; };
 		BD9FFD9118E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */; };
 		BD9FFD9318E5E355001DF6EC /* CRLViewUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */; };
 		BDD0D72018F0D12A007AA200 /* CRLCoverageReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0D71F18F0D12A007AA200 /* CRLCoverageReporter.m */; };
@@ -94,6 +96,8 @@
 		BD0C902618E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CRLHexColorsSpec.m"; sourceTree = "<group>"; };
 		BD0C902A18E5C606005B537A /* NSObject+CRLRuntimeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CRLRuntimeSpec.m"; sourceTree = "<group>"; };
 		BD0C902C18E5C95F005B537A /* NSData+CRLDigestsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CRLDigestsSpec.m"; sourceTree = "<group>"; };
+		BD57091B18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLShapeLayerViewSpec.m; sourceTree = "<group>"; };
+		BD57092218F2E68D00E73B69 /* UIView+CRLPositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CRLPositioning.m"; sourceTree = "<group>"; };
 		BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLGradientLayerViewSpec.m; sourceTree = "<group>"; };
 		BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLViewUtilsSpec.m; sourceTree = "<group>"; };
 		BDD0D71F18F0D12A007AA200 /* CRLCoverageReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLCoverageReporter.m; sourceTree = "<group>"; };
@@ -208,7 +212,9 @@
 				BD0C902618E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m */,
 				BD0C902A18E5C606005B537A /* NSObject+CRLRuntimeSpec.m */,
 				BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */,
+				BD57091B18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m */,
 				BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */,
+				BD57092218F2E68D00E73B69 /* UIView+CRLPositioning.m */,
 				BD0C8FA918E4F937005B537A /* Supporting Files */,
 			);
 			path = Specs;
@@ -362,7 +368,9 @@
 				BD0C902718E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m in Sources */,
 				BD0C901018E50239005B537A /* NSString+CRLUtilsSpec.m in Sources */,
 				BD9FFD9118E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m in Sources */,
+				BD57092318F2E68D00E73B69 /* UIView+CRLPositioning.m in Sources */,
 				BD9FFD9318E5E355001DF6EC /* CRLViewUtilsSpec.m in Sources */,
+				BD57091C18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +543,8 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DSTROOT = /tmp/Sidecar.dst;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sidecar/Sidecar-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -564,6 +574,8 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DSTROOT = /tmp/Sidecar.dst;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sidecar/Sidecar-Prefix.pch";
 				GCC_WARN_SHADOW = YES;

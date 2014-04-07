@@ -1,5 +1,5 @@
 // Meta-header file that includes commonly used functions and categories.
-// Intended for inclusin in a prefix header, so that these goodies are readily available.
+// Intended for inclusion in a prefix header, so that these goodies are readily available.
 
 #import "CRLBlockExecution.h"
 #import "CRLViewUtils.h"

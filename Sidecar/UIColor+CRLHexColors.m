@@ -49,7 +49,7 @@
     NSScanner *scanner = [NSScanner scannerWithString:hexString];
     uint hex;
     if(![scanner scanHexInt:&hex])
-        return nil;
+        return nil;  // This should never happen; if we got here the string contains only hex digits
 
     return [self crl_colorWithHex:hex alpha:alpha];
 }

@@ -59,6 +59,7 @@ it(@"should return nil for malformed strings", ^{
     expect([UIColor crl_colorWithHexString:@"0xf"]).to.beNil();
     expect([UIColor crl_colorWithHexString:@""]).to.beNil();
     expect([UIColor crl_colorWithHexString:@"0xfffffff"]).to.beNil();
+    expect([UIColor crl_colorWithHexString:@"eeffgg"]).to.beNil();
     expect([UIColor crl_colorWithHexString:nil]).to.beNil();
 });
 
@@ -73,6 +74,7 @@ it(@"should properly convert strings to colors", ^{
     expect(r).to.equal(0xaa);
     expect(g).to.equal(0xbb);
     expect(b).to.equal(0xcc);
+    expect(a).to.equal(1.0);
 
     NSArray *equivalentColors = @[
         [UIColor crl_colorWithHexString:@"abc"],
