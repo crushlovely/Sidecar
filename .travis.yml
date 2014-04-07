@@ -14,7 +14,7 @@ before_install:
   - sudo easy_install cpp-coveralls
 
 script:
-  - xctool -workspace Sidecar.xcworkspace -scheme Sidecar -configuration Debug -sdk iphonesimulator build test ARCHS=i386 VALID_ARCHS=i386 ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+  - xctool -workspace Sidecar.xcworkspace -scheme Sidecar -configuration Debug -sdk iphonesimulator build test ARCHS=i386 VALID_ARCHS=i386 ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_PREPROCESSOR_DEFINITIONS='${inherited} CI=1'
 
 after_success:
   - ./coveralls.rb --extension m --extension h --exclude-folder Pods --exclude-folder Specs
