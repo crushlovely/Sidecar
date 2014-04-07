@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A988BFA2BBC9495D9D69B0A1 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBDAAE6E5C149AEBAF63496 /* libPods-Specs.a */; };
+		BD0923EC18F331DB00D10D62 /* shield.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD0923EB18F331DB00D10D62 /* shield.caf */; };
+		BD0923EE18F331F600D10D62 /* CRLSystemSoundSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0923ED18F331F600D10D62 /* CRLSystemSoundSpec.m */; };
 		BD0C8FA418E4F937005B537A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C8F8318E4F937005B537A /* Foundation.framework */; };
 		BD0C8FA518E4F937005B537A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C8F8718E4F937005B537A /* UIKit.framework */; };
 		BD0C8FE918E4FDF5005B537A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C8F8318E4F937005B537A /* Foundation.framework */; };
@@ -58,6 +60,8 @@
 /* Begin PBXFileReference section */
 		27C0E0FD106045AA86C3C2F4 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
 		3CBDAAE6E5C149AEBAF63496 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0923EB18F331DB00D10D62 /* shield.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = shield.caf; sourceTree = "<group>"; };
+		BD0923ED18F331F600D10D62 /* CRLSystemSoundSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLSystemSoundSpec.m; sourceTree = "<group>"; };
 		BD0C8F8318E4F937005B537A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD0C8F8518E4F937005B537A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BD0C8F8718E4F937005B537A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -215,6 +219,7 @@
 				BD57091B18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m */,
 				BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */,
 				BD57092218F2E68D00E73B69 /* UIView+CRLPositioningSpec.m */,
+				BD0923ED18F331F600D10D62 /* CRLSystemSoundSpec.m */,
 				BD0C8FA918E4F937005B537A /* Supporting Files */,
 			);
 			path = Specs;
@@ -223,6 +228,7 @@
 		BD0C8FA918E4F937005B537A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BD0923EB18F331DB00D10D62 /* shield.caf */,
 				BD0C900A18E5002E005B537A /* Specs-Prefix.pch */,
 				BD0C8FBF18E4FB20005B537A /* Specs-Info.plist */,
 				BDD0D71F18F0D12A007AA200 /* CRLCoverageReporter.m */,
@@ -306,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD0923EC18F331DB00D10D62 /* shield.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +372,7 @@
 				BDD0D72018F0D12A007AA200 /* CRLCoverageReporter.m in Sources */,
 				BD0C902D18E5C95F005B537A /* NSData+CRLDigestsSpec.m in Sources */,
 				BD0C902B18E5C606005B537A /* NSObject+CRLRuntimeSpec.m in Sources */,
+				BD0923EE18F331F600D10D62 /* CRLSystemSoundSpec.m in Sources */,
 				BD0C902718E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m in Sources */,
 				BD0C901018E50239005B537A /* NSString+CRLUtilsSpec.m in Sources */,
 				BD9FFD9118E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m in Sources */,

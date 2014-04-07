@@ -85,8 +85,7 @@ static void SBSystemSoundCompletionCallback(SystemSoundID soundID __unused, void
         self.fileURL = URL;
         
         [self createSystemSound];
-        
-        // TODO: iron out if this is logical behavior, or totally unexpected...
+
         if(!soundID)
             return nil;
     }
