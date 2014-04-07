@@ -7,12 +7,33 @@
 //
 
 #import "CRLSystemSound.h"
+#import <AVFoundation/AVAudioSession.h>
 
 SpecBegin(CRLSystemSound)
 
 NSBundle *currentBundle = [NSBundle bundleForClass:self.class];
 NSURL *soundURL = [currentBundle URLForResource:@"shield" withExtension:@"caf"];
 NSString *soundPath = [NSString stringWithUTF8String:soundURL.fileSystemRepresentation];
+
+beforeAll(^{
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+
+    NSError *error;
+    if(![audioSession setActive:NO error:&error]) {
+        NSLog(@"Error deactivating audio session: %@", error);
+        return;
+    }
+
+    if(![audioSession setCategory:AVAudioSessionCategoryPlayback error:&error]) {
+        NSLog(@"Error setting audio session category: %@", error);
+        return;
+    }
+
+    if(![audioSession setActive:YES error:&error]) {
+        NSLog(@"Error reactivating audio session: %@", error);
+        return;
+    }
+});
 
 describe(@"creation", ^{
     it(@"should return nil for bogus resources", ^{
