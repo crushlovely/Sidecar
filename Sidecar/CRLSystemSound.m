@@ -1,3 +1,7 @@
+// Sidecar
+// Copyright (c) 2014, Crush & Lovely <engineering@crushlovely.com>
+// Under the MIT License; see LICENSE file for details.
+
 #if defined(__has_feature) && __has_feature(objc_arc)
     #error CRLSystemSound.m must be compiled without ARC; add -fno-objc-arc to the compiler arguments for this file in the "Build Phases" section of your project settings
 #endif

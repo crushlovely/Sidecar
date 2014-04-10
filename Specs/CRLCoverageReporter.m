@@ -1,10 +1,6 @@
-//
-//  CRLCoverageReporter.m
-//  Sidecar
-//
-//  Created by Tim Clem on 4/5/14.
-//  Copyright (c) 2014 Crush & Lovely. All rights reserved.
-//
+// Sidecar
+// Copyright (c) 2014, Crush & Lovely <engineering@crushlovely.com>
+// Under the MIT License; see LICENSE file for details.
 
 // This is to work around an issue where apps run in the iOS 7 simulator don't terminate
 // in such a away that the coverage files are actually generated.

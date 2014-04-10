@@ -1,10 +1,6 @@
-//
-//  UIColor+CRLHexColorsSpec.m
-//  Sidecar
-//
-//  Created by Tim Clem on 3/28/14.
-//  Copyright (c) 2014 Crush & Lovely. All rights reserved.
-//
+// Sidecar
+// Copyright (c) 2014, Crush & Lovely <engineering@crushlovely.com>
+// Under the MIT License; see LICENSE file for details.
 
 #import "UIColor+CRLHexColors.h"
 

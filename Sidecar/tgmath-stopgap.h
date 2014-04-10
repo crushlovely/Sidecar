@@ -1,3 +1,7 @@
+// Sidecar
+// Copyright (c) 2014, Crush & Lovely <engineering@crushlovely.com>
+// Under the MIT License; see LICENSE file for details.
+
 // This is a real shame..
 // The modules feature in clang (-fmodules) breaks tgmath. Its rules about the visibility of
 // macros means that tgmath's redefinitions of the math functions never make it out of the
@@ -5,6 +9,7 @@
 // This is just a stopgap of the macro definitions. It can definitely be removed when that
 // clang situation gets fixed. Also if they make drastic updates to tgmath.h, this should be
 // updated (though that's probably unlikely...).
+// Solution inspired by https://gist.github.com/a2/8465866
 
 #if __has_feature(modules)
 
