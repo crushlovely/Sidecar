@@ -23,20 +23,20 @@ describe(@"creation", ^{
         expect([[CRLSystemSound alloc] initWithFileURL:nil]).to.beNil();
     });
 
+#ifndef CI  // For some reason these have started failing in Travis. Sandboxing stuff, maybe?
     it(@"should create an instance for valid resources", ^{
         // Can't test ...Resource:extension: methods here.. we're not in the main bundle
         expect([[CRLSystemSound alloc] initWithFileURL:soundURL]).toNot.beNil();
 
-#ifndef CI  // For some reason these fail in Travis. Sandboxing stuff, maybe?
         expect([[CRLSystemSound alloc] initWithFileAtPath:soundPath]).toNot.beNil();
 
         expect([CRLSystemSound playFileAtPath:soundPath]).toNot.beNil();
-#endif
     });
 
     it(@"should create instances that are not yet playing", ^{
         expect([[CRLSystemSound alloc] initWithFileURL:soundURL].playing).to.beFalsy();
     });
+#endif
 });
 
 #ifndef CI  // Unfortunately these tests don't work in Travis land. Maybe one day soon...
