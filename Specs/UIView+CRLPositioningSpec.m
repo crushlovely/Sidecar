@@ -88,8 +88,11 @@ describe(@"z-order functions", ^{
             [parent crl_exchangeSubview:nil withSubview:childA];
             expect([parent.subviews indexOfObject:childA]).to.equal(0);
 
-            [parent crl_exchangeSubview:nil withSubview:childA];
+            [parent crl_exchangeSubview:childA withSubview:nil];
             expect([parent.subviews indexOfObject:childA]).to.equal(0);
+
+            [parent crl_exchangeSubview:nil withSubview:childB];
+            expect([parent.subviews indexOfObject:childB]).to.equal(1);
 
             [parent crl_exchangeSubview:nil withSubview:nil];
             expect([parent.subviews indexOfObject:childA]).to.equal(0);
