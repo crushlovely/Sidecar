@@ -10,13 +10,13 @@
  Returns a UIColor from a hexadecimal representation of its RGB components,
  as 0xrrggbb, with the given alpha.
  */
-+(UIColor *)crl_colorWithHex:(uint)hex alpha:(CGFloat)alpha;
++(UIColor *)crl_colorWithHex:(NSUInteger)hex alpha:(CGFloat)alpha;
 
 /**
  Returns a UIColor from a hexadecimal representation of its RGB components,
  as 0xrrggbb, with an alpha of 1.0.
  */
-+(UIColor *)crl_colorWithHex:(uint)hex;
++(UIColor *)crl_colorWithHex:(NSUInteger)hex;
 
 /**
  Returns a UIColor from a string representation of its RGB components, in one

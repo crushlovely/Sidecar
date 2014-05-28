@@ -6,18 +6,18 @@
 
 @implementation UIColor (CRLHexColors)
 
-+(UIColor *)crl_colorWithHex:(uint)hex alpha:(CGFloat)alpha
++(UIColor *)crl_colorWithHex:(NSUInteger)hex alpha:(CGFloat)alpha
 {
-    int r = (hex & 0xff0000) >> 16;
-    int g = (hex & 0x00ff00) >> 8;
-    int b = (hex & 0x0000ff);
+    NSUInteger r = (hex & 0xff0000) >> 16;
+    NSUInteger g = (hex & 0x00ff00) >> 8;
+    NSUInteger b = (hex & 0x0000ff);
 
     const CGFloat divisor = 255.0;
 
     return [self colorWithRed:r / divisor green:g / divisor blue:b / divisor alpha:alpha];
 }
 
-+(UIColor *)crl_colorWithHex:(uint)hex
++(UIColor *)crl_colorWithHex:(NSUInteger)hex
 {
     return [self crl_colorWithHex:hex alpha:1];
 }
@@ -25,37 +25,47 @@
 +(UIColor *)crl_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha
 {
     // Valid lengths are 3 (fff), 4 (#fff), 5 (0xfff), 6 (ffffff), 7 (#ffffff), 8 (0xffffff)
-    NSRange validLengths = NSMakeRange(3, 6);
-    if(!NSLocationInRange(hexString.length, validLengths))
+    if(hexString.length < 3 || hexString.length > 8)
         return nil;
+
+    NSUInteger valueStartIndex = 0;
 
     if([hexString hasPrefix:@"0x"] || [hexString hasPrefix:@"0X"])
-        hexString = [hexString substringFromIndex:2];
+        valueStartIndex = 2;
     else if([hexString hasPrefix:@"#"])
-        hexString = [hexString substringFromIndex:1];
+        valueStartIndex = 1;
 
-    NSCharacterSet *hexDigitCharacters = [NSCharacterSet characterSetWithCharactersInString:@"0123456789abcdefABCDEF"];
-    NSCharacterSet *illegalCharacters = [hexDigitCharacters invertedSet];
+    NSRange valueRange = NSMakeRange(valueStartIndex, hexString.length - valueStartIndex);
 
-    if([hexString rangeOfCharacterFromSet:illegalCharacters].location != NSNotFound)
+    NSMutableCharacterSet *illegalCharacters = [NSMutableCharacterSet characterSetWithCharactersInString:@"0123456789abcdefABCDEF"];
+    [illegalCharacters invert];
+
+    if([hexString rangeOfCharacterFromSet:illegalCharacters options:0 range:valueRange].location != NSNotFound)
         return nil;
 
-    if(hexString.length == 3) {
-        NSString *rc = [hexString substringWithRange:NSMakeRange(0, 1)];
-        NSString *gc = [hexString substringWithRange:NSMakeRange(1, 1)];
-        NSString *bc = [hexString substringWithRange:NSMakeRange(2, 1)];
+    NSInteger ir, ig, ib;
+    const char *s = [hexString UTF8String] + valueRange.location;  // Skip the prefix
 
-        hexString = [NSString stringWithFormat:@"%@%@%@%@%@%@", rc, rc, gc, gc, bc, bc];
+    if(valueRange.length == 3) {
+        ir = digittoint(s[0]);
+        ir |= ir << 4;
+
+        ig = digittoint(s[1]);
+        ig |= ig << 4;
+
+        ib = digittoint(s[2]);
+        ib |= ib << 4;
+
+        CGFloat divisor = 255.0;
+        return [UIColor colorWithRed:ir / divisor green:ig / divisor blue:ib / divisor alpha:alpha];
     }
-    else if(hexString.length != 6)
-        return nil;
 
-    NSScanner *scanner = [NSScanner scannerWithString:hexString];
-    uint hex;
-    if(![scanner scanHexInt:&hex])
-        return nil;  // This should never happen; if we got here the string contains only hex digits
+    if(valueRange.length == 6) {
+        NSUInteger hexVal = (NSUInteger)strtoul(s, NULL, 16);
+        return [self crl_colorWithHex:hexVal alpha:alpha];
+    }
 
-    return [self crl_colorWithHex:hex alpha:alpha];
+    return nil;
 }
 
 +(UIColor *)crl_colorWithHexString:(NSString *)hexString

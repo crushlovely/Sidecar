@@ -26,7 +26,9 @@
 {
     if(self.length == 0) return YES;
 
-    NSCharacterSet *notWhitespace = [[NSCharacterSet whitespaceAndNewlineCharacterSet] invertedSet];
+    NSMutableCharacterSet *notWhitespace = [NSMutableCharacterSet whitespaceAndNewlineCharacterSet];
+    [notWhitespace invert];
+
     return [self rangeOfCharacterFromSet:notWhitespace].location == NSNotFound;  // We didn't find none. Wot?
 }
 
