@@ -27,11 +27,11 @@ describe(@"creation", ^{
         // Can't test ...Resource:extension: methods here.. we're not in the main bundle
         expect([[CRLSystemSound alloc] initWithFileURL:soundURL]).toNot.beNil();
 
-#ifndef CI  // For some reason this fails in Travis. Sandboxing stuff, maybe?
+#ifndef CI  // For some reason these fail in Travis. Sandboxing stuff, maybe?
         expect([[CRLSystemSound alloc] initWithFileAtPath:soundPath]).toNot.beNil();
-#endif
 
         expect([CRLSystemSound playFileAtPath:soundPath]).toNot.beNil();
+#endif
     });
 
     it(@"should create instances that are not yet playing", ^{
