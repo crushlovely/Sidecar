@@ -16,9 +16,9 @@ Yet another utility belt for iOS projects. Sidecar aims to be small, well-tested
 * Well-documented and tested.
 
 ## Installation
-Sidecar is available through [CocoaPods](http://cocoapods.org). Until an official spec is merged, you can use it by adding the following line to your Podfile:
+Sidecar is available through [CocoaPods](http://cocoapods.org). You can use it by adding the following line to your Podfile:
 
-    pod 'Sidecar', :git => 'https://github.com/crushlovely/Sidecar.git'
+    pod 'Sidecar'
 
 ## License
 Sidecar is available under the MIT license. See the LICENSE file for more info.
