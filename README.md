@@ -1,4 +1,4 @@
-# ![icon](sidecar-120.png) Sidecar [![Build Status](https://travis-ci.org/crushlovely/Sidecar.svg?branch=master)](https://travis-ci.org/crushlovely/Sidecar) [![Coverage Status](https://coveralls.io/repos/crushlovely/Sidecar/badge.png)](https://coveralls.io/r/crushlovely/Sidecar)
+# ![icon](sidecar-120.png) Sidecar [![Build Status](http://img.shields.io/travis/crushlovely/Sidecar.svg?style=flat)](https://travis-ci.org/crushlovely/Sidecar) [![Coverage Status](http://img.shields.io/coveralls/crushlovely/Sidecar.svg?style=flat)](https://coveralls.io/r/crushlovely/Sidecar)
 
 <!--
 [![Version](http://cocoapod-badges.herokuapp.com/v/Sidecar/badge.png)](http://cocoadocs.org/docsets/Sidecar)
