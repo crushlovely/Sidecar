@@ -13,7 +13,7 @@ Yet another utility belt for iOS projects. Sidecar aims to be small, well-tested
 * A log formatter for [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) that includes the method and filename in log messages.
 * A wrapper for [`tgmath.h`](http://libreprogramming.org/books/c/tgmath/) to work around a bug with tgmath and Clang modules (`-fmodules`).
 * A featureful object wrapper around the AudioToolbox [system sound API](https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html) for playing short sound effects.
-* Well-documented and tested.
+* Well-documented and tested. (Note that the test coverage percentage is higher than appears in the badge above; Travis CI's virtual machines can't run tests on the audio components of Sidecar.)
 
 ## Installation
 Sidecar is available through [CocoaPods](http://cocoapods.org). You can use it by adding the following line to your Podfile:
