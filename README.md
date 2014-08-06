@@ -1,4 +1,4 @@
-# <img src="sidecar.png"> Sidecar [![Build Status](https://travis-ci.org/crushlovely/Sidecar.svg?branch=master)](https://travis-ci.org/crushlovely/Sidecar) [![Coverage Status](https://coveralls.io/repos/crushlovely/Sidecar/badge.png)](https://coveralls.io/r/crushlovely/Sidecar)
+# ![icon](sidecar-120.png) Sidecar [![Build Status](https://travis-ci.org/crushlovely/Sidecar.svg?branch=master)](https://travis-ci.org/crushlovely/Sidecar) [![Coverage Status](https://coveralls.io/repos/crushlovely/Sidecar/badge.png)](https://coveralls.io/r/crushlovely/Sidecar)
 
 <!--
 [![Version](http://cocoapod-badges.herokuapp.com/v/Sidecar/badge.png)](http://cocoadocs.org/docsets/Sidecar)
@@ -24,4 +24,4 @@ Sidecar is available through [CocoaPods](http://cocoapods.org). You can use it b
 Sidecar is available under the MIT license. See the LICENSE file for more info.
 
 ## Acknowledgements
-The [lovely icon](http://thenounproject.com/term/cocktail/19746/) above was designed by Okan Benn from The Noun Project. It is licensed under the Creative Commons Attribution License 3.0.
+The lovely icon was created by [Ray Bruwelheide](http://ray-b.net). It is licensed under the [Creative Commons Attribution 3.0 license](http://creativecommons.org/licenses/by/3.0/us/).
