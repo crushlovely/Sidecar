@@ -7,7 +7,7 @@
 #import <libkern/OSAtomic.h>
 
 static NSString * const CRLMethodLogFormatterCalendarKey = @"CRLMethodLogFormatterCalendarKey";
-static const NSCalendarUnit CRLMethodLogFormatterCalendarUnitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+static const NSCalendarUnit CRLMethodLogFormatterCalendarUnitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
 
 
 NS_INLINE const char *CRLLogFlagToCString(int logFlag)
