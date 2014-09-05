@@ -5,6 +5,11 @@
 #import "NSString+CRLUtils.h"
 #import "NSData+CRLDigests.h"
 
+#define CRLSTRINGHASHFUNC(hashName) \
+    -(NSString *)crl_ ## hashName ## Hash { \
+        return [[self dataUsingEncoding:NSUTF8StringEncoding] crl_ ## hashName ## Hash]; \
+    }
+
 @implementation NSString (CRLUtils)
 
 -(NSString *)crl_stringByTrimmingWhitespace
@@ -12,15 +17,15 @@
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
--(NSString *)crl_MD5Hash
-{
-    return [[self dataUsingEncoding:NSUTF8StringEncoding] crl_MD5Hash];
-}
+CRLSTRINGHASHFUNC(MD2)
+CRLSTRINGHASHFUNC(MD4)
+CRLSTRINGHASHFUNC(MD5)
 
--(NSString *)crl_SHA1Hash
-{
-    return [[self dataUsingEncoding:NSUTF8StringEncoding] crl_SHA1Hash];
-}
+CRLSTRINGHASHFUNC(SHA1)
+CRLSTRINGHASHFUNC(SHA224)
+CRLSTRINGHASHFUNC(SHA256)
+CRLSTRINGHASHFUNC(SHA384)
+CRLSTRINGHASHFUNC(SHA512)
 
 -(BOOL)crl_isEmptyOrWhitespace
 {
