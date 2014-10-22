@@ -1,3 +1,5 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 pod 'CocoaLumberjack/Core', '~> 1.8.0'
 
 target 'Specs', :exclusive => true do

@@ -58,8 +58,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		27C0E0FD106045AA86C3C2F4 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
 		3CBDAAE6E5C149AEBAF63496 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		520E55916A8AA30045A8A298 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		544BF82B048F3D475AE3237F /* Pods-Specs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.release.xcconfig"; sourceTree = "<group>"; };
+		900A12B99FF0BEAF309E9AE7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9349A1216737F1CED4BB8B25 /* Pods-Specs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug.xcconfig"; sourceTree = "<group>"; };
 		BD0923EB18F331DB00D10D62 /* shield.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = shield.caf; sourceTree = "<group>"; };
 		BD0923ED18F331F600D10D62 /* CRLSystemSoundSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLSystemSoundSpec.m; sourceTree = "<group>"; };
 		BD0C8F8318E4F937005B537A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -106,7 +109,6 @@
 		BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLViewUtilsSpec.m; sourceTree = "<group>"; };
 		BDD0D71F18F0D12A007AA200 /* CRLCoverageReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLCoverageReporter.m; sourceTree = "<group>"; };
 		C5E5AD17574C4C5DA5F72058 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA638790D943413BB7910570 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		117A81CFF14EAFB2F3AD15FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				900A12B99FF0BEAF309E9AE7 /* Pods.debug.xcconfig */,
+				520E55916A8AA30045A8A298 /* Pods.release.xcconfig */,
+				9349A1216737F1CED4BB8B25 /* Pods-Specs.debug.xcconfig */,
+				544BF82B048F3D475AE3237F /* Pods-Specs.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BD0C8F7718E4F937005B537A = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +153,7 @@
 				BD0C8FA818E4F937005B537A /* Specs */,
 				BD0C8F8218E4F937005B537A /* Frameworks */,
 				BD0C8F8118E4F937005B537A /* Products */,
-				27C0E0FD106045AA86C3C2F4 /* Pods-Specs.xcconfig */,
-				EA638790D943413BB7910570 /* Pods.xcconfig */,
+				117A81CFF14EAFB2F3AD15FF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -346,7 +358,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Specs-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Specs/Pods-Specs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BD0C900E18E5013B005B537A /* ShellScript */ = {
@@ -501,7 +513,7 @@
 		};
 		BD0C8FB618E4F937005B537A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27C0E0FD106045AA86C3C2F4 /* Pods-Specs.xcconfig */;
+			baseConfigurationReference = 9349A1216737F1CED4BB8B25 /* Pods-Specs.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -524,7 +536,7 @@
 		};
 		BD0C8FB718E4F937005B537A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27C0E0FD106045AA86C3C2F4 /* Pods-Specs.xcconfig */;
+			baseConfigurationReference = 544BF82B048F3D475AE3237F /* Pods-Specs.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -543,7 +555,7 @@
 		};
 		BD0C900518E4FDF5005B537A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA638790D943413BB7910570 /* Pods.xcconfig */;
+			baseConfigurationReference = 900A12B99FF0BEAF309E9AE7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
@@ -565,7 +577,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SKIP_INSTALL = YES;
@@ -574,7 +585,7 @@
 		};
 		BD0C900618E4FDF5005B537A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA638790D943413BB7910570 /* Pods.xcconfig */;
+			baseConfigurationReference = 520E55916A8AA30045A8A298 /* Pods.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
@@ -592,7 +603,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SKIP_INSTALL = YES;
