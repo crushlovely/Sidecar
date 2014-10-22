@@ -36,18 +36,18 @@ typedef NS_ENUM(NSInteger, CRLAssociationPolicy) {
  Uses the runtime Associative References functionality to associate the given object with
  the receiver, using the semantics specified by policy.
  */
--(void)crl_associateObject:(id)object withKey:(void *)key policy:(CRLAssociationPolicy)policy;
+-(void)crl_associateObject:(id)object withKey:(const void *)key policy:(CRLAssociationPolicy)policy;
 
 /**
  Retrieves an object previously associated with the receiver through the Associative
  References functionality. If no object is associated with the given key, returns nil.
  */
--(id)crl_objectAssociatedWithKey:(void *)key;
+-(id)crl_objectAssociatedWithKey:(const void *)key;
 
 /**
  Removes an object previously associated with the receiver through the Associative
  References functionality.
  */
--(void)crl_removeObjectAssociatedWithKey:(void *)key;
+-(void)crl_removeObjectAssociatedWithKey:(const void *)key;
 
 @end

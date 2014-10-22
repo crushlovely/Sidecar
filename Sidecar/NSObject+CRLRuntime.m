@@ -17,17 +17,17 @@ NS_INLINE objc_AssociationPolicy CRLAssociationPolicyToObjcAssociationPolicy(CRL
 
 @implementation NSObject (CRLRuntime)
 
--(void)crl_associateObject:(id)object withKey:(void *)key policy:(CRLAssociationPolicy)policy
+-(void)crl_associateObject:(id)object withKey:(const void *)key policy:(CRLAssociationPolicy)policy
 {
     objc_setAssociatedObject(self, key, object, CRLAssociationPolicyToObjcAssociationPolicy(policy));
 }
 
--(id)crl_objectAssociatedWithKey:(void *)key
+-(id)crl_objectAssociatedWithKey:(const void *)key
 {
     return objc_getAssociatedObject(self, key);
 }
 
--(void)crl_removeObjectAssociatedWithKey:(void *)key
+-(void)crl_removeObjectAssociatedWithKey:(const void *)key
 {
     [self crl_associateObject:nil withKey:key policy:CRLAssociatedObjectPolicyAssign];
 }
