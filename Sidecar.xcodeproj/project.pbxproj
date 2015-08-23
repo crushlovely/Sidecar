@@ -24,15 +24,25 @@
 		BD0C901718E50395005B537A /* NSString+CRLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FD518E4FC0F005B537A /* NSString+CRLUtils.m */; };
 		BD0C901818E50395005B537A /* UIColor+CRLHexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FD818E4FC0F005B537A /* UIColor+CRLHexColors.m */; };
 		BD0C901918E50395005B537A /* UIView+CRLPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FDA18E4FC0F005B537A /* UIView+CRLPositioning.m */; };
-		BD0C901D18E50ACA005B537A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C901C18E50ACA005B537A /* libPods.a */; };
 		BD0C902718E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902618E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m */; };
 		BD0C902B18E5C606005B537A /* NSObject+CRLRuntimeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902A18E5C606005B537A /* NSObject+CRLRuntimeSpec.m */; };
 		BD0C902D18E5C95F005B537A /* NSData+CRLDigestsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902C18E5C95F005B537A /* NSData+CRLDigestsSpec.m */; };
+		BD345DF41B78010400B3DE28 /* NSAttributedString+CRLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD345DEC1B78010400B3DE28 /* NSAttributedString+CRLUtils.m */; };
+		BD345DF51B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD345DEE1B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.m */; };
+		BD345DF61B78010400B3DE28 /* NSNumber+CRL64BitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = BD345DF01B78010400B3DE28 /* NSNumber+CRL64BitSupport.m */; };
+		BD345DF71B78010400B3DE28 /* NSString+CRLAttributedUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD345DF21B78010400B3DE28 /* NSString+CRLAttributedUtils.m */; };
+		BD5195B31B7FDABE00EF752C /* NSURLComponents+CRLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5195B21B7FDABE00EF752C /* NSURLComponents+CRLUtils.m */; };
 		BD57091C18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57091B18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m */; };
-		BD57092318F2E68D00E73B69 /* UIView+CRLPositioningSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57092218F2E68D00E73B69 /* UIView+CRLPositioningSpec.m */; };
 		BD9FFD9118E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */; };
 		BD9FFD9318E5E355001DF6EC /* CRLViewUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */; };
-		BDD0D72018F0D12A007AA200 /* CRLCoverageReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD0D71F18F0D12A007AA200 /* CRLCoverageReporter.m */; };
+		BDDA0D4F1B780A0400912811 /* CRLGeometryUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA0D4E1B780A0400912811 /* CRLGeometryUtilsSpec.m */; };
+		BDDA0D511B780E1700912811 /* UIView+CRLPositioningSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA0D501B780E1700912811 /* UIView+CRLPositioningSpec.m */; };
+		BDDA0D531B780EEA00912811 /* NSAttributedString+CRLUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA0D521B780EEA00912811 /* NSAttributedString+CRLUtilsSpec.m */; };
+		BDDA0D551B780F3900912811 /* NSMutableAttributedString+CRLUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA0D541B780F3900912811 /* NSMutableAttributedString+CRLUtilsSpec.m */; };
+		BDDA0D571B780FD000912811 /* NSString+CRLAttributedUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA0D561B780FD000912811 /* NSString+CRLAttributedUtilsSpec.m */; };
+		BDDD9A2F1B8A22E9002A7CAC /* NSURLComponents+CRLUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDD9A2E1B8A22E9002A7CAC /* NSURLComponents+CRLUtilsSpec.m */; };
+		BDDD9A321B8A4CD3002A7CAC /* CRLTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDD9A311B8A4CD3002A7CAC /* CRLTestUtils.m */; };
+		E139B89273A84B86D440C4D3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3753F249E319A41C09B49D8C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3753F249E319A41C09B49D8C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBDAAE6E5C149AEBAF63496 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		520E55916A8AA30045A8A298 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		544BF82B048F3D475AE3237F /* Pods-Specs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,7 +85,6 @@
 		BD0C8FA218E4F937005B537A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BD0C8FBF18E4FB20005B537A /* Specs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Specs-Info.plist"; path = "Specs/Specs-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BD0C8FC418E4FC0F005B537A /* CRLBlockExecution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLBlockExecution.h; sourceTree = "<group>"; };
-		BD0C8FC518E4FC0F005B537A /* CRLCategoriesAndUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLCategoriesAndUtils.h; sourceTree = "<group>"; };
 		BD0C8FC618E4FC0F005B537A /* CRLFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLFileUtils.h; sourceTree = "<group>"; };
 		BD0C8FC718E4FC0F005B537A /* CRLGradientLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLGradientLayerView.h; sourceTree = "<group>"; };
 		BD0C8FC818E4FC0F005B537A /* CRLGradientLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLGradientLayerView.m; sourceTree = "<group>"; };
@@ -99,16 +109,32 @@
 		BD0C8FE818E4FDF5005B537A /* libSidecar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSidecar.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0C900A18E5002E005B537A /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Specs-Prefix.pch"; path = "Specs/Specs-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		BD0C900F18E50239005B537A /* NSString+CRLUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CRLUtilsSpec.m"; sourceTree = "<group>"; };
-		BD0C901C18E50ACA005B537A /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		BD0C902618E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CRLHexColorsSpec.m"; sourceTree = "<group>"; };
 		BD0C902A18E5C606005B537A /* NSObject+CRLRuntimeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CRLRuntimeSpec.m"; sourceTree = "<group>"; };
 		BD0C902C18E5C95F005B537A /* NSData+CRLDigestsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CRLDigestsSpec.m"; sourceTree = "<group>"; };
+		BD345DEA1B78010400B3DE28 /* CRLGeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLGeometryUtils.h; sourceTree = "<group>"; };
+		BD345DEB1B78010400B3DE28 /* NSAttributedString+CRLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CRLUtils.h"; sourceTree = "<group>"; };
+		BD345DEC1B78010400B3DE28 /* NSAttributedString+CRLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CRLUtils.m"; sourceTree = "<group>"; };
+		BD345DED1B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+CRLUtils.h"; sourceTree = "<group>"; };
+		BD345DEE1B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+CRLUtils.m"; sourceTree = "<group>"; };
+		BD345DEF1B78010400B3DE28 /* NSNumber+CRL64BitSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CRL64BitSupport.h"; sourceTree = "<group>"; };
+		BD345DF01B78010400B3DE28 /* NSNumber+CRL64BitSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CRL64BitSupport.m"; sourceTree = "<group>"; };
+		BD345DF11B78010400B3DE28 /* NSString+CRLAttributedUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CRLAttributedUtils.h"; sourceTree = "<group>"; };
+		BD345DF21B78010400B3DE28 /* NSString+CRLAttributedUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CRLAttributedUtils.m"; sourceTree = "<group>"; };
+		BD345DF31B78010400B3DE28 /* Sidecar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sidecar.h; sourceTree = "<group>"; };
+		BD5195B11B7FDABE00EF752C /* NSURLComponents+CRLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLComponents+CRLUtils.h"; sourceTree = "<group>"; };
+		BD5195B21B7FDABE00EF752C /* NSURLComponents+CRLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLComponents+CRLUtils.m"; sourceTree = "<group>"; };
 		BD57091B18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLShapeLayerViewSpec.m; sourceTree = "<group>"; };
-		BD57092218F2E68D00E73B69 /* UIView+CRLPositioningSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CRLPositioningSpec.m"; sourceTree = "<group>"; };
 		BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLGradientLayerViewSpec.m; sourceTree = "<group>"; };
 		BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLViewUtilsSpec.m; sourceTree = "<group>"; };
-		BDD0D71F18F0D12A007AA200 /* CRLCoverageReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLCoverageReporter.m; sourceTree = "<group>"; };
-		C5E5AD17574C4C5DA5F72058 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDDA0D4E1B780A0400912811 /* CRLGeometryUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLGeometryUtilsSpec.m; sourceTree = "<group>"; };
+		BDDA0D501B780E1700912811 /* UIView+CRLPositioningSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CRLPositioningSpec.m"; sourceTree = "<group>"; };
+		BDDA0D521B780EEA00912811 /* NSAttributedString+CRLUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CRLUtilsSpec.m"; sourceTree = "<group>"; };
+		BDDA0D541B780F3900912811 /* NSMutableAttributedString+CRLUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+CRLUtilsSpec.m"; sourceTree = "<group>"; };
+		BDDA0D561B780FD000912811 /* NSString+CRLAttributedUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CRLAttributedUtilsSpec.m"; sourceTree = "<group>"; };
+		BDDD9A2E1B8A22E9002A7CAC /* NSURLComponents+CRLUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLComponents+CRLUtilsSpec.m"; sourceTree = "<group>"; };
+		BDDD9A301B8A4CD3002A7CAC /* CRLTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLTestUtils.h; sourceTree = "<group>"; };
+		BDDD9A311B8A4CD3002A7CAC /* CRLTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLTestUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0C8FE918E4FDF5005B537A /* Foundation.framework in Frameworks */,
-				BD0C901D18E50ACA005B537A /* libPods.a in Frameworks */,
+				E139B89273A84B86D440C4D3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,13 +195,12 @@
 		BD0C8F8218E4F937005B537A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BD0C901C18E50ACA005B537A /* libPods.a */,
 				BD0C8F8318E4F937005B537A /* Foundation.framework */,
 				BD0C8F8518E4F937005B537A /* CoreGraphics.framework */,
 				BD0C8F8718E4F937005B537A /* UIKit.framework */,
 				BD0C8FA218E4F937005B537A /* XCTest.framework */,
 				3CBDAAE6E5C149AEBAF63496 /* libPods-Specs.a */,
-				C5E5AD17574C4C5DA5F72058 /* libPods.a */,
+				3753F249E319A41C09B49D8C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,7 +208,16 @@
 		BD0C8F8918E4F937005B537A /* Sidecar */ = {
 			isa = PBXGroup;
 			children = (
-				BD0C8FC518E4FC0F005B537A /* CRLCategoriesAndUtils.h */,
+				BD345DEA1B78010400B3DE28 /* CRLGeometryUtils.h */,
+				BD345DEB1B78010400B3DE28 /* NSAttributedString+CRLUtils.h */,
+				BD345DEC1B78010400B3DE28 /* NSAttributedString+CRLUtils.m */,
+				BD345DED1B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.h */,
+				BD345DEE1B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.m */,
+				BD345DEF1B78010400B3DE28 /* NSNumber+CRL64BitSupport.h */,
+				BD345DF01B78010400B3DE28 /* NSNumber+CRL64BitSupport.m */,
+				BD345DF11B78010400B3DE28 /* NSString+CRLAttributedUtils.h */,
+				BD345DF21B78010400B3DE28 /* NSString+CRLAttributedUtils.m */,
+				BD345DF31B78010400B3DE28 /* Sidecar.h */,
 				BD0C8FD918E4FC0F005B537A /* UIView+CRLPositioning.h */,
 				BD0C8FDA18E4FC0F005B537A /* UIView+CRLPositioning.m */,
 				BD0C8FCD18E4FC0F005B537A /* CRLSystemSound.h */,
@@ -205,6 +239,8 @@
 				BD0C8FD518E4FC0F005B537A /* NSString+CRLUtils.m */,
 				BD0C8FD718E4FC0F005B537A /* UIColor+CRLHexColors.h */,
 				BD0C8FD818E4FC0F005B537A /* UIColor+CRLHexColors.m */,
+				BD5195B11B7FDABE00EF752C /* NSURLComponents+CRLUtils.h */,
+				BD5195B21B7FDABE00EF752C /* NSURLComponents+CRLUtils.m */,
 				BD0C8FD618E4FC0F005B537A /* tgmath-stopgap.h */,
 				BD0C8F8A18E4F937005B537A /* Supporting Files */,
 			);
@@ -230,9 +266,16 @@
 				BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */,
 				BD57091B18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m */,
 				BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */,
-				BD57092218F2E68D00E73B69 /* UIView+CRLPositioningSpec.m */,
+				BDDA0D501B780E1700912811 /* UIView+CRLPositioningSpec.m */,
 				BD0923ED18F331F600D10D62 /* CRLSystemSoundSpec.m */,
+				BDDA0D4E1B780A0400912811 /* CRLGeometryUtilsSpec.m */,
+				BDDA0D541B780F3900912811 /* NSMutableAttributedString+CRLUtilsSpec.m */,
+				BDDA0D521B780EEA00912811 /* NSAttributedString+CRLUtilsSpec.m */,
+				BDDA0D561B780FD000912811 /* NSString+CRLAttributedUtilsSpec.m */,
+				BDDD9A2E1B8A22E9002A7CAC /* NSURLComponents+CRLUtilsSpec.m */,
 				BD0C8FA918E4F937005B537A /* Supporting Files */,
+				BDDD9A301B8A4CD3002A7CAC /* CRLTestUtils.h */,
+				BDDD9A311B8A4CD3002A7CAC /* CRLTestUtils.m */,
 			);
 			path = Specs;
 			sourceTree = SOURCE_ROOT;
@@ -243,7 +286,6 @@
 				BD0923EB18F331DB00D10D62 /* shield.caf */,
 				BD0C900A18E5002E005B537A /* Specs-Prefix.pch */,
 				BD0C8FBF18E4FB20005B537A /* Specs-Info.plist */,
-				BDD0D71F18F0D12A007AA200 /* CRLCoverageReporter.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -259,7 +301,6 @@
 				BD0C8F9D18E4F937005B537A /* Sources */,
 				BD0C8F9E18E4F937005B537A /* Frameworks */,
 				BD0C8F9F18E4F937005B537A /* Resources */,
-				BD0C900E18E5013B005B537A /* ShellScript */,
 				A060128E177D4C138D1ABA95 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -276,9 +317,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD0C900418E4FDF5005B537A /* Build configuration list for PBXNativeTarget "Sidecar" */;
 			buildPhases = (
+				2517BECDFF6C3C043ABBDADC /* Check Pods Manifest.lock */,
 				BD0C8FE418E4FDF5005B537A /* Sources */,
 				BD0C8FE518E4FDF5005B537A /* Frameworks */,
 				BD0C8FE618E4FDF5005B537A /* CopyFiles */,
+				E84CA89759852A4F2A89A811 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -297,7 +340,7 @@
 			attributes = {
 				CLASSPREFIX = CRL;
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Crush & Lovely";
 			};
 			buildConfigurationList = BD0C8F7B18E4F937005B537A /* Build configuration list for PBXProject "Sidecar" */;
@@ -346,6 +389,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		2517BECDFF6C3C043ABBDADC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		A060128E177D4C138D1ABA95 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,18 +419,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Specs/Pods-Specs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BD0C900E18E5013B005B537A /* ShellScript */ = {
+		E84CA89759852A4F2A89A811 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -381,14 +441,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD0D72018F0D12A007AA200 /* CRLCoverageReporter.m in Sources */,
 				BD0C902D18E5C95F005B537A /* NSData+CRLDigestsSpec.m in Sources */,
+				BDDD9A2F1B8A22E9002A7CAC /* NSURLComponents+CRLUtilsSpec.m in Sources */,
 				BD0C902B18E5C606005B537A /* NSObject+CRLRuntimeSpec.m in Sources */,
 				BD0923EE18F331F600D10D62 /* CRLSystemSoundSpec.m in Sources */,
 				BD0C902718E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m in Sources */,
+				BDDA0D531B780EEA00912811 /* NSAttributedString+CRLUtilsSpec.m in Sources */,
+				BDDA0D551B780F3900912811 /* NSMutableAttributedString+CRLUtilsSpec.m in Sources */,
+				BDDA0D571B780FD000912811 /* NSString+CRLAttributedUtilsSpec.m in Sources */,
+				BDDD9A321B8A4CD3002A7CAC /* CRLTestUtils.m in Sources */,
+				BDDA0D4F1B780A0400912811 /* CRLGeometryUtilsSpec.m in Sources */,
+				BDDA0D511B780E1700912811 /* UIView+CRLPositioningSpec.m in Sources */,
 				BD0C901018E50239005B537A /* NSString+CRLUtilsSpec.m in Sources */,
 				BD9FFD9118E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m in Sources */,
-				BD57092318F2E68D00E73B69 /* UIView+CRLPositioningSpec.m in Sources */,
 				BD9FFD9318E5E355001DF6EC /* CRLViewUtilsSpec.m in Sources */,
 				BD57091C18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m in Sources */,
 			);
@@ -398,13 +463,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD345DF51B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.m in Sources */,
+				BD345DF61B78010400B3DE28 /* NSNumber+CRL64BitSupport.m in Sources */,
 				BD0C901318E50395005B537A /* CRLShapeLayerView.m in Sources */,
 				BD0C901818E50395005B537A /* UIColor+CRLHexColors.m in Sources */,
 				BD0C901518E50395005B537A /* NSData+CRLDigests.m in Sources */,
 				BD0C901618E50395005B537A /* NSObject+CRLRuntime.m in Sources */,
+				BD345DF71B78010400B3DE28 /* NSString+CRLAttributedUtils.m in Sources */,
 				BD0C901218E50395005B537A /* CRLMethodLogFormatter.m in Sources */,
 				BD0C901418E50395005B537A /* CRLSystemSound.m in Sources */,
 				BD0C901918E50395005B537A /* UIView+CRLPositioning.m in Sources */,
+				BD5195B31B7FDABE00EF752C /* NSURLComponents+CRLUtils.m in Sources */,
+				BD345DF41B78010400B3DE28 /* NSAttributedString+CRLUtils.m in Sources */,
 				BD0C901118E50395005B537A /* CRLGradientLayerView.m in Sources */,
 				BD0C901718E50395005B537A /* NSString+CRLUtils.m in Sources */,
 			);
@@ -439,6 +509,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -520,8 +591,6 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -543,8 +612,6 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
@@ -563,8 +630,6 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DSTROOT = /tmp/Sidecar.dst;
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sidecar/Sidecar-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -573,10 +638,7 @@
 				);
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SKIP_INSTALL = YES;
@@ -593,16 +655,11 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DSTROOT = /tmp/Sidecar.dst;
-				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
-				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sidecar/Sidecar-Prefix.pch";
 				GCC_WARN_SHADOW = YES;
 				GCC_WARN_SIGN_COMPARE = YES;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SKIP_INSTALL = YES;

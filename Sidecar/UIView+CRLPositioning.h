@@ -4,13 +4,15 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIView (CRLPositioning)
 
 /**
  Returns the first subview of the receiver that is an instance of the
  given class or a class inheriting from it.
  */
--(UIView *)crl_firstSubviewOfKind:(Class)aClass;
+-(nullable UIView *)crl_firstSubviewOfKind:(Class)aClass;
 
 /**
  Swaps the position of view1 and view2 in the subviews array.
@@ -64,3 +66,5 @@
 @property (nonatomic, assign) CGPoint crl_bottomRight;
 
 @end
+
+NS_ASSUME_NONNULL_END

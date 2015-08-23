@@ -44,7 +44,7 @@
         return nil;
 
     NSInteger ir, ig, ib;
-    const char *s = [hexString UTF8String] + valueRange.location;  // Skip the prefix
+    const char *s = hexString.UTF8String + valueRange.location;  // Skip the prefix
 
     if(valueRange.length == 3) {
         ir = digittoint(s[0]);

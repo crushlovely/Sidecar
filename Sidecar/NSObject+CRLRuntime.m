@@ -5,7 +5,7 @@
 #import "NSObject+CRLRuntime.h"
 #import <objc/runtime.h>
 
-NS_INLINE objc_AssociationPolicy CRLAssociationPolicyToObjcAssociationPolicy(CRLAssociationPolicy crlPolicy) {
+NS_INLINE objc_AssociationPolicy CRLAssociationPolicyToObjCAssociationPolicy(CRLAssociationPolicy crlPolicy) {
     switch(crlPolicy) {
         case CRLAssociatedObjectPolicyAssign: return OBJC_ASSOCIATION_ASSIGN;
         case CRLAssociatedObjectPolicyCopy: return OBJC_ASSOCIATION_COPY_NONATOMIC;
@@ -19,7 +19,7 @@ NS_INLINE objc_AssociationPolicy CRLAssociationPolicyToObjcAssociationPolicy(CRL
 
 -(void)crl_associateObject:(id)object withKey:(const void *)key policy:(CRLAssociationPolicy)policy
 {
-    objc_setAssociatedObject(self, key, object, CRLAssociationPolicyToObjcAssociationPolicy(policy));
+    objc_setAssociatedObject(self, key, object, CRLAssociationPolicyToObjCAssociationPolicy(policy));
 }
 
 -(id)crl_objectAssociatedWithKey:(const void *)key

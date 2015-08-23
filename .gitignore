@@ -18,9 +18,9 @@ profile
 DerivedData
 *.hmap
 *.ipa
+ObjectiveC.gcda
 
 # CocoaPods
-
 Pods
 Podfile.lock
 *.xcworkspace

@@ -6,8 +6,8 @@
 
 #ifdef __OBJC__
     #define LOG_LEVEL_DEF CRLSidecarLogLevel
-    #import <CocoaLumberjack/DDLog.h>
-    static const int CRLSidecarLogLevel = LOG_LEVEL_WARN;
+    #import <CocoaLumberjack/CocoaLumberjack.h>
+    static const DDLogLevel CRLSidecarLogLevel = DDLogLevelWarning;
 
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>

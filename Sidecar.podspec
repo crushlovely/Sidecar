@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Sidecar"
-  s.version          = "0.2.0"
+  s.version          = "1.0.0"
   s.summary          = "Yet Another iOS Utility Belt"
   s.license          = 'MIT'
   s.authors          = { 'Crush & Lovely' => 'engineering@crushlovely.com', 'Tim Clem' => 'tim@crushlovely.com' }
@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.ios.deployment_target = '7.0'
   s.requires_arc = true
-  s.dependency 'CocoaLumberjack/Core', '~>1.9.0'
+  
+  s.dependency 'CocoaLumberjack', '~>2.0'
   
   # Defining LOG_LEVEL_DEF makes sure we don't stomp on the application's
   # log level, which is usually called 'ddLogLevel'.
@@ -18,8 +19,8 @@ Pod::Spec.new do |s|
 
 #ifdef __OBJC__
   #define LOG_LEVEL_DEF CRLSidecarLogLevel
-  #import <CocoaLumberjack/DDLog.h>
-  static const int CRLSidecarLogLevel = LOG_LEVEL_WARN;
+  #import <CocoaLumberjack/CocoaLumberjack.h>
+  static const DDLogLevel CRLSidecarLogLevel = DDLogLevelWarning;
 #endif
   PCH
 

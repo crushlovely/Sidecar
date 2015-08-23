@@ -3,42 +3,24 @@
 // Under the MIT License; see LICENSE file for details.
 
 #import "CRLMethodLogFormatter.h"
-#import <CocoaLumberjack/DDLog.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 #import <libkern/OSAtomic.h>
 
 static NSString * const CRLMethodLogFormatterCalendarKey = @"CRLMethodLogFormatterCalendarKey";
 static const NSCalendarUnit CRLMethodLogFormatterCalendarUnitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
 
 
-NS_INLINE const char *CRLLogFlagToCString(int logFlag)
+NS_INLINE const char *CRLLogFlagToCString(DDLogFlag logFlag)
 {
     switch(logFlag) {
-        case LOG_FLAG_ERROR: return "ERR";
-        case LOG_FLAG_WARN: return "WRN";
-        case LOG_FLAG_INFO: return "INF";
-        case LOG_FLAG_DEBUG: return "DBG";
-        case LOG_FLAG_VERBOSE: return "VRB";
+        case DDLogFlagError: return "ERR";
+        case DDLogFlagWarning: return "WRN";
+        case DDLogFlagInfo: return "INF";
+        case DDLogFlagDebug: return "DBG";
+        case DDLogFlagVerbose: return "VRB";
 
         default: return "";
     }
-}
-
-NS_INLINE const char *CRLPointerToLastPathComponent(const char *path)
-{
-    if(!path) return "";
-
-    const char *p = path, *lastSlash = NULL;
-    while (*p != '\0')
-    {
-        if (*p == '/') lastSlash = p;
-        p++;
-    }
-
-    // If we didn't find a slash, or the slash is the final character in the string,
-    // just give back the whole thing.
-    if(!lastSlash || *(lastSlash + 1) == '\0') return path;
-
-    return lastSlash + 1;
 }
 
 
@@ -64,11 +46,11 @@ NS_INLINE const char *CRLPointerToLastPathComponent(const char *path)
     else {
         // Multi-threaded. Use the thread-local instance
         NSMutableDictionary *threadDictionary = [[NSThread currentThread] threadDictionary];
-        NSCalendar *threadCalendar = [threadDictionary objectForKey:CRLMethodLogFormatterCalendarKey];
+        NSCalendar *threadCalendar = threadDictionary[CRLMethodLogFormatterCalendarKey];
 
         if(!threadCalendar) {
             threadCalendar = [NSCalendar autoupdatingCurrentCalendar];
-            [threadDictionary setObject:threadCalendar forKey:CRLMethodLogFormatterCalendarKey];
+            threadDictionary[CRLMethodLogFormatterCalendarKey] = threadCalendar;
         }
 
         return threadCalendar;
@@ -80,12 +62,12 @@ NS_INLINE const char *CRLPointerToLastPathComponent(const char *path)
     // Time calculation is ripped from DDTTYLogger
 
     NSDateComponents *components = [[self threadsafeCalendar] components:CRLMethodLogFormatterCalendarUnitFlags
-                                                                fromDate:logMessage->timestamp];
+                                                                fromDate:logMessage->_timestamp];
 
-    NSTimeInterval epoch = [logMessage->timestamp timeIntervalSinceReferenceDate];
+    NSTimeInterval epoch = logMessage->_timestamp.timeIntervalSinceReferenceDate;
     int milliseconds = (int)((epoch - floor(epoch)) * 1000);
 
-    NSString *formattedMsg = [NSString stringWithFormat:@"%04ld-%02ld-%02ld %02ld:%02ld:%02ld:%03d [%s] %s:%d (%s): %@",
+    NSString *formattedMsg = [NSString stringWithFormat:@"%04ld-%02ld-%02ld %02ld:%02ld:%02ld:%03d [%s] %@:%lu (%@): %@",
                               (long)components.year,
                               (long)components.month,
                               (long)components.day,
@@ -93,11 +75,11 @@ NS_INLINE const char *CRLPointerToLastPathComponent(const char *path)
                               (long)components.minute,
                               (long)components.second,
                               milliseconds,
-                              CRLLogFlagToCString(logMessage->logFlag),
-                              CRLPointerToLastPathComponent(logMessage->file),
-                              logMessage->lineNumber,
-                              logMessage->function ?: "",
-                              logMessage->logMsg];
+                              CRLLogFlagToCString(logMessage->_flag),
+                              logMessage->_fileName,
+                              (unsigned long)logMessage->_line,
+                              logMessage->_function ?: @"",
+                              logMessage->_message];
 
     return formattedMsg;
 }

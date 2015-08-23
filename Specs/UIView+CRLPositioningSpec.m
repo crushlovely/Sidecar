@@ -3,30 +3,10 @@
 // Under the MIT License; see LICENSE file for details.
 
 #import "UIView+CRLPositioning.h"
-
-// TODO: write a nice matcher for these?
-#define expectEqualRects(r1, r2) \
-    do { \
-        expect(  CGRectGetMinX(r1)).to.equal(  CGRectGetMinX(r2)); \
-        expect(  CGRectGetMinY(r1)).to.equal(  CGRectGetMinY(r2)); \
-        expect( CGRectGetWidth(r1)).to.equal( CGRectGetWidth(r2)); \
-        expect(CGRectGetHeight(r1)).to.equal(CGRectGetHeight(r2)); \
-    } while(0)
-
-#define expectEqualPoints(p1, p2) \
-    do { \
-        expect(p1.x).to.equal(p2.x); \
-        expect(p1.y).to.equal(p2.y); \
-    } while(0)
-
-#define expectEqualSizes(s1, s2) \
-    do { \
-        expect(s1.width).to.equal(s2.width); \
-        expect(s1.height).to.equal(s2.height); \
-    } while(0)
+#import "CRLTestUtils.h"
 
 
-SpecBegin(CRLPositioning)
+SpecBegin(UIView_CRLPositioning)
 
 describe(@"firstSubviewOfKind", ^{
     __block UIView *parent;
@@ -85,6 +65,9 @@ describe(@"z-order functions", ^{
         });
 
         it(@"should do nothing when given nils", ^{
+            #pragma clang diagnostic push
+            #pragma clang diagnostic ignored "-Wnonnull"
+
             [parent crl_exchangeSubview:nil withSubview:childA];
             expect([parent.subviews indexOfObject:childA]).to.equal(0);
 
@@ -97,6 +80,8 @@ describe(@"z-order functions", ^{
             [parent crl_exchangeSubview:nil withSubview:nil];
             expect([parent.subviews indexOfObject:childA]).to.equal(0);
             expect([parent.subviews indexOfObject:childB]).to.equal(1);
+
+            #pragma clang diagnostic pop
         });
     });
 
@@ -111,8 +96,11 @@ describe(@"z-order functions", ^{
             expect([parent crl_subview:childA isInFrontOfSubview:otherView]).to.beFalsy();
             expect([parent crl_subview:otherView isInFrontOfSubview:childA]).to.beFalsy();
 
+            #pragma clang diagnostic push
+            #pragma clang diagnostic ignored "-Wnonnull"
             expect([parent crl_subview:nil isInFrontOfSubview:childA]).to.beFalsy();
             expect([parent crl_subview:childA isInFrontOfSubview:nil]).to.beFalsy();
+            #pragma clang diagnostic pop
         });
     });
 });

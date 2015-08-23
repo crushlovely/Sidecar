@@ -4,6 +4,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  This is a simple wrapper around AudioServicesCreateSystemSoundID and
  AudioServicesPlaySystemSound. You should read the docs surrounding
@@ -41,20 +43,20 @@
 
 // These class-level methods and the associated -init methods will return
 // nil if the given path or resource could not be loaded.
-+(CRLSystemSound *)playFileAtPath:(NSString *)path completion:(void (^)(CRLSystemSound *sound))completion;
-+(CRLSystemSound *)playFileAtPath:(NSString *)path;
++(nullable CRLSystemSound *)playFileAtPath:(NSString *)path completion:(nullable void (^)(CRLSystemSound *sound))completion;
++(nullable CRLSystemSound *)playFileAtPath:(NSString *)path;
 
 // The resource initializers retrieve the path for the given resource
 // from [NSBundle mainBundle].
-+(CRLSystemSound *)playResource:(NSString *)name extension:(NSString *)extension completion:(void (^)(CRLSystemSound *sound))completion;
-+(CRLSystemSound *)playResource:(NSString *)name extension:(NSString *)extension;
++(nullable CRLSystemSound *)playResource:(NSString *)name extension:(NSString *)extension completion:(nullable void (^)(CRLSystemSound *sound))completion;
++(nullable CRLSystemSound *)playResource:(NSString *)name extension:(NSString *)extension;
 
--(CRLSystemSound *)initWithFileURL:(NSURL *)URL;
--(CRLSystemSound *)initWithFileAtPath:(NSString *)path;
--(CRLSystemSound *)initWithResource:(NSString *)name extension:(NSString *)extension;
+-(nullable CRLSystemSound *)initWithFileURL:(NSURL *)URL;
+-(nullable CRLSystemSound *)initWithFileAtPath:(NSString *)path;
+-(nullable CRLSystemSound *)initWithResource:(NSString *)name extension:(NSString *)extension;
 
 // Calling these on an instance that's already playing will have no effect.
--(void)playWithCompletion:(void (^)(CRLSystemSound *sound))completion;
+-(void)playWithCompletion:(nullable void (^)(CRLSystemSound *sound))completion;
 -(void)play;  // Same as above with nil completion block
 
 @property (nonatomic, assign, readonly, getter=isPlaying) BOOL playing;
@@ -67,3 +69,5 @@
 -(void)stop;
 
 @end
+
+NS_ASSUME_NONNULL_END

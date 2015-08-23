@@ -4,13 +4,7 @@ env:
   global:
     - LANG=en_US.UTF-8
 
-# Pulling in the head version of xctool until they update to something > 0.1.14
-# Unfortunate, but I couldn't get tests to run without it.
 before_install:
-  - gem install cocoapods --no-ri --no-rdoc
-  - brew update
-  - brew unlink xctool
-  - brew install xctool --HEAD
   - sudo easy_install cpp-coveralls
 
 script:
