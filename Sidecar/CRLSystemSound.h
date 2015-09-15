@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  Also of note for developers is that this class has specific hooks
  to work in the simulator regardless of your sound settings in
- System Preferences. Also +playVibrationOrBeep:YES will play
+ System Preferences. Also +vibrateOrBeep:YES will play
  the default OSX alert sound in the simulator.
  */
 @interface CRLSystemSound : NSObject

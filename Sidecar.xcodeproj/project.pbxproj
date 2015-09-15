@@ -340,7 +340,7 @@
 			attributes = {
 				CLASSPREFIX = CRL;
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Crush & Lovely";
 			};
 			buildConfigurationList = BD0C8F7B18E4F937005B537A /* Build configuration list for PBXProject "Sidecar" */;
@@ -598,6 +598,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.crushlovely.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -615,6 +616,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.crushlovely.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
