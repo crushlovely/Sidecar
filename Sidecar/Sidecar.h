@@ -8,9 +8,16 @@
 #import "CRLBlockExecution.h"
 #import "CRLViewUtils.h"
 #import "CRLFileUtils.h"
+#import "CRLGeometryUtils.h"
 
 #import "NSData+CRLDigests.h"
+#import "NSNumber+CRL64BitSupport.h"
 #import "NSObject+CRLRuntime.h"
 #import "NSString+CRLUtils.h"
 #import "UIColor+CRLHexColors.h"
 #import "UIView+CRLPositioning.h"
+#import "NSURLComponents+CRLUtils.h"
+
+#import "NSAttributedString+CRLUtils.h"
+#import "NSMutableAttributedString+CRLUtils.h"
+#import "NSString+CRLAttributedUtils.h"

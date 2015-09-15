@@ -4,58 +4,60 @@
 
 #import "NSObject+CRLRuntime.h"
 
-SpecBegin(associatedObjects)
+SpecBegin(NSObject_CRLRuntime)
 
-it(@"should associate objects with other objects", ^{
-    NSObject *obj = [[NSObject alloc] init];
-    NSObject *associated = [[NSObject alloc] init];
+describe(@"associated objects wrapper", ^{
+    it(@"should associate objects with other objects", ^{
+        NSObject *obj = [[NSObject alloc] init];
+        NSObject *associated = [[NSObject alloc] init];
 
-    [obj crl_associateObject:associated withKey:@"testKey" policy:CRLAssociatedObjectPolicyStrong];
+        [obj crl_associateObject:associated withKey:@"testKey" policy:CRLAssociatedObjectPolicyStrong];
 
-    expect([obj crl_objectAssociatedWithKey:@"testKey"]).to.beIdenticalTo(associated);
-});
+        expect([obj crl_objectAssociatedWithKey:@"testKey"]).to.beIdenticalTo(associated);
+    });
 
-it(@"should be able to remove associated objects", ^{
-    NSObject *obj = [[NSObject alloc] init];
-    NSObject *associated = [[NSObject alloc] init];
-    [obj crl_associateObject:associated withKey:@"testKey" policy:CRLAssociatedObjectPolicyStrong];
-    [obj crl_removeObjectAssociatedWithKey:@"testKey"];
+    it(@"should be able to remove associated objects", ^{
+        NSObject *obj = [[NSObject alloc] init];
+        NSObject *associated = [[NSObject alloc] init];
+        [obj crl_associateObject:associated withKey:@"testKey" policy:CRLAssociatedObjectPolicyStrong];
+        [obj crl_removeObjectAssociatedWithKey:@"testKey"];
 
-    expect([obj crl_objectAssociatedWithKey:@"testKey"]).to.beNil();
-});
+        expect([obj crl_objectAssociatedWithKey:@"testKey"]).to.beNil();
+    });
 
-it(@"should copy associated objects if requested", ^{
-    NSObject *obj = [[NSObject alloc] init];
-    NSMutableString *associated = [NSMutableString stringWithString:@"test"];
-    [obj crl_associateObject:associated withKey:@"testKey" policy:CRLAssociatedObjectPolicyCopy];
+    it(@"should copy associated objects if requested", ^{
+        NSObject *obj = [[NSObject alloc] init];
+        NSMutableString *associated = [NSMutableString stringWithString:@"test"];
+        [obj crl_associateObject:associated withKey:@"testKey" policy:CRLAssociatedObjectPolicyCopy];
 
-    [associated appendString:@"y test test"];
-    expect([obj crl_objectAssociatedWithKey:@"testKey"]).to.equal(@"test");
-});
+        [associated appendString:@"y test test"];
+        expect([obj crl_objectAssociatedWithKey:@"testKey"]).to.equal(@"test");
+    });
 
-it(@"should create weak references if requested", ^{
-    NSObject *obj = [[NSObject alloc] init];
-    NSObject *associated = [[NSObject alloc] init];
-    __weak NSObject *weakAssociated = associated;
+    it(@"should create weak references if requested", ^{
+        NSObject *obj = [[NSObject alloc] init];
+        NSObject *associated = [[NSObject alloc] init];
+        __weak NSObject *weakAssociated = associated;
 
-    [obj crl_associateObject:associated withKey:@"testKey" policy:CRLAssociatedObjectPolicyAssign];
-    associated = nil;
+        [obj crl_associateObject:associated withKey:@"testKey" policy:CRLAssociatedObjectPolicyAssign];
+        associated = nil;
 
-    // If the association was really weak, weakAssociated should now be nil, as associated was the
-    // only living strong reference to it.
-    expect(weakAssociated).to.beNil();
-});
+        // If the association was really weak, weakAssociated should now be nil, as associated was the
+        // only living strong reference to it.
+        expect(weakAssociated).to.beNil();
+    });
 
-it(@"should create strong references if requested", ^{
-    NSObject *obj = [[NSObject alloc] init];
-    NSObject *associated = [[NSObject alloc] init];
-    __weak NSObject *weakAssociated = associated;
+    it(@"should create strong references if requested", ^{
+        NSObject *obj = [[NSObject alloc] init];
+        NSObject *associated = [[NSObject alloc] init];
+        __weak NSObject *weakAssociated = associated;
 
-    [obj crl_associateObject:associated withKey:@"testKey" policy:CRLAssociatedObjectPolicyStrong];
-    associated = nil;
+        [obj crl_associateObject:associated withKey:@"testKey" policy:CRLAssociatedObjectPolicyStrong];
+        associated = nil;
 
-    // If the association was really strong, weakAssociated should still be non-nil.
-    expect(weakAssociated).toNot.beNil();
+        // If the association was really strong, weakAssociated should still be non-nil.
+        expect(weakAssociated).toNot.beNil();
+    });
 });
 
 SpecEnd

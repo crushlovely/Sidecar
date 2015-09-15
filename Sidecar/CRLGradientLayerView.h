@@ -18,19 +18,19 @@
 /**
  A type-correct passthrough for the layer property.
  */
-@property (nonatomic, readonly) CAGradientLayer *gradientLayer;
+@property (nonatomic, readonly, nonnull) CAGradientLayer *gradientLayer;
 
 /**
  An array of UIColor objects that specify the colors for the gradientLayer.
  @see [CAGradientLayer colors]
  */
-@property (nonatomic, assign) NSArray *gradientColors;
+@property (nonatomic, copy, nullable) NSArray<UIColor *> *gradientColors;
 
 /**
  An array of NSNumber objects that represents the locations of elements in the gradient.
  Passed through to CAGradientLayer's locations property.
  @see [CAGradientLayer locations]
  */
-@property (nonatomic, assign) NSArray *gradientLocations;
+@property (nonatomic, copy, nullable) NSArray<NSNumber *> *gradientLocations;
 
 @end

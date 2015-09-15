@@ -4,6 +4,9 @@
 
 #import <Foundation/Foundation.h>
 
+#if __has_include(<CocoaLumberjack/CocoaLumberjack.h>)
+
+
 @protocol DDLogFormatter;
 
 /**
@@ -13,3 +16,6 @@
 @interface CRLMethodLogFormatter : NSObject <DDLogFormatter>
 
 @end
+
+
+#endif

@@ -23,7 +23,7 @@
     return (CAGradientLayer *)self.layer;
 }
 
--(void)setGradientColors:(NSArray *)gradientColors
+-(void)setGradientColors:(NSArray<UIColor *> *)gradientColors
 {
     if(!gradientColors || gradientColors.count == 0)
         self.gradientLayer.colors = nil;
@@ -39,7 +39,7 @@
     self.backgroundColor = [UIColor clearColor];
 }
 
--(NSArray *)gradientColors
+-(NSArray<UIColor *> *)gradientColors
 {
     if(!self.gradientLayer.colors)
         return nil;
@@ -53,7 +53,7 @@
 
 -(void)setBackgroundColor:(UIColor *)backgroundColor
 {
-    [super setBackgroundColor:backgroundColor];
+    super.backgroundColor = backgroundColor;
 
     if(!self.settingBackgroundColorInternally)
         self.gradientLayer.colors = nil;  // Not -setGradientColors: to avoid a loop
@@ -61,12 +61,12 @@
         self.settingBackgroundColorInternally = NO;
 }
 
--(void)setGradientLocations:(NSArray *)gradientLocations
+-(void)setGradientLocations:(NSArray<NSNumber *> *)gradientLocations
 {
     self.gradientLayer.locations = gradientLocations;
 }
 
--(NSArray *)gradientLocations
+-(NSArray<NSNumber *> *)gradientLocations
 {
     return self.gradientLayer.locations;
 }

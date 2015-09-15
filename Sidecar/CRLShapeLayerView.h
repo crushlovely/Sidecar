@@ -13,6 +13,6 @@
 /**
  Type-correct passthrough for the layer property.
  */
-@property (nonatomic, readonly) CAShapeLayer *shapeLayer;
+@property (nonatomic, readonly, nonnull) CAShapeLayer *shapeLayer;
 
 @end

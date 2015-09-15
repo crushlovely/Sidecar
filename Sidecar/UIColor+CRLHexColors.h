@@ -4,6 +4,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIColor (CRLHexColors)
 
 /**
@@ -28,7 +30,7 @@
  
  @returns A UIColor instance, or nil if the string is not in one of the above formats.
  */
-+(UIColor *)crl_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
++(nullable UIColor *)crl_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
 
 /**
  Returns a UIColor from a string representation of its RGB components, in one
@@ -40,6 +42,8 @@
  
  @returns A UIColor instance, or nil if the string is not in one of the above formats.
  */
-+(UIColor *)crl_colorWithHexString:(NSString *)hexString;
++(nullable UIColor *)crl_colorWithHexString:(NSString *)hexString;
 
 @end
+
+NS_ASSUME_NONNULL_END

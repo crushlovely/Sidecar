@@ -4,6 +4,8 @@
 
 #import <dispatch/dispatch.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Creates a dispatch_time_t representing the given time interval from the present.
  */
@@ -86,3 +88,5 @@ NS_INLINE void CRLPerformBlockInBackground(dispatch_block_t block)
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block);
 }
+
+NS_ASSUME_NONNULL_END

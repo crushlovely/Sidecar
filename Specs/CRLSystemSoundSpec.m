@@ -20,7 +20,10 @@ describe(@"creation", ^{
         expect([CRLSystemSound playFileAtPath:@"blah.caf"]).to.beNil();
         expect([CRLSystemSound playResource:@"blah" extension:@"caf"]).to.beNil();
 
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Wnonnull"
         expect([[CRLSystemSound alloc] initWithFileURL:nil]).to.beNil();
+        #pragma clang diagnostic pop
     });
 
 #ifndef CI  // For some reason these have started failing in Travis. Sandboxing stuff, maybe?
@@ -42,38 +45,44 @@ describe(@"creation", ^{
 #ifndef CI  // Unfortunately these tests don't work in Travis land. Maybe one day soon...
 
 describe(@"playing", ^{
-    it(@"should call the block on completion of the sound", ^AsyncBlock {
-        CRLSystemSound *sound = [[CRLSystemSound alloc] initWithFileURL:soundURL];
-        [sound playWithCompletion:^(CRLSystemSound *_sound) {
-            expect(sound).to._beIdenticalTo((__bridge void *)(_sound));
-            expect(sound.playing).to.beFalsy();
-            done();
-        }];
+    it(@"should call the block on completion of the sound", ^{
+        waitUntil(^(DoneCallback done) {
+            CRLSystemSound *sound = [[CRLSystemSound alloc] initWithFileURL:soundURL];
+            [sound playWithCompletion:^(CRLSystemSound *_sound) {
+                expect(sound).to._beIdenticalTo((__bridge void *)(_sound));
+                expect(sound.playing).to.beFalsy();
+                done();
+            }];
 
-        expect(sound.playing).to.beTruthy();
+            expect(sound.playing).to.beTruthy();
+        });
     });
 
-    it(@"should handle fire-and-forget calling", ^AsyncBlock {
-        [CRLSystemSound playFileAtPath:soundPath completion:^(CRLSystemSound *sound) {
-            expect(sound).toNot.beNil();
-            expect(sound.playing).to.beFalsy();
+    it(@"should handle fire-and-forget calling", ^{
+        waitUntil(^(DoneCallback done) {
+            [CRLSystemSound playFileAtPath:soundPath completion:^(CRLSystemSound *sound) {
+                expect(sound).toNot.beNil();
+                expect(sound.playing).to.beFalsy();
 
-            done();
-        }];
+                done();
+            }];
+        });
     });
 
-    it(@"should continue to work after being stopped", ^AsyncBlock {
-        CRLSystemSound *sound = [[CRLSystemSound alloc] initWithFileURL:soundURL];
-        [sound play];
-        expect(sound.playing).to.beTruthy();
+    it(@"should continue to work after being stopped", ^{
+        waitUntil(^(DoneCallback done) {
+            CRLSystemSound *sound = [[CRLSystemSound alloc] initWithFileURL:soundURL];
+            [sound play];
+            expect(sound.playing).to.beTruthy();
 
-        [sound stop];
-        expect(sound.playing).to.beFalsy();
+            [sound stop];
+            expect(sound.playing).to.beFalsy();
 
-        [sound playWithCompletion:^(CRLSystemSound *sound __unused) {
-            done();
-        }];
-        expect(sound.playing).to.beTruthy();
+            [sound playWithCompletion:^(CRLSystemSound *sound __unused) {
+                done();
+            }];
+            expect(sound.playing).to.beTruthy();
+        });
     });
 
     it(@"should ignore requests to play while already playing", ^ {
