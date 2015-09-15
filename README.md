@@ -9,7 +9,7 @@ Yet another utility belt for iOS projects. Sidecar aims to be small, well-tested
 
 ## Features
 * Category methods for commonly needed functionality (trimming a string, creating UIColors from hex, generating digests of data, etc.).
-# A bunch fo category methods for building up attributed strings.
+# A bunch of category methods for building up attributed strings.
 # A small library of useful geometry routines -- linear interpolation, range mapping, etc.
 * A few simple UIView subclasses to make dealing with non-standard `+layerClass`es easier.
 * A log formatter for [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) that includes the method and filename in log messages.

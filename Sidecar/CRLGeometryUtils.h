@@ -7,6 +7,8 @@
 #define CRL_PURE_INLINE NS_INLINE __pure
 #define CRL_OVERLOADABLE __attribute__((overloadable))
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Linearly interpolates between the given floats, returning f0 when percent is 0, and
  f1 when percent is 1.
@@ -139,3 +141,5 @@ CRL_PURE_INLINE CRL_OVERLOADABLE CGFloat CRLAspectRatio(UIView *view)
 {
     return CRLAspectRatio(view.frame.size);
 }
+
+NS_ASSUME_NONNULL_END
