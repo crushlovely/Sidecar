@@ -2,6 +2,9 @@
 // Copyright (c) 2014, Crush & Lovely <engineering@crushlovely.com>
 // Under the MIT License; see LICENSE file for details.
 
+#if __has_include(<CocoaLumberjack/CocoaLumberjack.h>)
+
+
 #import "CRLMethodLogFormatter.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 #import <libkern/OSAtomic.h>
@@ -95,3 +98,6 @@ NS_INLINE const char *CRLLogFlagToCString(DDLogFlag logFlag)
 }
 
 @end
+
+
+#endif

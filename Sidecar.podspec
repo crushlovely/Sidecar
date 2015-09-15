@@ -11,16 +11,21 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.requires_arc = true
   
-  s.dependency 'CocoaLumberjack', '~>2.0'
-  
   # Defining LOG_LEVEL_DEF makes sure we don't stomp on the application's
   # log level, which is usually called 'ddLogLevel'.
   s.prefix_header_contents = <<-PCH
 
 #ifdef __OBJC__
-  #define LOG_LEVEL_DEF CRLSidecarLogLevel
-  #import <CocoaLumberjack/CocoaLumberjack.h>
-  static const DDLogLevel CRLSidecarLogLevel = DDLogLevelWarning;
+  #if __has_include(<CocoaLumberjack/CocoaLumberjack.h>)
+    #define LOG_LEVEL_DEF CRLSidecarLogLevel
+
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wunused-function"
+    #import <CocoaLumberjack/CocoaLumberjack.h>
+    #pragma clang diagnostic pop
+
+    static const DDLogLevel CRLSidecarLogLevel = DDLogLevelWarning;
+  #endif
 #endif
   PCH
 

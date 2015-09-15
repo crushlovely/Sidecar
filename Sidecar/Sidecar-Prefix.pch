@@ -5,9 +5,16 @@
 //
 
 #ifdef __OBJC__
-    #define LOG_LEVEL_DEF CRLSidecarLogLevel
-    #import <CocoaLumberjack/CocoaLumberjack.h>
-    static const DDLogLevel CRLSidecarLogLevel = DDLogLevelWarning;
+    #if __has_include(<CocoaLumberjack/CocoaLumberjack.h>)
+        #define LOG_LEVEL_DEF CRLSidecarLogLevel
+
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Wunused-function"
+        #import <CocoaLumberjack/CocoaLumberjack.h>
+        #pragma clang diagnostic pop
+
+        static const DDLogLevel CRLSidecarLogLevel = DDLogLevelWarning;
+    #endif
 
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
