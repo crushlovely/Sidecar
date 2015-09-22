@@ -6,7 +6,6 @@ env:
     - LANG=en_US.UTF-8
 
 before_install:
-  - sudo easy_install cpp-coveralls
   - gem install xcpretty-travis-formatter
 
 # xctool is more trouble than it's worth...
@@ -15,4 +14,4 @@ script:
   - xcodebuild -workspace Sidecar.xcworkspace -scheme Sidecar -configuration Debug -sdk iphonesimulator build test ARCHS=i386 VALID_ARCHS=i386 ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES GCC_PREPROCESSOR_DEFINITIONS='${inherited} CI=1' | xcpretty -f `xcpretty-travis-formatter`
 
 after_success:
-  - ./coveralls.rb --extension m --extension h --exclude-folder Pods --exclude-folder Specs
+  - bash <(curl -s https://codecov.io/bash)

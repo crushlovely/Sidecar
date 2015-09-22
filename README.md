@@ -1,9 +1,5 @@
-# ![icon](sidecar-120.png) Sidecar [![Build Status](http://img.shields.io/travis/crushlovely/Sidecar.svg?style=flat)](https://travis-ci.org/crushlovely/Sidecar) [![Coverage Status](http://img.shields.io/coveralls/crushlovely/Sidecar.svg?style=flat)](https://coveralls.io/r/crushlovely/Sidecar)
+# ![icon](sidecar-120.png) Sidecar [![Build Status](http://img.shields.io/travis/crushlovely/Sidecar.svg?style=flat)](https://travis-ci.org/crushlovely/Sidecar) [![Coverage Status](http://img.shields.io/codecov/c/github/crushlovely/Sidecar.svg?style=flat)](https://codecov.io/github/crushlovely/Sidecar)
 
-<!--
-[![Version](http://cocoapod-badges.herokuapp.com/v/Sidecar/badge.png)](http://cocoadocs.org/docsets/Sidecar)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/Sidecar/badge.png)](http://cocoadocs.org/docsets/Sidecar)
--->
 
 Yet another utility belt for iOS projects. Sidecar aims to be small, well-tested, and non-invasive.
 
