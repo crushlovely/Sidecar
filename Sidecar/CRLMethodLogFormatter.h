@@ -6,8 +6,7 @@
 
 #if __has_include(<CocoaLumberjack/CocoaLumberjack.h>)
 
-
-@protocol DDLogFormatter;
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 /**
  A CocoaLumberjack log formatter that includes the date, time, filename, function name

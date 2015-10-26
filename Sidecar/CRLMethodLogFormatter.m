@@ -6,7 +6,6 @@
 
 
 #import "CRLMethodLogFormatter.h"
-#import <CocoaLumberjack/CocoaLumberjack.h>
 #import <libkern/OSAtomic.h>
 
 static NSString * const CRLMethodLogFormatterCalendarKey = @"CRLMethodLogFormatterCalendarKey";
@@ -65,9 +64,9 @@ NS_INLINE const char *CRLLogFlagToCString(DDLogFlag logFlag)
     // Time calculation is ripped from DDTTYLogger
 
     NSDateComponents *components = [[self threadsafeCalendar] components:CRLMethodLogFormatterCalendarUnitFlags
-                                                                fromDate:logMessage->_timestamp];
+                                                                fromDate:logMessage.timestamp];
 
-    NSTimeInterval epoch = logMessage->_timestamp.timeIntervalSinceReferenceDate;
+    NSTimeInterval epoch = logMessage.timestamp.timeIntervalSinceReferenceDate;
     int milliseconds = (int)((epoch - floor(epoch)) * 1000);
 
     NSString *formattedMsg = [NSString stringWithFormat:@"%04ld-%02ld-%02ld %02ld:%02ld:%02ld:%03d [%s] %@:%lu (%@): %@",
@@ -78,11 +77,11 @@ NS_INLINE const char *CRLLogFlagToCString(DDLogFlag logFlag)
                               (long)components.minute,
                               (long)components.second,
                               milliseconds,
-                              CRLLogFlagToCString(logMessage->_flag),
-                              logMessage->_fileName,
-                              (unsigned long)logMessage->_line,
-                              logMessage->_function ?: @"",
-                              logMessage->_message];
+                              CRLLogFlagToCString(logMessage.flag),
+                              logMessage.fileName,
+                              (unsigned long)logMessage.line,
+                              logMessage.function ?: @"",
+                              logMessage.message];
 
     return formattedMsg;
 }
