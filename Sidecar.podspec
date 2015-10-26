@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = "1.1.0"
   s.summary          = "Yet Another iOS Utility Belt"
   s.license          = 'MIT'
-  s.authors          = { 'Crush & Lovely' => 'engineering@crushlovely.com', 'Tim Clem' => 'tim@crushlovely.com' }
+  s.authors          = { 'Crush & Lovely' => 'engineering@crushlovely.com', 'Tim Clem' => 'tim.clem@gmail.com' }
   s.source           = { :git => "https://github.com/crushlovely/Sidecar.git", :tag => "v#{s.version}" }
   s.homepage         = 'https://github.com/crushlovely/Sidecar'
 
