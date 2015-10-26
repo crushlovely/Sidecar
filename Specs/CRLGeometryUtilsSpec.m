@@ -64,6 +64,11 @@ describe(@"CRLMapRange", ^{
         expect(CRLMapRange(2, 0, 1, 0, 20, NO)).to.equal(40);
         expect(CRLMapRange(-1, 0, 1, 0, 20, NO)).to.equal(-20);
     });
+
+    it(@"should handle the the min and max being flipped", ^{
+        expect(CRLMapRange(2, 0, 10, 5, 0, YES)).to.equal(4);
+        expect(CRLMapRange(25, 100, 0, 10, 0, YES)).to.equal(2.5);
+    });
 });
 
 describe(@"CRLMapToPercentage", ^{

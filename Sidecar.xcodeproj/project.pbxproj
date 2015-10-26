@@ -18,7 +18,7 @@
 		BD0C901118E50395005B537A /* CRLGradientLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FC818E4FC0F005B537A /* CRLGradientLayerView.m */; };
 		BD0C901218E50395005B537A /* CRLMethodLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FCA18E4FC0F005B537A /* CRLMethodLogFormatter.m */; };
 		BD0C901318E50395005B537A /* CRLShapeLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FCC18E4FC0F005B537A /* CRLShapeLayerView.m */; };
-		BD0C901418E50395005B537A /* CRLSystemSound.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FCE18E4FC0F005B537A /* CRLSystemSound.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD0C901418E50395005B537A /* CRLSystemSound.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FCE18E4FC0F005B537A /* CRLSystemSound.m */; };
 		BD0C901518E50395005B537A /* NSData+CRLDigests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FD118E4FC0F005B537A /* NSData+CRLDigests.m */; };
 		BD0C901618E50395005B537A /* NSObject+CRLRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FD318E4FC0F005B537A /* NSObject+CRLRuntime.m */; };
 		BD0C901718E50395005B537A /* NSString+CRLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FD518E4FC0F005B537A /* NSString+CRLUtils.m */; };
@@ -302,6 +302,7 @@
 				BD0C8F9E18E4F937005B537A /* Frameworks */,
 				BD0C8F9F18E4F937005B537A /* Resources */,
 				A060128E177D4C138D1ABA95 /* Copy Pods Resources */,
+				7ED97C7AD5CA5A71D7697AD6 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -402,6 +403,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7ED97C7AD5CA5A71D7697AD6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Specs/Pods-Specs-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A060128E177D4C138D1ABA95 /* Copy Pods Resources */ = {
@@ -586,11 +602,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9349A1216737F1CED4BB8B25 /* Pods-Specs.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -608,11 +619,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 544BF82B048F3D475AE3237F /* Pods-Specs.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
 				INFOPLIST_FILE = "Specs/Specs-Info.plist";

@@ -49,12 +49,25 @@ describe(@"playing", ^{
         waitUntil(^(DoneCallback done) {
             CRLSystemSound *sound = [[CRLSystemSound alloc] initWithFileURL:soundURL];
             [sound playWithCompletion:^(CRLSystemSound *_sound) {
-                expect(sound).to._beIdenticalTo((__bridge void *)(_sound));
+                expect(sound).to.beIdenticalTo(_sound);
                 expect(sound.playing).to.beFalsy();
                 done();
             }];
 
             expect(sound.playing).to.beTruthy();
+        });
+    });
+
+    it(@"should call the completion block back on the main thread", ^{
+        waitUntil(^(DoneCallback done) {
+            CRLSystemSound *sound = [[CRLSystemSound alloc] initWithFileURL:soundURL];
+
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [sound playWithCompletion:^(CRLSystemSound *sound __unused) {
+                    expect([NSThread isMainThread]).to.beTruthy();
+                    done();
+                }];
+            });
         });
     });
 
@@ -79,9 +92,9 @@ describe(@"playing", ^{
             expect(sound.playing).to.beFalsy();
 
             [sound playWithCompletion:^(CRLSystemSound *sound __unused) {
+                expect(YES).to.beTruthy();
                 done();
             }];
-            expect(sound.playing).to.beTruthy();
         });
     });
 

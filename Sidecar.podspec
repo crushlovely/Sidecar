@@ -29,20 +29,7 @@ Pod::Spec.new do |s|
 #endif
   PCH
 
-  non_arc_files = 'Sidecar/CRLSystemSound.{h,m}'
-
-  s.source_files = 'Sidecar'
-  s.exclude_files = non_arc_files
-  
-  s.subspec 'Non-ARC' do |sna|
-    sna.requires_arc = false
-    sna.source_files = non_arc_files
-    
-    # Nil out the PCH content for this subspec... otherwise it gets two copies
-    # of our string, which doesn't work at all.
-    sna.prefix_header_contents = ''
-  end
-  
+  s.source_files = 'Sidecar'  
   s.public_header_files = 'Sidecar/*.h'
   s.frameworks = 'QuartzCore', 'AudioToolbox'
 end

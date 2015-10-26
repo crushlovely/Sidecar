@@ -30,7 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
  to work in the simulator regardless of your sound settings in
  System Preferences. Also +vibrateOrBeep:YES will play
  the default OSX alert sound in the simulator.
+
+ Completion blocks are called back on the main thread.
  */
+NS_CLASS_AVAILABLE_IOS(9_0)
 @interface CRLSystemSound : NSObject
 
 /**
@@ -63,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Stops playback of the sound, or does nothing if it is not playing.
- 
+
  The completion block will not be called.
  */
 -(void)stop;
