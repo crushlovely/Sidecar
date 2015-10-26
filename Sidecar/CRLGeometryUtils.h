@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 CRL_PURE_INLINE CRL_OVERLOADABLE CGFloat CRLLerp(CGFloat f0, CGFloat f1, CGFloat percent)
 {
-    return fma(f1 - f0, percent, f0);
+    return (CGFloat)fma(f1 - f0, percent, f0);
 }
 
 /**
@@ -58,9 +58,9 @@ CRL_PURE_INLINE CGFloat CRLMapRange(CGFloat value, CGFloat originalMin, CGFloat 
 
     if(clamp) {
         if(targetMin < targetMax)
-            return fmin(fmax(raw, targetMin), targetMax);
+            return (CGFloat)fmin(fmax(raw, targetMin), targetMax);
         else
-            return fmin(fmax(raw, targetMax), targetMin);
+            return (CGFloat)fmin(fmax(raw, targetMax), targetMin);
     }
     return raw;
 }
@@ -80,8 +80,8 @@ CRL_PURE_INLINE CGFloat CRLMapToPercentage(CGFloat value, CGFloat originalMin, C
  a rectangle of containerSize, maintaining aspect ratio.
  */
 CRL_PURE_INLINE CGSize CRLSizeForFittingSizeInSize(CGSize contentSize, CGSize containerSize) {
-    CGFloat containerAspectRatio = fabs(containerSize.width / containerSize.height);
-    CGFloat contentAspectRatio = fabs(contentSize.width / contentSize.height);
+    CGFloat containerAspectRatio = (CGFloat)fabs(containerSize.width / containerSize.height);
+    CGFloat contentAspectRatio = (CGFloat)fabs(contentSize.width / contentSize.height);
 
     CGSize newSize = containerSize;
     // The largest dimension will be the `maxSize`, and then we need to scale
@@ -102,10 +102,10 @@ CRL_PURE_INLINE CGSize CRLSizeForFittingSizeInSize(CGSize contentSize, CGSize co
  */
 CRL_PURE_INLINE CGSize CRLSizeForFillingSizeInSize(CGSize contentSize, CGSize containerSize)
 {
-    CGFloat scaleWidth = fabs(containerSize.width / contentSize.width);
-    CGFloat scaleHeight = fabs(containerSize.height / contentSize.height);
+    CGFloat scaleWidth = (CGFloat)fabs(containerSize.width / contentSize.width);
+    CGFloat scaleHeight = (CGFloat)fabs(containerSize.height / contentSize.height);
 
-    CGFloat scaleFactor = fmax(scaleWidth, scaleHeight);
+    CGFloat scaleFactor = (CGFloat)fmax(scaleWidth, scaleHeight);
 
     return CGSizeMake(contentSize.width * scaleFactor, contentSize.height * scaleFactor);
 }
@@ -115,7 +115,7 @@ CRL_PURE_INLINE CGSize CRLSizeForFillingSizeInSize(CGSize contentSize, CGSize co
  */
 CRL_PURE_INLINE CRL_OVERLOADABLE CGFloat CRLAspectRatio(CGSize size)
 {
-    return fabs(size.width / size.height);
+    return (CGFloat)fabs(size.width / size.height);
 }
 
 /**

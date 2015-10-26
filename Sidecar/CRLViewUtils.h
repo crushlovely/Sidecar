@@ -11,7 +11,7 @@
  */
 NS_INLINE CGFloat CRLSizeOfPixelInPoints(void)
 {
-    return 1.0 / [UIScreen mainScreen].scale;
+    return (CGFloat)(1.0 / [UIScreen mainScreen].scale);
 }
 
 /**
