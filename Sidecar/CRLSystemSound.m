@@ -94,7 +94,7 @@
 #endif
     }
     else
-        NSLog(@"[CRLSystemSound] Error creating system sound for %@. Status code: %u", self.fileURL, err);
+        NSLog(@"[CRLSystemSound] Error creating system sound for %@. Status code: %d", self.fileURL, (int)err);
 
     return err;
 }
