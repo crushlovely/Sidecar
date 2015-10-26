@@ -1,5 +1,9 @@
 # Sidecar CHANGELOG
 
+## 1.1.1 - 25 Oct. 2015
+
+* Support compiling with `use_frameworks!` in an app's Podfile.
+
 ## 1.1.0 - 25 Oct. 2015
 
 * Rewrote CRLSystemSound to use the new completion block API in iOS 9. That class now requires iOS 9, but no external API changed.

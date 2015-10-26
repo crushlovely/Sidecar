@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Sidecar"
-  s.version          = "1.1.0"
+  s.version          = "1.1.1"
   s.summary          = "Yet Another iOS Utility Belt"
   s.license          = 'MIT'
   s.authors          = { 'Crush & Lovely' => 'engineering@crushlovely.com', 'Tim Clem' => 'tim.clem@gmail.com' }
