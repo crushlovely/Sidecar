@@ -7,35 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7061239D0C682860BF1F4588 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3298F14DE77FC0A31C747E5D /* libPods-Specs.a */; };
+		48FB3C8D6EF28991204BA8FA /* Pods_Specs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A529342D8AB37D2C88CCFC /* Pods_Specs.framework */; };
 		BD0923EC18F331DB00D10D62 /* shield.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD0923EB18F331DB00D10D62 /* shield.caf */; };
 		BD0923EE18F331F600D10D62 /* CRLSystemSoundSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0923ED18F331F600D10D62 /* CRLSystemSoundSpec.m */; };
 		BD0C8FA418E4F937005B537A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C8F8318E4F937005B537A /* Foundation.framework */; };
 		BD0C8FA518E4F937005B537A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C8F8718E4F937005B537A /* UIKit.framework */; };
-		BD0C8FE918E4FDF5005B537A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C8F8318E4F937005B537A /* Foundation.framework */; };
-		BD0C900D18E50116005B537A /* libSidecar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0C8FE818E4FDF5005B537A /* libSidecar.a */; };
 		BD0C901018E50239005B537A /* NSString+CRLDigestsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C900F18E50239005B537A /* NSString+CRLDigestsSpec.m */; };
-		BD0C901118E50395005B537A /* CRLGradientLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FC818E4FC0F005B537A /* CRLGradientLayerView.m */; };
-		BD0C901218E50395005B537A /* CRLMethodLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FCA18E4FC0F005B537A /* CRLMethodLogFormatter.m */; };
-		BD0C901318E50395005B537A /* CRLShapeLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FCC18E4FC0F005B537A /* CRLShapeLayerView.m */; };
-		BD0C901418E50395005B537A /* CRLSystemSound.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FCE18E4FC0F005B537A /* CRLSystemSound.m */; };
-		BD0C901618E50395005B537A /* NSObject+CRLRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FD318E4FC0F005B537A /* NSObject+CRLRuntime.m */; };
-		BD0C901718E50395005B537A /* NSString+CRLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FD518E4FC0F005B537A /* NSString+CRLUtils.m */; };
-		BD0C901818E50395005B537A /* UIColor+CRLHexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FD818E4FC0F005B537A /* UIColor+CRLHexColors.m */; };
-		BD0C901918E50395005B537A /* UIView+CRLPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C8FDA18E4FC0F005B537A /* UIView+CRLPositioning.m */; };
 		BD0C902718E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902618E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m */; };
 		BD0C902B18E5C606005B537A /* NSObject+CRLRuntimeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902A18E5C606005B537A /* NSObject+CRLRuntimeSpec.m */; };
 		BD0C902D18E5C95F005B537A /* NSData+CRLDigestsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0C902C18E5C95F005B537A /* NSData+CRLDigestsSpec.m */; };
-		BD12E78B1E46C31C0045D1C4 /* CRLDigestExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BD12E78A1E46C31C0045D1C4 /* CRLDigestExtensions.m */; };
 		BD12E78D1E46C60A0045D1C4 /* NSString+CRLUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD12E78C1E46C60A0045D1C4 /* NSString+CRLUtilsSpec.m */; };
-		BD345DF41B78010400B3DE28 /* NSAttributedString+CRLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD345DEC1B78010400B3DE28 /* NSAttributedString+CRLUtils.m */; };
-		BD345DF51B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD345DEE1B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.m */; };
-		BD345DF61B78010400B3DE28 /* NSNumber+CRL64BitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = BD345DF01B78010400B3DE28 /* NSNumber+CRL64BitSupport.m */; };
-		BD345DF71B78010400B3DE28 /* NSString+CRLAttributedUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD345DF21B78010400B3DE28 /* NSString+CRLAttributedUtils.m */; };
-		BD5195B31B7FDABE00EF752C /* NSURLComponents+CRLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5195B21B7FDABE00EF752C /* NSURLComponents+CRLUtils.m */; };
 		BD57091C18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57091B18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m */; };
 		BD9FFD9118E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */; };
 		BD9FFD9318E5E355001DF6EC /* CRLViewUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */; };
+		BDCD72091E46DC0800E22BAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCD72081E46DC0800E22BAA /* main.m */; };
+		BDCD720C1E46DC0800E22BAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCD720B1E46DC0800E22BAA /* AppDelegate.m */; };
+		BDCD720F1E46DC0800E22BAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCD720E1E46DC0800E22BAA /* ViewController.m */; };
+		BDCD72121E46DC0800E22BAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCD72101E46DC0800E22BAA /* Main.storyboard */; };
+		BDCD72141E46DC0800E22BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDCD72131E46DC0800E22BAA /* Assets.xcassets */; };
+		BDCD72171E46DC0800E22BAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDCD72151E46DC0800E22BAA /* LaunchScreen.storyboard */; };
 		BDDA0D4F1B780A0400912811 /* CRLGeometryUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA0D4E1B780A0400912811 /* CRLGeometryUtilsSpec.m */; };
 		BDDA0D511B780E1700912811 /* UIView+CRLPositioningSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA0D501B780E1700912811 /* UIView+CRLPositioningSpec.m */; };
 		BDDA0D531B780EEA00912811 /* NSAttributedString+CRLUtilsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA0D521B780EEA00912811 /* NSAttributedString+CRLUtilsSpec.m */; };
@@ -45,30 +35,8 @@
 		BDDD9A321B8A4CD3002A7CAC /* CRLTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDD9A311B8A4CD3002A7CAC /* CRLTestUtils.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		BD0C900B18E50102005B537A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BD0C8F7818E4F937005B537A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BD0C8FE718E4FDF5005B537A;
-			remoteInfo = Sidecar;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		BD0C8FE618E4FDF5005B537A /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		3298F14DE77FC0A31C747E5D /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18A529342D8AB37D2C88CCFC /* Pods_Specs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Specs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		407779A43C2063E280AE896D /* Pods-Specs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug.xcconfig"; sourceTree = "<group>"; };
 		A183BC512D2698242125B5D2 /* Pods-Specs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.release.xcconfig"; sourceTree = "<group>"; };
 		BD0923EB18F331DB00D10D62 /* shield.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = shield.caf; sourceTree = "<group>"; };
@@ -76,55 +44,28 @@
 		BD0C8F8318E4F937005B537A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD0C8F8518E4F937005B537A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BD0C8F8718E4F937005B537A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		BD0C8F8B18E4F937005B537A /* Sidecar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sidecar-Info.plist"; sourceTree = "<group>"; };
-		BD0C8F9118E4F937005B537A /* Sidecar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sidecar-Prefix.pch"; sourceTree = "<group>"; };
 		BD0C8FA118E4F937005B537A /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0C8FA218E4F937005B537A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BD0C8FBF18E4FB20005B537A /* Specs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Specs-Info.plist"; path = "Specs/Specs-Info.plist"; sourceTree = SOURCE_ROOT; };
-		BD0C8FC418E4FC0F005B537A /* CRLBlockExecution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLBlockExecution.h; sourceTree = "<group>"; };
-		BD0C8FC618E4FC0F005B537A /* CRLFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLFileUtils.h; sourceTree = "<group>"; };
-		BD0C8FC718E4FC0F005B537A /* CRLGradientLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLGradientLayerView.h; sourceTree = "<group>"; };
-		BD0C8FC818E4FC0F005B537A /* CRLGradientLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLGradientLayerView.m; sourceTree = "<group>"; };
-		BD0C8FC918E4FC0F005B537A /* CRLMethodLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLMethodLogFormatter.h; sourceTree = "<group>"; };
-		BD0C8FCA18E4FC0F005B537A /* CRLMethodLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLMethodLogFormatter.m; sourceTree = "<group>"; };
-		BD0C8FCB18E4FC0F005B537A /* CRLShapeLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLShapeLayerView.h; sourceTree = "<group>"; };
-		BD0C8FCC18E4FC0F005B537A /* CRLShapeLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLShapeLayerView.m; sourceTree = "<group>"; };
-		BD0C8FCD18E4FC0F005B537A /* CRLSystemSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLSystemSound.h; sourceTree = "<group>"; };
-		BD0C8FCE18E4FC0F005B537A /* CRLSystemSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLSystemSound.m; sourceTree = "<group>"; };
-		BD0C8FCF18E4FC0F005B537A /* CRLViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLViewUtils.h; sourceTree = "<group>"; };
-		BD0C8FD218E4FC0F005B537A /* NSObject+CRLRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CRLRuntime.h"; sourceTree = "<group>"; };
-		BD0C8FD318E4FC0F005B537A /* NSObject+CRLRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CRLRuntime.m"; sourceTree = "<group>"; };
-		BD0C8FD418E4FC0F005B537A /* NSString+CRLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CRLUtils.h"; sourceTree = "<group>"; };
-		BD0C8FD518E4FC0F005B537A /* NSString+CRLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CRLUtils.m"; sourceTree = "<group>"; };
-		BD0C8FD618E4FC0F005B537A /* tgmath-stopgap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "tgmath-stopgap.h"; sourceTree = "<group>"; };
-		BD0C8FD718E4FC0F005B537A /* UIColor+CRLHexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CRLHexColors.h"; sourceTree = "<group>"; };
-		BD0C8FD818E4FC0F005B537A /* UIColor+CRLHexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CRLHexColors.m"; sourceTree = "<group>"; };
-		BD0C8FD918E4FC0F005B537A /* UIView+CRLPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CRLPositioning.h"; sourceTree = "<group>"; };
-		BD0C8FDA18E4FC0F005B537A /* UIView+CRLPositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CRLPositioning.m"; sourceTree = "<group>"; };
-		BD0C8FE818E4FDF5005B537A /* libSidecar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSidecar.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0C900A18E5002E005B537A /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Specs-Prefix.pch"; path = "Specs/Specs-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		BD0C900F18E50239005B537A /* NSString+CRLDigestsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CRLDigestsSpec.m"; sourceTree = "<group>"; };
 		BD0C902618E5ACC3005B537A /* UIColor+CRLHexColorsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CRLHexColorsSpec.m"; sourceTree = "<group>"; };
 		BD0C902A18E5C606005B537A /* NSObject+CRLRuntimeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CRLRuntimeSpec.m"; sourceTree = "<group>"; };
 		BD0C902C18E5C95F005B537A /* NSData+CRLDigestsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CRLDigestsSpec.m"; sourceTree = "<group>"; };
-		BD12E7891E46C31C0045D1C4 /* CRLDigestExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLDigestExtensions.h; sourceTree = "<group>"; };
-		BD12E78A1E46C31C0045D1C4 /* CRLDigestExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLDigestExtensions.m; sourceTree = "<group>"; };
 		BD12E78C1E46C60A0045D1C4 /* NSString+CRLUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CRLUtilsSpec.m"; sourceTree = "<group>"; };
-		BD345DEA1B78010400B3DE28 /* CRLGeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRLGeometryUtils.h; sourceTree = "<group>"; };
-		BD345DEB1B78010400B3DE28 /* NSAttributedString+CRLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CRLUtils.h"; sourceTree = "<group>"; };
-		BD345DEC1B78010400B3DE28 /* NSAttributedString+CRLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CRLUtils.m"; sourceTree = "<group>"; };
-		BD345DED1B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+CRLUtils.h"; sourceTree = "<group>"; };
-		BD345DEE1B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+CRLUtils.m"; sourceTree = "<group>"; };
-		BD345DEF1B78010400B3DE28 /* NSNumber+CRL64BitSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CRL64BitSupport.h"; sourceTree = "<group>"; };
-		BD345DF01B78010400B3DE28 /* NSNumber+CRL64BitSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CRL64BitSupport.m"; sourceTree = "<group>"; };
-		BD345DF11B78010400B3DE28 /* NSString+CRLAttributedUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CRLAttributedUtils.h"; sourceTree = "<group>"; };
-		BD345DF21B78010400B3DE28 /* NSString+CRLAttributedUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CRLAttributedUtils.m"; sourceTree = "<group>"; };
-		BD345DF31B78010400B3DE28 /* Sidecar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sidecar.h; sourceTree = "<group>"; };
-		BD5195B11B7FDABE00EF752C /* NSURLComponents+CRLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLComponents+CRLUtils.h"; sourceTree = "<group>"; };
-		BD5195B21B7FDABE00EF752C /* NSURLComponents+CRLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLComponents+CRLUtils.m"; sourceTree = "<group>"; };
 		BD57091B18F1B00A00E73B69 /* CRLShapeLayerViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLShapeLayerViewSpec.m; sourceTree = "<group>"; };
 		BD9FFD9018E5CDBC001DF6EC /* CRLGradientLayerViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLGradientLayerViewSpec.m; sourceTree = "<group>"; };
 		BD9FFD9218E5E355001DF6EC /* CRLViewUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLViewUtilsSpec.m; sourceTree = "<group>"; };
+		BDCD72051E46DC0800E22BAA /* SidecarTestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SidecarTestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDCD72081E46DC0800E22BAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BDCD720A1E46DC0800E22BAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BDCD720B1E46DC0800E22BAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BDCD720D1E46DC0800E22BAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BDCD720E1E46DC0800E22BAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BDCD72111E46DC0800E22BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDCD72131E46DC0800E22BAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDCD72161E46DC0800E22BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDCD72181E46DC0800E22BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDDA0D4E1B780A0400912811 /* CRLGeometryUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRLGeometryUtilsSpec.m; sourceTree = "<group>"; };
 		BDDA0D501B780E1700912811 /* UIView+CRLPositioningSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CRLPositioningSpec.m"; sourceTree = "<group>"; };
 		BDDA0D521B780EEA00912811 /* NSAttributedString+CRLUtilsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CRLUtilsSpec.m"; sourceTree = "<group>"; };
@@ -142,16 +83,14 @@
 			files = (
 				BD0C8FA518E4F937005B537A /* UIKit.framework in Frameworks */,
 				BD0C8FA418E4F937005B537A /* Foundation.framework in Frameworks */,
-				BD0C900D18E50116005B537A /* libSidecar.a in Frameworks */,
-				7061239D0C682860BF1F4588 /* libPods-Specs.a in Frameworks */,
+				48FB3C8D6EF28991204BA8FA /* Pods_Specs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD0C8FE518E4FDF5005B537A /* Frameworks */ = {
+		BDCD72021E46DC0800E22BAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD0C8FE918E4FDF5005B537A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,8 +100,8 @@
 		BD0C8F7718E4F937005B537A = {
 			isa = PBXGroup;
 			children = (
-				BD0C8F8918E4F937005B537A /* Sidecar */,
 				BD0C8FA818E4F937005B537A /* Specs */,
+				BDCD72061E46DC0800E22BAA /* SidecarTestHost */,
 				BD0C8F8218E4F937005B537A /* Frameworks */,
 				BD0C8F8118E4F937005B537A /* Products */,
 				DC486B8D3A88A995A8417444 /* Pods */,
@@ -173,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0C8FA118E4F937005B537A /* Specs.xctest */,
-				BD0C8FE818E4FDF5005B537A /* libSidecar.a */,
+				BDCD72051E46DC0800E22BAA /* SidecarTestHost.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,60 +124,9 @@
 				BD0C8F8518E4F937005B537A /* CoreGraphics.framework */,
 				BD0C8F8718E4F937005B537A /* UIKit.framework */,
 				BD0C8FA218E4F937005B537A /* XCTest.framework */,
-				3298F14DE77FC0A31C747E5D /* libPods-Specs.a */,
+				18A529342D8AB37D2C88CCFC /* Pods_Specs.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BD0C8F8918E4F937005B537A /* Sidecar */ = {
-			isa = PBXGroup;
-			children = (
-				BD345DEA1B78010400B3DE28 /* CRLGeometryUtils.h */,
-				BD345DEB1B78010400B3DE28 /* NSAttributedString+CRLUtils.h */,
-				BD345DEC1B78010400B3DE28 /* NSAttributedString+CRLUtils.m */,
-				BD345DED1B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.h */,
-				BD345DEE1B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.m */,
-				BD345DEF1B78010400B3DE28 /* NSNumber+CRL64BitSupport.h */,
-				BD345DF01B78010400B3DE28 /* NSNumber+CRL64BitSupport.m */,
-				BD345DF11B78010400B3DE28 /* NSString+CRLAttributedUtils.h */,
-				BD345DF21B78010400B3DE28 /* NSString+CRLAttributedUtils.m */,
-				BD345DF31B78010400B3DE28 /* Sidecar.h */,
-				BD0C8FD918E4FC0F005B537A /* UIView+CRLPositioning.h */,
-				BD0C8FDA18E4FC0F005B537A /* UIView+CRLPositioning.m */,
-				BD0C8FCD18E4FC0F005B537A /* CRLSystemSound.h */,
-				BD0C8FCE18E4FC0F005B537A /* CRLSystemSound.m */,
-				BD0C8FCF18E4FC0F005B537A /* CRLViewUtils.h */,
-				BD0C8FC418E4FC0F005B537A /* CRLBlockExecution.h */,
-				BD0C8FC618E4FC0F005B537A /* CRLFileUtils.h */,
-				BD0C8FC918E4FC0F005B537A /* CRLMethodLogFormatter.h */,
-				BD0C8FCA18E4FC0F005B537A /* CRLMethodLogFormatter.m */,
-				BD0C8FCB18E4FC0F005B537A /* CRLShapeLayerView.h */,
-				BD0C8FCC18E4FC0F005B537A /* CRLShapeLayerView.m */,
-				BD0C8FC718E4FC0F005B537A /* CRLGradientLayerView.h */,
-				BD0C8FC818E4FC0F005B537A /* CRLGradientLayerView.m */,
-				BD0C8FD218E4FC0F005B537A /* NSObject+CRLRuntime.h */,
-				BD0C8FD318E4FC0F005B537A /* NSObject+CRLRuntime.m */,
-				BD0C8FD418E4FC0F005B537A /* NSString+CRLUtils.h */,
-				BD0C8FD518E4FC0F005B537A /* NSString+CRLUtils.m */,
-				BD0C8FD718E4FC0F005B537A /* UIColor+CRLHexColors.h */,
-				BD0C8FD818E4FC0F005B537A /* UIColor+CRLHexColors.m */,
-				BD5195B11B7FDABE00EF752C /* NSURLComponents+CRLUtils.h */,
-				BD5195B21B7FDABE00EF752C /* NSURLComponents+CRLUtils.m */,
-				BD12E7891E46C31C0045D1C4 /* CRLDigestExtensions.h */,
-				BD12E78A1E46C31C0045D1C4 /* CRLDigestExtensions.m */,
-				BD0C8FD618E4FC0F005B537A /* tgmath-stopgap.h */,
-				BD0C8F8A18E4F937005B537A /* Supporting Files */,
-			);
-			path = Sidecar;
-			sourceTree = "<group>";
-		};
-		BD0C8F8A18E4F937005B537A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BD0C8F8B18E4F937005B537A /* Sidecar-Info.plist */,
-				BD0C8F9118E4F937005B537A /* Sidecar-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		BD0C8FA818E4F937005B537A /* Specs */ = {
@@ -276,6 +164,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BDCD72061E46DC0800E22BAA /* SidecarTestHost */ = {
+			isa = PBXGroup;
+			children = (
+				BDCD720A1E46DC0800E22BAA /* AppDelegate.h */,
+				BDCD720B1E46DC0800E22BAA /* AppDelegate.m */,
+				BDCD720D1E46DC0800E22BAA /* ViewController.h */,
+				BDCD720E1E46DC0800E22BAA /* ViewController.m */,
+				BDCD72101E46DC0800E22BAA /* Main.storyboard */,
+				BDCD72131E46DC0800E22BAA /* Assets.xcassets */,
+				BDCD72151E46DC0800E22BAA /* LaunchScreen.storyboard */,
+				BDCD72181E46DC0800E22BAA /* Info.plist */,
+				BDCD72071E46DC0800E22BAA /* Supporting Files */,
+			);
+			path = SidecarTestHost;
+			sourceTree = "<group>";
+		};
+		BDCD72071E46DC0800E22BAA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDCD72081E46DC0800E22BAA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		DC486B8D3A88A995A8417444 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,29 +214,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				BD0C900C18E50102005B537A /* PBXTargetDependency */,
 			);
 			name = Specs;
 			productName = SidecarTests;
 			productReference = BD0C8FA118E4F937005B537A /* Specs.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BD0C8FE718E4FDF5005B537A /* Sidecar */ = {
+		BDCD72041E46DC0800E22BAA /* SidecarTestHost */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD0C900418E4FDF5005B537A /* Build configuration list for PBXNativeTarget "Sidecar" */;
+			buildConfigurationList = BDCD721B1E46DC0800E22BAA /* Build configuration list for PBXNativeTarget "SidecarTestHost" */;
 			buildPhases = (
-				BD0C8FE418E4FDF5005B537A /* Sources */,
-				BD0C8FE518E4FDF5005B537A /* Frameworks */,
-				BD0C8FE618E4FDF5005B537A /* CopyFiles */,
+				BDCD72011E46DC0800E22BAA /* Sources */,
+				BDCD72021E46DC0800E22BAA /* Frameworks */,
+				BDCD72031E46DC0800E22BAA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Sidecar;
-			productName = Sidecar;
-			productReference = BD0C8FE818E4FDF5005B537A /* libSidecar.a */;
-			productType = "com.apple.product-type.library.static";
+			name = SidecarTestHost;
+			productName = SidecarTestHost;
+			productReference = BDCD72051E46DC0800E22BAA /* SidecarTestHost.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -336,6 +247,13 @@
 				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Crush & Lovely";
+				TargetAttributes = {
+					BDCD72041E46DC0800E22BAA = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 9H94YF52ZT;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = BD0C8F7B18E4F937005B537A /* Build configuration list for PBXProject "Sidecar" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -350,8 +268,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD0C8FE718E4FDF5005B537A /* Sidecar */,
 				BD0C8FA018E4F937005B537A /* Specs */,
+				BDCD72041E46DC0800E22BAA /* SidecarTestHost */,
 			);
 		};
 /* End PBXProject section */
@@ -362,6 +280,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0923EC18F331DB00D10D62 /* shield.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDCD72031E46DC0800E22BAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCD72171E46DC0800E22BAA /* LaunchScreen.storyboard in Resources */,
+				BDCD72141E46DC0800E22BAA /* Assets.xcassets in Resources */,
+				BDCD72121E46DC0800E22BAA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,36 +367,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD0C8FE418E4FDF5005B537A /* Sources */ = {
+		BDCD72011E46DC0800E22BAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD345DF51B78010400B3DE28 /* NSMutableAttributedString+CRLUtils.m in Sources */,
-				BD345DF61B78010400B3DE28 /* NSNumber+CRL64BitSupport.m in Sources */,
-				BD0C901318E50395005B537A /* CRLShapeLayerView.m in Sources */,
-				BD0C901818E50395005B537A /* UIColor+CRLHexColors.m in Sources */,
-				BD0C901618E50395005B537A /* NSObject+CRLRuntime.m in Sources */,
-				BD345DF71B78010400B3DE28 /* NSString+CRLAttributedUtils.m in Sources */,
-				BD0C901218E50395005B537A /* CRLMethodLogFormatter.m in Sources */,
-				BD0C901418E50395005B537A /* CRLSystemSound.m in Sources */,
-				BD0C901918E50395005B537A /* UIView+CRLPositioning.m in Sources */,
-				BD5195B31B7FDABE00EF752C /* NSURLComponents+CRLUtils.m in Sources */,
-				BD345DF41B78010400B3DE28 /* NSAttributedString+CRLUtils.m in Sources */,
-				BD0C901118E50395005B537A /* CRLGradientLayerView.m in Sources */,
-				BD0C901718E50395005B537A /* NSString+CRLUtils.m in Sources */,
-				BD12E78B1E46C31C0045D1C4 /* CRLDigestExtensions.m in Sources */,
+				BDCD720F1E46DC0800E22BAA /* ViewController.m in Sources */,
+				BDCD720C1E46DC0800E22BAA /* AppDelegate.m in Sources */,
+				BDCD72091E46DC0800E22BAA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		BD0C900C18E50102005B537A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BD0C8FE718E4FDF5005B537A /* Sidecar */;
-			targetProxy = BD0C900B18E50102005B537A /* PBXContainerItemProxy */;
+/* Begin PBXVariantGroup section */
+		BDCD72101E46DC0800E22BAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDCD72111E46DC0800E22BAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
 		};
-/* End PBXTargetDependency section */
+		BDCD72151E46DC0800E22BAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDCD72161E46DC0800E22BAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BD0C8FB018E4F937005B537A /* Debug */ = {
@@ -602,47 +530,40 @@
 			};
 			name = Release;
 		};
-		BD0C900518E4FDF5005B537A /* Debug */ = {
+		BDCD72191E46DC0800E22BAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DSTROOT = /tmp/Sidecar.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sidecar/Sidecar-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_SHADOW = YES;
-				GCC_WARN_SIGN_COMPARE = YES;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9H94YF52ZT;
+				INFOPLIST_FILE = SidecarTestHost/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.misterfifths.SidecarTestHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		BD0C900618E4FDF5005B537A /* Release */ = {
+		BDCD721A1E46DC0800E22BAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				DSTROOT = /tmp/Sidecar.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sidecar/Sidecar-Prefix.pch";
-				GCC_WARN_SHADOW = YES;
-				GCC_WARN_SIGN_COMPARE = YES;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9H94YF52ZT;
+				INFOPLIST_FILE = SidecarTestHost/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.misterfifths.SidecarTestHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -667,11 +588,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD0C900418E4FDF5005B537A /* Build configuration list for PBXNativeTarget "Sidecar" */ = {
+		BDCD721B1E46DC0800E22BAA /* Build configuration list for PBXNativeTarget "SidecarTestHost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD0C900518E4FDF5005B537A /* Debug */,
-				BD0C900618E4FDF5005B537A /* Release */,
+				BDCD72191E46DC0800E22BAA /* Debug */,
+				BDCD721A1E46DC0800E22BAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

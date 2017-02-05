@@ -1,5 +1,3 @@
-#import "Sidecar-Prefix.pch"
-
 #ifdef __OBJC__
     #import <Specta/Specta.h>
 
