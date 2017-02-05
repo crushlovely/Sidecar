@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
  Returns the first NSURLQueryItem with the given name from the receiver's
  queryItems, or nil if no match is found.
  */
--(nullable NSURLQueryItem *)crl_firstQueryItemNamed:(NSString *)name;
+-(nullable NSURLQueryItem *)crl_firstQueryItemNamed:(NSString *)name NS_SWIFT_NAME(firstQueryItem(named:));
 
 @end
 

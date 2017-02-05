@@ -42,24 +42,25 @@ NS_CLASS_AVAILABLE_IOS(9_0)
  @param beepOnUnsupportedDevices If YES, will trigger the system alert beep on devices
  that do not support vibration.
  */
-+(void)vibrateOrBeep:(BOOL)beepOnUnsupportedDevices;
++(void)vibrateOrBeep:(BOOL)beepOnUnsupportedDevices NS_SWIFT_NAME(vibrate(beepOnUnsupportedDevices:));
 
 // These class-level methods and the associated -init methods will return
 // nil if the given path or resource could not be loaded.
-+(nullable CRLSystemSound *)playFileAtPath:(NSString *)path completion:(nullable void (^)(CRLSystemSound *sound))completion;
-+(nullable CRLSystemSound *)playFileAtPath:(NSString *)path;
++(nullable instancetype)playFileAtPath:(NSString *)path completion:(nullable void (^)(CRLSystemSound *sound))completion NS_SWIFT_NAME(play(path:with:));
++(nullable instancetype)playFileAtPath:(NSString *)path NS_SWIFT_NAME(play(path:));
 
 // The resource initializers retrieve the path for the given resource
 // from [NSBundle mainBundle].
-+(nullable CRLSystemSound *)playResource:(NSString *)name extension:(NSString *)extension completion:(nullable void (^)(CRLSystemSound *sound))completion;
-+(nullable CRLSystemSound *)playResource:(NSString *)name extension:(NSString *)extension;
++(nullable instancetype)playResource:(NSString *)name extension:(NSString *)extension completion:(nullable void (^)(CRLSystemSound *sound))completion NS_SWIFT_NAME(play(resource:extension:_:));
++(nullable instancetype)playResource:(NSString *)name extension:(NSString *)extension NS_SWIFT_NAME(play(resource:extension:));
 
--(nullable CRLSystemSound *)initWithFileURL:(NSURL *)URL;
--(nullable CRLSystemSound *)initWithFileAtPath:(NSString *)path;
--(nullable CRLSystemSound *)initWithResource:(NSString *)name extension:(NSString *)extension;
+-(instancetype)init NS_UNAVAILABLE;
+-(nullable instancetype)initWithFileURL:(NSURL *)URL NS_SWIFT_NAME(init(url:));
+-(nullable instancetype)initWithFileAtPath:(NSString *)path NS_SWIFT_NAME(init(path:));
+-(nullable instancetype)initWithResource:(NSString *)name extension:(NSString *)extension NS_SWIFT_NAME(init(resource:extension:));
 
 // Calling these on an instance that's already playing will have no effect.
--(void)playWithCompletion:(nullable void (^)(CRLSystemSound *sound))completion;
+-(void)playWithCompletion:(nullable void (^)(CRLSystemSound *sound))completion NS_SWIFT_NAME(playWithCompletion(_:));
 -(void)play;  // Same as above with nil completion block
 
 @property (nonatomic, assign, readonly, getter=isPlaying) BOOL playing;

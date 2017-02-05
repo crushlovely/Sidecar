@@ -12,13 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
  Returns a UIColor from a hexadecimal representation of its RGB components,
  as 0xrrggbb, with the given alpha.
  */
-+(UIColor *)crl_colorWithHex:(NSUInteger)hex alpha:(CGFloat)alpha;
++(UIColor *)crl_colorWithHex:(NSUInteger)hex alpha:(CGFloat)alpha NS_SWIFT_NAME(init(hex:alpha:));
 
 /**
  Returns a UIColor from a hexadecimal representation of its RGB components,
  as 0xrrggbb, with an alpha of 1.0.
  */
-+(UIColor *)crl_colorWithHex:(NSUInteger)hex;
++(UIColor *)crl_colorWithHex:(NSUInteger)hex NS_SWIFT_NAME(init(hex:));
 
 /**
  Returns a UIColor from a string representation of its RGB components, in one
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @returns A UIColor instance, or nil if the string is not in one of the above formats.
  */
-+(nullable UIColor *)crl_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
++(nullable UIColor *)crl_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha NS_SWIFT_NAME(init(hexString:alpha:));
 
 /**
  Returns a UIColor from a string representation of its RGB components, in one
@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @returns A UIColor instance, or nil if the string is not in one of the above formats.
  */
-+(nullable UIColor *)crl_colorWithHexString:(NSString *)hexString;
++(nullable UIColor *)crl_colorWithHexString:(NSString *)hexString NS_SWIFT_NAME(init(hexString:));
 
 @end
 

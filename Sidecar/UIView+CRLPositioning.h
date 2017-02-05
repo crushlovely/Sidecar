@@ -12,13 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
  Returns the first subview of the receiver that is an instance of the
  given class or a class inheriting from it.
  */
--(nullable UIView *)crl_firstSubviewOfKind:(Class)aClass;
+-(nullable UIView *)crl_firstSubviewOfKind:(Class)aClass NS_SWIFT_NAME(firstSubview(havingKind:));
 
 /**
  Swaps the position of view1 and view2 in the subviews array.
  If either view is not a subview of the receiver, this method does nothing.
  */
--(void)crl_exchangeSubview:(UIView *)view1 withSubview:(UIView *)view2;
+-(void)crl_exchangeSubview:(UIView *)view1 withSubview:(UIView *)view2 NS_SWIFT_NAME(exchangeSubview(_:with:));
 
 /**
  Returns YES if view1's index in the subviews array is greater than that of view2.
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
  view2, if their content were to overlap.
  If either view is not a subview of the receiver, this method returns NO.
  */
--(BOOL)crl_subview:(UIView *)view1 isInFrontOfSubview:(UIView *)view2;
+-(BOOL)crl_subview:(UIView *)view1 isInFrontOfSubview:(UIView *)view2 NS_SWIFT_NAME(subview(_:isInFrontOfSubview:));
 
 
 // All of the properties below interact with the view's frame.
@@ -34,36 +34,36 @@ NS_ASSUME_NONNULL_BEGIN
 // transform applied to it (in that case, rely on center and bounds).
 
 /// The origin of the receiver's frame.
-@property (nonatomic, assign) CGPoint crl_origin;
+@property (nonatomic, assign) CGPoint crl_origin NS_SWIFT_NAME(origin);
 /// The x-coordinate of the receiver's frame's origin.
-@property (nonatomic, assign) CGFloat crl_x;
+@property (nonatomic, assign) CGFloat crl_x NS_SWIFT_NAME(x);
 /// The y-coordinate of the receiver's frame's origin.
-@property (nonatomic, assign) CGFloat crl_y;
+@property (nonatomic, assign) CGFloat crl_y NS_SWIFT_NAME(y);
 
 /// The size of the receiver's frame.
-@property (nonatomic, assign) CGSize crl_size;
+@property (nonatomic, assign) CGSize crl_size NS_SWIFT_NAME(size);
 /// The width of the receiver's frame.
-@property (nonatomic, assign) CGFloat crl_width;
+@property (nonatomic, assign) CGFloat crl_width NS_SWIFT_NAME(width);
 /// The height of the receiver's frame.
-@property (nonatomic, assign) CGFloat crl_height;
+@property (nonatomic, assign) CGFloat crl_height NS_SWIFT_NAME(height);
 
 /// The minimum y-coordinate of the receiver's frame.
-@property (nonatomic, assign) CGFloat crl_top;
+@property (nonatomic, assign) CGFloat crl_top NS_SWIFT_NAME(top);
 /// The minimum x-coordinate of the receiver's frame.
-@property (nonatomic, assign) CGFloat crl_left;
+@property (nonatomic, assign) CGFloat crl_left NS_SWIFT_NAME(left);
 /// The maximum y-coordinate of the receiver's frame.
-@property (nonatomic, assign) CGFloat crl_bottom;
+@property (nonatomic, assign) CGFloat crl_bottom NS_SWIFT_NAME(bottom);
 /// The maximum x-coordinate of the receiver's frame.
-@property (nonatomic, assign) CGFloat crl_right;
+@property (nonatomic, assign) CGFloat crl_right NS_SWIFT_NAME(right);
 
 /// The location of the receiver's frame's top-left corner.
-@property (nonatomic, assign) CGPoint crl_topLeft;
+@property (nonatomic, assign) CGPoint crl_topLeft NS_SWIFT_NAME(topLeft);
 /// The location of the receiver's frame's top-right corner.
-@property (nonatomic, assign) CGPoint crl_topRight;
+@property (nonatomic, assign) CGPoint crl_topRight NS_SWIFT_NAME(topRight);
 /// The location of the receiver's frame's bottom-left corner.
-@property (nonatomic, assign) CGPoint crl_bottomLeft;
+@property (nonatomic, assign) CGPoint crl_bottomLeft NS_SWIFT_NAME(bottomLeft);
 /// The location of the receiver's frame's bottom-right corner.
-@property (nonatomic, assign) CGPoint crl_bottomRight;
+@property (nonatomic, assign) CGPoint crl_bottomRight NS_SWIFT_NAME(bottomRight);
 
 @end
 

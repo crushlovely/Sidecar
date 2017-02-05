@@ -10,7 +10,7 @@
 #import "CRLFileUtils.h"
 #import "CRLGeometryUtils.h"
 
-#import "NSData+CRLDigests.h"
+#import "CRLDigestExtensions.h"
 #import "NSNumber+CRL64BitSupport.h"
 #import "NSObject+CRLRuntime.h"
 #import "NSString+CRLUtils.h"

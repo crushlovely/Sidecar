@@ -13,6 +13,6 @@
  @note To convert a CGFloat to an NSNumber, use the literal NSNumber
  syntax -- it does the correct thing on all architectures.
  */
-@property (nonatomic, readonly) CGFloat crl_CGFloatValue;
+@property (nonatomic, readonly) CGFloat crl_CGFloatValue NS_SWIFT_NAME(cgFloatValue);
 
 @end

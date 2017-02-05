@@ -13,17 +13,17 @@ typedef NS_ENUM(NSInteger, CRLAssociationPolicy) {
      zeroing-weak reference; it is akin to __unsafe_unretained. Zeroing-weak reference
      semantics (that found in weak properties) are not available for associated objects.
      */
-    CRLAssociatedObjectPolicyAssign,
+    CRLAssociationPolicyAssign,
 
     /**
      Synonymous with a (nonatomic, strong) property.
      */
-    CRLAssociatedObjectPolicyStrong,
+    CRLAssociationPolicyStrong,
 
     /**
      Synonymous with a (nonatomic, copy) property.
      */
-    CRLAssociatedObjectPolicyCopy,
+    CRLAssociationPolicyCopy,
 };
 
 
@@ -36,18 +36,18 @@ typedef NS_ENUM(NSInteger, CRLAssociationPolicy) {
  Uses the runtime Associative References functionality to associate the given object with
  the receiver, using the semantics specified by policy.
  */
--(void)crl_associateObject:(nullable id)object withKey:(nonnull const void *)key policy:(CRLAssociationPolicy)policy;
+-(void)crl_associateObject:(nullable id)object withKey:(nonnull const void *)key policy:(CRLAssociationPolicy)policy NS_SWIFT_NAME(associate(object:forKey:policy:));
 
 /**
  Retrieves an object previously associated with the receiver through the Associative
  References functionality. If no object is associated with the given key, returns nil.
  */
--(nullable id)crl_objectAssociatedWithKey:(nonnull const void *)key;
+-(nullable id)crl_objectAssociatedWithKey:(nonnull const void *)key NS_SWIFT_NAME(associatedObject(forKey:));
 
 /**
  Removes an object previously associated with the receiver through the Associative
  References functionality.
  */
--(void)crl_removeObjectAssociatedWithKey:(nonnull const void *)key;
+-(void)crl_removeObjectAssociatedWithKey:(nonnull const void *)key NS_SWIFT_NAME(removeAssociatedObject(forKey:));
 
 @end

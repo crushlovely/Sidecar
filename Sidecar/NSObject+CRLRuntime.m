@@ -7,9 +7,9 @@
 
 NS_INLINE objc_AssociationPolicy CRLAssociationPolicyToObjCAssociationPolicy(CRLAssociationPolicy crlPolicy) {
     switch(crlPolicy) {
-        case CRLAssociatedObjectPolicyAssign: return OBJC_ASSOCIATION_ASSIGN;
-        case CRLAssociatedObjectPolicyCopy: return OBJC_ASSOCIATION_COPY_NONATOMIC;
-        case CRLAssociatedObjectPolicyStrong:
+        case CRLAssociationPolicyAssign: return OBJC_ASSOCIATION_ASSIGN;
+        case CRLAssociationPolicyCopy: return OBJC_ASSOCIATION_COPY_NONATOMIC;
+        case CRLAssociationPolicyStrong:
         default:
             return OBJC_ASSOCIATION_RETAIN_NONATOMIC;
     }
@@ -29,7 +29,7 @@ NS_INLINE objc_AssociationPolicy CRLAssociationPolicyToObjCAssociationPolicy(CRL
 
 -(void)crl_removeObjectAssociatedWithKey:(const void *)key
 {
-    [self crl_associateObject:nil withKey:key policy:CRLAssociatedObjectPolicyAssign];
+    [self crl_associateObject:nil withKey:key policy:CRLAssociationPolicyAssign];
 }
 
 @end

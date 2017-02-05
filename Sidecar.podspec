@@ -7,8 +7,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/crushlovely/Sidecar.git", :tag => "v#{s.version}" }
   s.homepage         = 'https://github.com/crushlovely/Sidecar'
 
-  s.platform     = :ios, '7.0'
-  s.ios.deployment_target = '7.0'
+  s.platform     = :ios, '8.0'
+  s.ios.deployment_target = '8.0'
   s.requires_arc = true
   
   # Defining LOG_LEVEL_DEF makes sure we don't stomp on the application's

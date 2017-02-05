@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-pod 'CocoaLumberjack', '~> 2.0'
+pod 'CocoaLumberjack', '~> 3.0'
 
 target 'Specs' do
   pod 'Specta',    '~> 1.0'

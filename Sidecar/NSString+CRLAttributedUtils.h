@@ -11,23 +11,23 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Returns an NSAttributedString version of the receiver, with no attributes.
  */
--(NSAttributedString *)crl_attributedCopy;
+-(NSAttributedString *)crl_attributedCopy NS_SWIFT_NAME(attributedCopy());
 
 /**
  Returns an NSAttributedString version of the receiver, with the given attributes.
  */
--(NSAttributedString *)crl_attributedCopyWithAttributes:(NSDictionary<NSString *, id> *)attributes;
+-(NSAttributedString *)crl_attributedCopyWithAttributes:(NSDictionary<NSString *, id> *)attributes NS_SWIFT_NAME(attributedCopy(attributes:));
 
 
 /**
  Returns an NSMutableAttributedString version of the receiver, with no attributes.
  */
--(NSMutableAttributedString *)crl_mutableAttributedCopy;
+-(NSMutableAttributedString *)crl_mutableAttributedCopy NS_SWIFT_NAME(mutableAttributedCopy());
 
 /**
  Returns an NSMutableAttributedString version of the receiver, with the given attributes.
  */
--(NSMutableAttributedString *)crl_mutableAttributedCopyWithAttributes:(NSDictionary<NSString *, id> *)attributes;
+-(NSMutableAttributedString *)crl_mutableAttributedCopyWithAttributes:(NSDictionary<NSString *, id> *)attributes NS_SWIFT_NAME(mutableAttributedCopy(attributes:));
 
 @end
 

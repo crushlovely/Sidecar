@@ -21,14 +21,14 @@ extern NSString * const CRLSoftLineBreakCharacter;
  Returns an attributed string created by using a given format string as a template into which
  the remaining argument values are substituted. The string has no attributes.
  */
-+(instancetype)crl_stringWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2);
++(instancetype)crl_stringWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2) NS_SWIFT_UNAVAILABLE("Use string interpolation");
 
 /**
  Returns an attributed string created by using a given format string as a template into which
  the remaining argument values are substituted. The provided attributes are applied to the
  entire string.
  */
-+(instancetype)crl_stringWithFormat:(NSString *)format attributes:(NSDictionary<NSString *, id> *)attributes, ... NS_FORMAT_FUNCTION(1, 3);
++(instancetype)crl_stringWithFormat:(NSString *)format attributes:(NSDictionary<NSString *, id> *)attributes, ... NS_FORMAT_FUNCTION(1, 3) NS_SWIFT_UNAVAILABLE("Use string interpolation");
 
 /**
  Returns a new attributed string formed by applying the given block to each substring of the
@@ -43,19 +43,19 @@ extern NSString * const CRLSoftLineBreakCharacter;
  desired substring to replace it in the return. The string the block returns may be of any length,
  but cannot be nil.
  */
--(NSAttributedString *)crl_stringByMutatingStringWithBlock:(NSString *(^)(NSString *substring))mutator;
+-(NSAttributedString *)crl_stringByMutatingStringWithBlock:(NSString *(^)(NSString *substring))mutator NS_SWIFT_NAME(mutating(with:));
 
 /**
  Returns an uppercase version of the receiver, with all attributes intact.
  @param locale The locale to use for the case conversion, or nil for the current locale.
  */
--(NSAttributedString *)crl_uppercaseStringWithLocale:(nullable NSLocale *)locale;
+-(NSAttributedString *)crl_uppercaseStringWithLocale:(nullable NSLocale *)locale NS_SWIFT_NAME(uppercased(with:));
 
 /**
  Returns lowercase version of the receiver, with all attributes intact.
  @param locale The locale to use for the case conversion, or nil for the current locale.
  */
--(NSAttributedString *)crl_lowercaseStringWithLocale:(nullable NSLocale *)locale;
+-(NSAttributedString *)crl_lowercaseStringWithLocale:(nullable NSLocale *)locale NS_SWIFT_NAME(lowercased(with:));
 
 @end
 

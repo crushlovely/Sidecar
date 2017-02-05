@@ -13,7 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
  Linearly interpolates between the given floats, returning f0 when percent is 0, and
  f1 when percent is 1.
  */
-CRL_PURE_INLINE CRL_OVERLOADABLE CGFloat CRLLerp(CGFloat f0, CGFloat f1, CGFloat percent)
+CRL_PURE_INLINE CRL_OVERLOADABLE NS_SWIFT_NAME(CRLLerp(_:_:_:))
+CGFloat CRLLerp(CGFloat f0, CGFloat f1, CGFloat percent)
 {
     return (CGFloat)fma(f1 - f0, percent, f0);
 }
@@ -22,7 +23,8 @@ CRL_PURE_INLINE CRL_OVERLOADABLE CGFloat CRLLerp(CGFloat f0, CGFloat f1, CGFloat
  Linearly interpolates the width and height of the given sizes, returning s0 when
  percent is 0, and s1 when percent is 1.
  */
-CRL_PURE_INLINE CRL_OVERLOADABLE CGSize CRLLerp(CGSize s0, CGSize s1, CGFloat percent)
+CRL_PURE_INLINE CRL_OVERLOADABLE NS_SWIFT_NAME(CRLLerp(_:_:_:))
+CGSize CRLLerp(CGSize s0, CGSize s1, CGFloat percent)
 {
     return CGSizeMake(CRLLerp(s0.width, s1.width, percent),
                       CRLLerp(s0.height, s1.height, percent));
@@ -32,7 +34,8 @@ CRL_PURE_INLINE CRL_OVERLOADABLE CGSize CRLLerp(CGSize s0, CGSize s1, CGFloat pe
  Linearly interpolates the x- and y-coordinates of the given points, returning p0 when
  percent is 0, and s1 when percent is 1.
  */
-CRL_PURE_INLINE CRL_OVERLOADABLE CGPoint CRLLerp(CGPoint p0, CGPoint p1, CGFloat percent)
+CRL_PURE_INLINE CRL_OVERLOADABLE NS_SWIFT_NAME(CRLLerp(_:_:_:))
+CGPoint CRLLerp(CGPoint p0, CGPoint p1, CGFloat percent)
 {
     return CGPointMake(CRLLerp(p0.x, p1.x, percent),
                        CRLLerp(p0.y, p1.y, percent));
@@ -42,7 +45,8 @@ CRL_PURE_INLINE CRL_OVERLOADABLE CGPoint CRLLerp(CGPoint p0, CGPoint p1, CGFloat
  Linearly interpolates the origin and size of teh given CGRects, returning r0 when
  percent is 0, and r1 when percent is 1.
  */
-CRL_PURE_INLINE CRL_OVERLOADABLE CGRect CRLLerp(CGRect r0, CGRect r1, CGFloat percent)
+CRL_PURE_INLINE CRL_OVERLOADABLE NS_SWIFT_NAME(CRLLerp(_:_:_:))
+CGRect CRLLerp(CGRect r0, CGRect r1, CGFloat percent)
 {
     return (CGRect){ CRLLerp(r0.origin, r1.origin, percent),
                      CRLLerp(r0.size, r1.size, percent) };
@@ -113,7 +117,8 @@ CRL_PURE_INLINE CGSize CRLSizeForFillingSizeInSize(CGSize contentSize, CGSize co
 /**
  Returns the aspect ratio (width:height) of the given size.
  */
-CRL_PURE_INLINE CRL_OVERLOADABLE CGFloat CRLAspectRatio(CGSize size)
+CRL_PURE_INLINE CRL_OVERLOADABLE NS_SWIFT_NAME(CRLAspectRatio(_:))
+CGFloat CRLAspectRatio(CGSize size)
 {
     return (CGFloat)fabs(size.width / size.height);
 }
@@ -121,7 +126,8 @@ CRL_PURE_INLINE CRL_OVERLOADABLE CGFloat CRLAspectRatio(CGSize size)
 /**
  Returns the aspect ratio (width:height) of the given rectangle.
  */
-CRL_PURE_INLINE CRL_OVERLOADABLE CGFloat CRLAspectRatio(CGRect rect)
+CRL_PURE_INLINE CRL_OVERLOADABLE NS_SWIFT_NAME(CRLAspectRatio(_:))
+CGFloat CRLAspectRatio(CGRect rect)
 {
     return CRLAspectRatio(rect.size);
 }
@@ -129,7 +135,8 @@ CRL_PURE_INLINE CRL_OVERLOADABLE CGFloat CRLAspectRatio(CGRect rect)
 /**
  Returns the aspect ratio (width:height) of the given image.
  */
-CRL_PURE_INLINE CRL_OVERLOADABLE CGFloat CRLAspectRatio(UIImage *image)
+CRL_PURE_INLINE CRL_OVERLOADABLE NS_SWIFT_NAME(CRLAspectRatio(_:))
+CGFloat CRLAspectRatio(UIImage *image)
 {
     return CRLAspectRatio(image.size);
 }
@@ -137,7 +144,8 @@ CRL_PURE_INLINE CRL_OVERLOADABLE CGFloat CRLAspectRatio(UIImage *image)
 /**
  Returns the aspect ratio (width:height) of the frame of the given view.
  */
-CRL_PURE_INLINE CRL_OVERLOADABLE CGFloat CRLAspectRatio(UIView *view)
+CRL_PURE_INLINE CRL_OVERLOADABLE NS_SWIFT_NAME(CRLAspectRatio(_:))
+CGFloat CRLAspectRatio(UIView *view)
 {
     return CRLAspectRatio(view.frame.size);
 }

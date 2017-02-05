@@ -22,7 +22,8 @@ NS_INLINE CGFloat CRLSizeOfPixelInPoints(void)
  non-retina ones (since a pixel is 0.5 points on such retina devices and 1 on
  non-retina ones).
  */
-NS_INLINE CGFloat CRLRoundToNearestPixel(CGFloat length)
+NS_INLINE NS_SWIFT_NAME(CRLRoundToNearestPixel(_:))
+CGFloat CRLRoundToNearestPixel(CGFloat length)
 {
     const CGFloat screenScale = [UIScreen mainScreen].scale;
 
@@ -39,7 +40,8 @@ NS_INLINE CGFloat CRLRoundToNearestPixel(CGFloat length)
  2x retina devices and (1, -10) on non-retina ones (since a pixel is 0.5 points on such
  retina devices and 1 on non-retina ones).
  */
-NS_INLINE CGPoint CRLRoundPointToNearestPixel(CGPoint point)
+NS_INLINE NS_SWIFT_NAME(CRLRoundPointToNearestPixel(_:))
+CGPoint CRLRoundPointToNearestPixel(CGPoint point)
 {
     return CGPointMake(CRLRoundToNearestPixel(point.x), CRLRoundToNearestPixel(point.y));
 }
